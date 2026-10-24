@@ -1,0 +1,18 @@
+{
+  "schema_version": 1,
+  "repository": "hilt21/project-router",
+  "version": "v0.1.0",
+  "commit_sha": "6ef26eb04e1219c6aa9b73d662eb2f0e9512460d",
+  "routes": {
+    "new-project": "routes/new-project.md",
+    "content-studio": "routes/content-studio.md"
+  },
+  "created_at": "2026-10-24T15:31:37.355239+00:00",
+  "maturity": "preview",
+  "verification": {
+    "static": "passed",
+    "work_fresh_chat": "not-run",
+    "work_compaction": "not-run",
+    "private_repository": "not-run"
+  }
+}
