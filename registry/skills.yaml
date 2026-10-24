@@ -1,0 +1,26 @@
+schema_version: 1
+skills:
+  research-open-source:
+    path: skills/research-open-source/SKILL.md
+    source: local
+    activation: document
+    license: MIT
+    required_capabilities: [github-read, web-search]
+  craft-channel-content:
+    path: skills/craft-channel-content/SKILL.md
+    source: local
+    activation: document
+    license: MIT
+    required_capabilities: []
+  verify-delivery:
+    path: skills/verify-delivery/SKILL.md
+    source: local
+    activation: document
+    license: MIT
+    required_capabilities: []
+  capture-router-feedback:
+    path: skills/capture-router-feedback/SKILL.md
+    source: local
+    activation: document
+    license: MIT
+    required_capabilities: []

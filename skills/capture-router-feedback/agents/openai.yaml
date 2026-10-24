@@ -1,0 +1,4 @@
+interface:
+  display_name: "记录路由反馈"
+  short_description: "Capture verified workflow failures for a focused improvement"
+  default_prompt: "Use $capture-router-feedback to capture a verified workflow issue."

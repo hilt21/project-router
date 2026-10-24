@@ -1,0 +1,33 @@
+name: Validate router
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        python-version: ['3.11', '3.12']
+    steps:
+      - uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262
+        with:
+          fetch-depth: 0
+      - uses: actions/setup-python@a26af69be951a213d495a4c3e4e4022e16d87065
+        with:
+          python-version: ${{ matrix.python-version }}
+      - run: python -m pip install .
+      - run: python scripts/check_release_history.py --base "$ROUTER_BASE_SHA"
+        env:
+          ROUTER_BASE_SHA: ${{ github.event.pull_request.base.sha || github.event.before }}
+      - run: python -m router lock --check
+      - run: python -m router validate
+      - run: python -m router eval
+      - run: python evals/probes/check_artifacts.py
+      - run: python -m unittest discover -s tests -v

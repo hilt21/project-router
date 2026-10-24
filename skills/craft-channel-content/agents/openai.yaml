@@ -1,0 +1,4 @@
+interface:
+  display_name: "按发布渠道创作"
+  short_description: "Create evidence-grounded WeChat or LinkedIn drafts"
+  default_prompt: "Use $craft-channel-content to prepare a channel-specific draft."

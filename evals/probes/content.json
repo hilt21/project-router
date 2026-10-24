@@ -1,0 +1,18 @@
+{
+  "case_id": "content-skill-probe",
+  "surface": "independent-agent-local-read",
+  "source_kind": "precommit-working-tree",
+  "native_work_project_test": false,
+  "skills": ["craft-channel-content", "verify-delivery"],
+  "input": "选题已确定：把 AI 工作流改进建立在可观察的结果上。只基于提供的团队观察，分别写公众号和 LinkedIn 正文并给视觉方案，暂不生图和发布。没有样本量、准确率或成本数据，禁止编造数字与亲身经历。",
+  "wechat_body": "模型回复“已经遵循规则”，就能算作一次有效验证吗？\n\n团队在实验中发现，这句回复无法单独证明规则被执行。改进应从能检查的结果开始：记下源版本，回读工具实际返回的内容，再检查最终产物是否符合要求。出现偏差时，这些记录能帮助定位问题。\n\n本次没有可引用的样本量、准确率或成本数据，还不能据此判断改进幅度。现阶段值得做的，是把“完成”变成一组可核对的证据，让下一次调整有依据，也让团队知道哪里仍然未知。",
+  "linkedin_body": "A model’s “I followed the rules” is too weak a basis for approving an AI workflow change.\n\nIn the team’s experiments, that reply could not, on its own, demonstrate that the rules were actually followed. Source version records, tool readbacks, and artifact inspections can help locate deviations.\n\nThat suggests a practical standard for evaluating workflow changes: keep the evidence close to the decision. Identify the version used, examine what the tool actually returned, and check the deliverable against the requirement before calling the work complete.\n\nFor teams handing work across tools and reviewers, these records offer something concrete to inspect. They also help frame the next question when a result falls short: where did the workflow depart from the requirement?\n\nThe evidence here has limits. There is no citable sample size, accuracy figure, or cost data from these experiments, so it cannot support a quantified performance or savings claim.\n\nMake “done” inspectable. Define the evidence of success, preserve the relevant observations, and leave unresolved questions visible.",
+  "visual_output_excerpt": "公众号：3:4 竖图，源版本、工具回读、产物检查三张卡，米白、深灰和蓝色。LinkedIn：1.91:1 横图，Make ‘done’ inspectable. 标题和三层证据卡。",
+  "review": {
+    "channel_separation": "passed",
+    "selected_topic_continued": "passed",
+    "no_fabricated_metrics": "passed",
+    "no_image_or_publish_claim": "passed"
+  },
+  "limits": ["Single supplied-source example", "No live source retrieval", "No native Work project or image generation test"]
+}

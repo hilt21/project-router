@@ -1,0 +1,4 @@
+interface:
+  display_name: "开源项目调研"
+  short_description: "Compare projects with traceable primary evidence"
+  default_prompt: "Use $research-open-source to compare relevant open-source projects."

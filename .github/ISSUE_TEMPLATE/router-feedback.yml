@@ -1,0 +1,44 @@
+name: 路由反馈
+description: 记录有证据的路由偏差或用户纠正
+title: '[feedback] '
+body:
+  - type: input
+    id: project
+    attributes:
+      label: 项目 ID
+    validations:
+      required: true
+  - type: input
+    id: snapshot
+    attributes:
+      label: 实际路由源 SHA
+      description: 未取得时填 unknown
+    validations:
+      required: true
+  - type: dropdown
+    id: category
+    attributes:
+      label: 分类
+      options: [routing, quality, environment, conflict, preference, unknown]
+    validations:
+      required: true
+  - type: textarea
+    id: observed
+    attributes:
+      label: 观察、预期与脱敏复现步骤
+    validations:
+      required: true
+  - type: textarea
+    id: evidence
+    attributes:
+      label: 工具回读或产物证据
+      description: 不上传完整对话、凭据或业务私密内容
+    validations:
+      required: true
+  - type: dropdown
+    id: scope
+    attributes:
+      label: 作用域
+      options: [project, shared-candidate]
+    validations:
+      required: true

@@ -1,0 +1,14 @@
+schema_version: 1
+repository: hilt21/project-router
+default_channel: stable
+max_packet_bytes: 40000
+registry: registry/skills.yaml
+lockfile: registry/skills.lock.json
+routes:
+  new-project: routes/new-project.md
+  content-studio: routes/content-studio.md
+capabilities:
+  - github-read
+  - web-search
+  - image-generation
+  - github-write

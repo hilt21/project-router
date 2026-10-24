@@ -1,0 +1,4 @@
+interface:
+  display_name: "交付证据检查"
+  short_description: "Check delivered outcomes and report verification gaps"
+  default_prompt: "Use $verify-delivery to verify the result and record evidence."

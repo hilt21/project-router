@@ -1,0 +1,37 @@
+{
+  "schema_version": 1,
+  "skills": {
+    "capture-router-feedback": {
+      "path": "skills/capture-router-feedback/SKILL.md",
+      "activation": "document",
+      "files": {
+        "skills/capture-router-feedback/SKILL.md": "cf35584e2578f739a92d130a776f076bbe6c0c487dbd4bfcff6ddf08e07ab8e5",
+        "skills/capture-router-feedback/agents/openai.yaml": "35f370cfe8e4778f6b0d86f9b70adeb0e13dbe0824cecfd0e2f9e667b5524fb9"
+      }
+    },
+    "craft-channel-content": {
+      "path": "skills/craft-channel-content/SKILL.md",
+      "activation": "document",
+      "files": {
+        "skills/craft-channel-content/SKILL.md": "ab43a528efd3404e1e3a8f6d61c7809e6690417b3b2cc7e4fb970d5261bd39cc",
+        "skills/craft-channel-content/agents/openai.yaml": "ad372c0c316fcea85fc1ee50f670b489e3b1ab8e336b2775217c439f273ebc31"
+      }
+    },
+    "research-open-source": {
+      "path": "skills/research-open-source/SKILL.md",
+      "activation": "document",
+      "files": {
+        "skills/research-open-source/SKILL.md": "53c03600a0409966ff315ed2348767e57d11c471453f28bd7e6a46f1684b61ff",
+        "skills/research-open-source/agents/openai.yaml": "2b257212beff36175663cf3b41f929a33d7197a51f4c1a4d358263ccc93dcf27"
+      }
+    },
+    "verify-delivery": {
+      "path": "skills/verify-delivery/SKILL.md",
+      "activation": "document",
+      "files": {
+        "skills/verify-delivery/SKILL.md": "a3bffe103b5ca191731ee78fe463c86fd12a603c68423ebf5ff1603c358efcd1",
+        "skills/verify-delivery/agents/openai.yaml": "15cc858ba29ef6bc94f7c5fb44f071bf1c75d28a4568fab21c832f338e677597"
+      }
+    }
+  }
+}

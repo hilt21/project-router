@@ -1,0 +1,17 @@
+{
+  "case_id": "research-skill-probe",
+  "surface": "independent-agent-local-read",
+  "source_kind": "precommit-working-tree",
+  "native_work_project_test": false,
+  "skills": ["research-open-source", "verify-delivery"],
+  "input": "基于给定冻结快照比较虚构 Alpha 与 Beta。Alpha：MIT、Python 3.11、Markdown/YAML 规则包、固定 SHA、600 stars、无回调。Beta：MIT、Node.js 22、PostgreSQL、Redis、18000 stars、声称有自动反馈但无 Work 兼容证据。目标：一人维护、减少复制、首版不维护服务器。只调研，不创建文件和实现代码。",
+  "output_excerpt": "默认选 Alpha 做 MVP。它的规则包形态和固定 commit SHA 更贴合一人维护、减少复制、首版不维护服务器的目标。Beta 的自动反馈只是待验证主张，目前不足以抵消其运维成本。以下仅基于用户提供的冻结快照，未查询仓库当前数据、读取候选源码或运行候选项目。Alpha 能固定 SHA，不代表 Work 会自动读取该版本；Beta 有任务结束机制，也不代表它能接收 Work 的任务完成事件。最小实验包括两个项目、共享和独有规则、项目切换、新会话及已知版本切换。",
+  "review": {
+    "constraint_based_selection": "passed",
+    "facts_vs_inference": "passed",
+    "unknowns_preserved": "passed",
+    "implementation_boundary": "passed",
+    "observable_experiment": "passed"
+  },
+  "limits": ["Single synthetic example", "No network execution", "No real Work project settings", "Does not prove fresh-chat or compaction behavior"]
+}

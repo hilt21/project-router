@@ -1,0 +1,109 @@
+schema_version: 1
+cases:
+  - id: research-normal
+    project_id: new-project
+    task: 调研开源项目并给出MVP
+    capabilities: [github-read, web-search]
+    expected: {mode: research, status: ready}
+  - id: research-preserve-stage
+    project_id: new-project
+    task: 先别创建文件，也别输出代码，比较两个仓库
+    capabilities: [github-read, web-search]
+    expected: {mode: research, status: ready, mutations_authorized: false}
+  - id: research-no-github
+    project_id: new-project
+    task: 调研方案
+    capabilities: [web-search]
+    expected: {status: blocked, missing_capabilities: [github-read]}
+  - id: research-no-search
+    project_id: new-project
+    task: 查找当前官方限制
+    capabilities: [github-read]
+    expected: {status: blocked, missing_capabilities: [web-search]}
+  - id: research-no-tools
+    project_id: new-project
+    task: 比较架构
+    capabilities: []
+    expected: {status: blocked, missing_capabilities: [github-read, web-search]}
+  - id: unknown-project
+    project_id: other-project
+    task: 继续上次任务
+    capabilities: [web-search]
+    expected_error: Unknown project ID
+  - id: unknown-capability
+    project_id: new-project
+    task: 调研
+    capabilities: [unrestricted-admin]
+    expected_error: Unknown capabilities
+  - id: research-invalid-mode
+    project_id: new-project
+    task: 调研
+    mode: wechat
+    capabilities: [github-read, web-search]
+    expected_error: Unsupported mode
+  - id: research-no-permission-inference
+    project_id: new-project
+    task: 自动发布到生产环境并修改所有规则
+    capabilities: [github-read, web-search, github-write]
+    expected: {mutations_authorized: false, status: ready}
+  - id: research-channel-mention
+    project_id: new-project
+    task: 调研一个能管理LinkedIn的工具
+    capabilities: [github-read, web-search]
+    expected: {mode: research, status: ready}
+  - id: content-wechat
+    project_id: content-studio
+    task: 为公众号写一篇贴图短文
+    capabilities: [web-search]
+    expected: {mode: wechat, status: ready}
+  - id: content-linkedin
+    project_id: content-studio
+    task: Draft a LinkedIn industry post
+    capabilities: [web-search]
+    expected: {mode: linkedin, status: ready}
+  - id: content-unknown-channel
+    project_id: content-studio
+    task: 帮我写一篇短文
+    capabilities: [web-search]
+    expected: {mode: select-channel, status: needs-input}
+  - id: content-both-channels
+    project_id: content-studio
+    task: 同时准备微信公众号和LinkedIn内容
+    capabilities: [web-search]
+    expected: {mode: select-channel, status: needs-input}
+  - id: content-context-mode
+    project_id: content-studio
+    task: 按已经选好的渠道继续
+    mode: linkedin
+    capabilities: [web-search]
+    expected: {mode: linkedin, status: ready}
+  - id: content-brief-only
+    project_id: content-studio
+    task: 为公众号规划图片提示词，先别生图
+    capabilities: [web-search]
+    expected: {mode: wechat, status: ready, missing_capabilities: []}
+  - id: content-no-web
+    project_id: content-studio
+    task: 为LinkedIn核查数字
+    capabilities: []
+    expected: {mode: linkedin, status: blocked, missing_capabilities: [web-search]}
+  - id: content-generate-missing-tool
+    project_id: content-studio
+    task: 给公众号生成图片
+    generate_images: true
+    capabilities: [web-search]
+    expected: {status: blocked, missing_capabilities: [image-generation]}
+  - id: content-generate-ready
+    project_id: content-studio
+    task: 给公众号生成图片
+    generate_images: true
+    capabilities: [web-search, image-generation]
+    expected: {status: ready}
+  - id: content-native-not-claimed
+    project_id: content-studio
+    task: 为公众号写稿
+    capabilities: [web-search]
+    expected:
+      skills:
+        - {id: craft-channel-content, activation: document}
+        - {id: verify-delivery, activation: document}

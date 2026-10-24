@@ -1,0 +1,13 @@
+{
+  "schema_version": 1,
+  "run_id": "example-not-a-real-run",
+  "project_id": "new-project",
+  "mode": "research",
+  "created_at": "2026-10-24T22:00:00+08:00",
+  "snapshot_sha": "1111111111111111111111111111111111111111",
+  "status": "partial",
+  "source_readback": [],
+  "skills": [{"id": "research-open-source", "activation": "document"}],
+  "verification": [{"check": "Real platform execution", "status": "not-run", "kind": "tool-readback", "evidence": []}],
+  "unverified": ["Example only. Replace with actual source, readback and observable evidence."]
+}
