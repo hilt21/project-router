@@ -11,11 +11,15 @@
 | 独立调研探针 | passed，范围有限 | evals/probes/research.json；基于虚构冻结快照 |
 | 独立内容探针 | passed，范围有限 | evals/probes/content.json；中文 194 字，英文 166 词；只给定素材 |
 | 包安装与 CLI | passed | 本地 editable 安装、packet 和 receipt-check 已运行 |
-| GitHub CI | pending | 推送后记录实际运行链接 |
-| Work 当前会话连接器回读 | pending | 发布后按固定 SHA 回读 |
+| GitHub CI | passed | Python 3.11 和 3.12 两个任务均通过，[源提交运行记录](https://github.com/hilt21/project-router/actions/runs/40107216692) |
+| Work 当前会话连接器回读 | 17/17 一致 | 用完整源 SHA 读取启动协议、两条路由及其规则、工作流和 skills，与本地已测试文件逐字一致 |
 
 上述探针为独立 agent 本地读取，未注入父会话结论。探针输出摘录和可测篇幅检查已保存；小样本不能证明普遍稳定性。
 
 首轮曾出现 content-brief-only 失败：否定生图请求被关键词误判。改为显式动作参数后通过。真实反馈已记录在 [Issue 1](https://github.com/hilt21/project-router/issues/1)，保留了反例。
+
+源提交：`6ef26eb04e1219c6aa9b73d662eb2f0e9512460d`。远端文件树与本地测试文件树相同，树 SHA 为 `9cdbbe252d3bc193038e2c5e6c74785b3600cda5`。连接器回读明细见 [github-readback.json](qa/github-readback.json)。
+
+发布后还将从 main 读取稳定指针，再用其 SHA 重读路由。源提交中的初始 QA 文档保留推送前状态；本报告属于交付证据，按 main 上的最新版本读取。
 
 当前尚未完成真实新建 Work 项目对话、长对话压缩和私有仓库测试。验收步骤见 [WORK_ACCEPTANCE.md](WORK_ACCEPTANCE.md)。

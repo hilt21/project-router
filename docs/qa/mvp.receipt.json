@@ -1,0 +1,143 @@
+{
+  "schema_version": 1,
+  "run_id": "mvp-20261024-readback",
+  "project_id": "new-project",
+  "mode": "research",
+  "created_at": "2026-10-24T23:32:18.214264+08:00",
+  "snapshot_sha": "6ef26eb04e1219c6aa9b73d662eb2f0e9512460d",
+  "status": "partial",
+  "source_readback": [
+    {
+      "path": "BOOTSTRAP.md",
+      "sha256": "d2a7cec1bc389e885326d175d1f76f66e03eefc5924d4f7e8d6c0a117580d2ac",
+      "tool": "github.fetch_file with exact ref"
+    },
+    {
+      "path": "project-router.yaml",
+      "sha256": "fa1d3262c5e2d851933db5d2d85c0474c4d9a38f47ee534bd4ce2980370b3b9b",
+      "tool": "github.fetch_file with exact ref"
+    },
+    {
+      "path": "registry/skills.yaml",
+      "sha256": "e3c12619a495221a4bf87b1ace96f7c2181225b2701e74864f11a99ae49aefae",
+      "tool": "github.fetch_file with exact ref"
+    },
+    {
+      "path": "registry/skills.lock.json",
+      "sha256": "8f21fbb65612b456a78dc257f69a408e8de600dc2ae33b9a05f5730c753cbb88",
+      "tool": "github.fetch_file with exact ref"
+    },
+    {
+      "path": "routes/new-project.md",
+      "sha256": "0b93e14755af3bccf9c4fe82dd0b35fbf011c9f7c0d8b00a3caf1489de16bce4",
+      "tool": "github.fetch_file with exact ref"
+    },
+    {
+      "path": "routes/content-studio.md",
+      "sha256": "f96249d6e9a3d0abfa2441fba50edde2475bb021fdbae9caac068949f04b2810",
+      "tool": "github.fetch_file with exact ref"
+    },
+    {
+      "path": "rules/shared.md",
+      "sha256": "a40f46431a230bc1b500fa2b3439566dc3858aabf7723f90e74016452b880d09",
+      "tool": "github.fetch_file with exact ref"
+    },
+    {
+      "path": "rules/research.md",
+      "sha256": "ff0eb66ff6e8cd2780ccb89e93946953d4efc5cb4b22c6377fa85605b108db08",
+      "tool": "github.fetch_file with exact ref"
+    },
+    {
+      "path": "rules/content.md",
+      "sha256": "0c3b376c353625517c09d36648347f159f1b5ee923d519cbd44083c9a45c8c4d",
+      "tool": "github.fetch_file with exact ref"
+    },
+    {
+      "path": "workflows/research.md",
+      "sha256": "22617e5e111195aa78f92c053d633c9b987e8cb1ac4f29ae08f1f10d78cda679",
+      "tool": "github.fetch_file with exact ref"
+    },
+    {
+      "path": "workflows/content.md",
+      "sha256": "8c5932e33e75231ea7515de0d08bc680550949caf6a80953e624be1e1a66530f",
+      "tool": "github.fetch_file with exact ref"
+    },
+    {
+      "path": "skills/research-open-source/SKILL.md",
+      "sha256": "53c03600a0409966ff315ed2348767e57d11c471453f28bd7e6a46f1684b61ff",
+      "tool": "github.fetch_file with exact ref"
+    },
+    {
+      "path": "skills/craft-channel-content/SKILL.md",
+      "sha256": "ab43a528efd3404e1e3a8f6d61c7809e6690417b3b2cc7e4fb970d5261bd39cc",
+      "tool": "github.fetch_file with exact ref"
+    },
+    {
+      "path": "skills/verify-delivery/SKILL.md",
+      "sha256": "a3bffe103b5ca191731ee78fe463c86fd12a603c68423ebf5ff1603c358efcd1",
+      "tool": "github.fetch_file with exact ref"
+    },
+    {
+      "path": "skills/capture-router-feedback/SKILL.md",
+      "sha256": "cf35584e2578f739a92d130a776f076bbe6c0c487dbd4bfcff6ddf08e07ab8e5",
+      "tool": "github.fetch_file with exact ref"
+    },
+    {
+      "path": "feedback/README.md",
+      "sha256": "d1504b30f20ebc7717f2971b6a1210535a92cb4162993fd40742c1c729d82c52",
+      "tool": "github.fetch_file with exact ref"
+    },
+    {
+      "path": "docs/PROTOCOL.md",
+      "sha256": "12596b67cf7afa89c0582153f3c80ff7909b71bc7a4492eb65958a0739560ee3",
+      "tool": "github.fetch_file with exact ref"
+    }
+  ],
+  "skills": [
+    {
+      "id": "research-open-source",
+      "activation": "document"
+    },
+    {
+      "id": "craft-channel-content",
+      "activation": "document"
+    },
+    {
+      "id": "verify-delivery",
+      "activation": "document"
+    },
+    {
+      "id": "capture-router-feedback",
+      "activation": "document"
+    }
+  ],
+  "verification": [
+    {
+      "check": "17 remote source files match tested files",
+      "status": "passed",
+      "kind": "tool-readback",
+      "evidence": [
+        "docs/qa/github-readback.json"
+      ]
+    },
+    {
+      "check": "Python 3.11 and 3.12 CI",
+      "status": "passed",
+      "kind": "tool-readback",
+      "evidence": [
+        "https://github.com/hilt21/project-router/actions/runs/40107216692"
+      ]
+    },
+    {
+      "check": "Fresh Work project conversation and compaction",
+      "status": "not-run",
+      "kind": "tool-readback",
+      "evidence": []
+    }
+  ],
+  "unverified": [
+    "Fresh Work project settings",
+    "Long-chat compaction recovery",
+    "Private repository access"
+  ]
+}

@@ -1,0 +1,124 @@
+{
+  "source_sha": "6ef26eb04e1219c6aa9b73d662eb2f0e9512460d",
+  "transport": "GitHub connector fetch_file with explicit ref",
+  "surface": "current Work conversation",
+  "files": [
+    {
+      "path": "BOOTSTRAP.md",
+      "matched": true,
+      "error": false,
+      "characters": 887
+    },
+    {
+      "path": "project-router.yaml",
+      "matched": true,
+      "error": false,
+      "characters": 338
+    },
+    {
+      "path": "registry/skills.yaml",
+      "matched": true,
+      "error": false,
+      "characters": 691
+    },
+    {
+      "path": "registry/skills.lock.json",
+      "matched": true,
+      "error": false,
+      "characters": 1596
+    },
+    {
+      "path": "routes/new-project.md",
+      "matched": true,
+      "error": false,
+      "characters": 456
+    },
+    {
+      "path": "routes/content-studio.md",
+      "matched": true,
+      "error": false,
+      "characters": 515
+    },
+    {
+      "path": "rules/shared.md",
+      "matched": true,
+      "error": false,
+      "characters": 659
+    },
+    {
+      "path": "rules/research.md",
+      "matched": true,
+      "error": false,
+      "characters": 340
+    },
+    {
+      "path": "rules/content.md",
+      "matched": true,
+      "error": false,
+      "characters": 409
+    },
+    {
+      "path": "workflows/research.md",
+      "matched": true,
+      "error": false,
+      "characters": 571
+    },
+    {
+      "path": "workflows/content.md",
+      "matched": true,
+      "error": false,
+      "characters": 593
+    },
+    {
+      "path": "skills/research-open-source/SKILL.md",
+      "matched": true,
+      "error": false,
+      "characters": 693
+    },
+    {
+      "path": "skills/craft-channel-content/SKILL.md",
+      "matched": true,
+      "error": false,
+      "characters": 804
+    },
+    {
+      "path": "skills/verify-delivery/SKILL.md",
+      "matched": true,
+      "error": false,
+      "characters": 679
+    },
+    {
+      "path": "skills/capture-router-feedback/SKILL.md",
+      "matched": true,
+      "error": false,
+      "characters": 696
+    },
+    {
+      "path": "feedback/README.md",
+      "matched": true,
+      "error": false,
+      "characters": 542
+    },
+    {
+      "path": "docs/PROTOCOL.md",
+      "matched": true,
+      "error": false,
+      "characters": 1298
+    }
+  ],
+  "all_matched": true,
+  "ci": {
+    "url": "https://github.com/hilt21/project-router/actions/runs/40107216692",
+    "status": "success",
+    "jobs": [
+      {
+        "name": "validate (3.11)",
+        "conclusion": "success"
+      },
+      {
+        "name": "validate (3.12)",
+        "conclusion": "success"
+      }
+    ]
+  }
+}
