@@ -13,6 +13,7 @@
 | 包安装与 CLI | passed | 本地 editable 安装、packet 和 receipt-check 已运行 |
 | GitHub CI | passed | Python 3.11 和 3.12 两个任务均通过，[源提交运行记录](https://github.com/hilt21/project-router/actions/runs/40107216692) |
 | Work 当前会话连接器回读 | 17/17 一致 | 用完整源 SHA 读取启动协议、两条路由及其规则、工作流和 skills，与本地已测试文件逐字一致 |
+| 发布后入口链路 | passed | main 上的两个入口和 stable 指针读取成功，再按解析出的 SHA 重读启动协议和两条路由；缺失路径返回预期错误 |
 
 上述探针为独立 agent 本地读取，未注入父会话结论。探针输出摘录和可测篇幅检查已保存；小样本不能证明普遍稳定性。
 
@@ -20,6 +21,8 @@
 
 源提交：`6ef26eb04e1219c6aa9b73d662eb2f0e9512460d`。远端文件树与本地测试文件树相同，树 SHA 为 `9cdbbe252d3bc193038e2c5e6c74785b3600cda5`。连接器回读明细见 [github-readback.json](qa/github-readback.json)。
 
-发布后还将从 main 读取稳定指针，再用其 SHA 重读路由。源提交中的初始 QA 文档保留推送前状态；本报告属于交付证据，按 main 上的最新版本读取。
+发布 PR [2](https://github.com/hilt21/project-router/pull/2) 已通过 CI 并合并，[合并后 CI](https://github.com/hilt21/project-router/actions/runs/40107731096) 也通过。完整入口链路证据见 [stable-chain.json](qa/stable-chain.json)。已从独立 detached worktree 重建两条执行包，源 SHA 均与指针一致。
+
+源提交中的初始 QA 文档保留推送前状态；本报告属于交付证据，按 main 上的最新版本读取。额外自动代码审查仍在运行，未计入已通过证据。
 
 当前尚未完成真实新建 Work 项目对话、长对话压缩和私有仓库测试。验收步骤见 [WORK_ACCEPTANCE.md](WORK_ACCEPTANCE.md)。

@@ -51,6 +51,8 @@ python -m router packet --project new-project --task '调研开源方案' --capa
 
 CLI 返回码：0 表示静态通过或执行包就绪；1 表示配置错误；2 表示能力缺失、需要补充输入或评测失败。`ready` 只说明声明依赖满足，不代表任务已执行或已获得写权限。
 
+CLI 针对当前工作树编译候选执行包。要复现发布版，先按稳定指针的 SHA 在独立 worktree 检出源提交；输出中的 `source.kind` 应为 `git-commit`，且 `source.sha` 与指针一致。未提交工作树不能作为发布版运行证据。
+
 ## 维护文档
 
 - [架构与边界](docs/ARCHITECTURE.md)

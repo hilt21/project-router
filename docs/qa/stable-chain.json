@@ -1,0 +1,28 @@
+{
+  "entry_files_loaded": 2,
+  "pointer_loaded": true,
+  "version": "v0.1.0",
+  "source_sha": "6ef26eb04e1219c6aa9b73d662eb2f0e9512460d",
+  "source_documents": [
+    {
+      "path": "BOOTSTRAP.md",
+      "matched": true
+    },
+    {
+      "path": "routes/new-project.md",
+      "matched": true
+    },
+    {
+      "path": "routes/content-studio.md",
+      "matched": true
+    }
+  ],
+  "missing_file_probe": {
+    "expected": "not found",
+    "observed_error": true
+  },
+  "scope": "current Work conversation; no project settings changed; fresh chat and compaction remain not-run",
+  "publication_commit": "7da1fa3da45ba52382b714a2487e37151f7b6095",
+  "ci_url": "https://github.com/hilt21/project-router/actions/runs/40107731096",
+  "detached_snapshot_plan_check": "passed"
+}
