@@ -49,8 +49,14 @@ def identifiers(value, name):
 
 
 def read_object(path):
+    def unique_pairs(pairs):
+        result = {}
+        for key, value in pairs:
+            require(key not in result, f"Duplicate JSON key in {path.name}: {key}")
+            result[key] = value
+        return result
     try:
-        value = json.loads(path.read_text(encoding="utf-8"))
+        value = json.loads(path.read_text(encoding="utf-8"), object_pairs_hook=unique_pairs)
     except (OSError, UnicodeError, json.JSONDecodeError) as exc:
         raise RouterError(f"Cannot read research record: {path.name}") from exc
     return mapping(value, path.name)
@@ -131,10 +137,14 @@ def check_records(passport_path: Path, research_root: Path, research_id: str,
         require(isinstance(claim_id, str) and ID.fullmatch(claim_id) and claim_id not in claims, "Invalid or duplicate claim ID")
         require(claim.get("kind") in CLAIM_CHECKS, "Invalid claim kind")
         require(isinstance(claim.get("critical"), bool), "Claim critical must be boolean")
+        require(claim.get("disposition", "active") in {"active", "withdrawn"}, "Invalid claim disposition")
+        if claim.get("disposition") == "withdrawn":
+            nonempty(claim.get("withdrawal_reason"), "withdrawal_reason")
         nonempty(claim.get("text"), "claim text")
         evidence_refs([claim.get("manuscript")], "claim manuscript")
         evidence_refs(claim.get("evidence"), "claim evidence")
         claims[claim_id] = claim
+    active_claims = {key: claim for key, claim in claims.items() if claim.get("disposition", "active") == "active"}
 
     audit_pointer = mapping(passport.get("audit_ledger"), "audit_ledger")
     require(isinstance(audit_pointer.get("sha256"), str) and DIGEST.fullmatch(audit_pointer["sha256"]),
@@ -165,13 +175,13 @@ def check_records(passport_path: Path, research_root: Path, research_id: str,
         previous = identifiers(audit.get("supersedes", []), "supersedes")
         for old in previous:
             require(old in audits and old not in superseded, "Superseded audit must be an active earlier record")
-            require(audits[old]["check"] == audit["check"] and set(audits[old]["claim_ids"]) == set(targets),
+            require(audits[old]["check"] == audit["check"] and set(audits[old]["claim_ids"]) <= set(targets),
                     "Superseding audit must preserve check and claim scope")
             superseded.add(old)
         if audit["status"] in {"passed", "not-applicable"}:
             required_inputs = {claims_id}
             if audit["status"] == "passed":
-                bound_claims = list(claims.values()) if audit["check"] in GLOBAL_CHECKS else [claims[x] for x in targets]
+                bound_claims = list(active_claims.values()) if audit["check"] in GLOBAL_CHECKS else [claims[x] for x in targets]
                 for claim in bound_claims:
                     required_inputs.add(claim["manuscript"]["artifact_id"])
                     required_inputs.update(ref["artifact_id"] for ref in claim["evidence"])
@@ -185,28 +195,36 @@ def check_records(passport_path: Path, research_root: Path, research_id: str,
         audits[audit_id] = {**audit, "current": current}
 
     active = [audit for key, audit in audits.items() if key not in superseded]
-    for audit in active:
+    relevant = [a for a in active if a["check"] in GLOBAL_CHECKS or not a["claim_ids"]
+                or set(a["claim_ids"]) & set(active_claims)]
+    for audit in relevant:
         if not audit["current"]:
             issues.append(f"audit-stale:{audit['id']}")
+    if coverage["semantic_extraction"] == "human-attested" and not any(
+            a["check"] == "coverage" and a["kind"] == "human-check" and a["status"] == "passed" and a["current"]
+            for a in relevant):
+        issues.append("unsubstantiated-human-coverage-attestation")
     blockers = list(issues)
     if submission:
-        if not claims:
+        if not active_claims:
             blockers.append("empty-claim-registry")
         if candidates:
             blockers.append("unregistered-claim-candidates")
         if passport["pending_decisions"]:
             blockers.append("pending-research-decisions")
-        for audit in active:
-            if audit["blocking_findings"] or audit["status"] == "failed":
+        for audit in relevant:
+            if audit["blocking_findings"] or audit["status"] in {"failed", "unknown", "not-run"}:
                 blockers.append(f"unresolved-audit:{audit['id']}")
         for check in sorted(CHECKS):
-            applicable = list(claims) if check in GLOBAL_CHECKS else [key for key, claim in claims.items()
+            applicable = list(active_claims) if check in GLOBAL_CHECKS else [key for key, claim in active_claims.items()
                                                                      if check in CLAIM_CHECKS[claim["kind"]]]
-            candidates_for_check = [a for a in active if a["check"] == check and a["current"]]
+            candidates_for_check = [a for a in relevant if a["check"] == check and a["current"]]
             if not applicable and check not in GLOBAL_CHECKS:
                 if not any(a["status"] == "not-applicable" for a in candidates_for_check):
                     blockers.append(f"missing-not-applicable-record:{check}")
                 continue
+            if any(a["status"] == "not-applicable" for a in candidates_for_check):
+                blockers.append(f"not-applicable-conflicts-with-claims:{check}")
             for claim_id in applicable:
                 if not claims[claim_id]["evidence"]:
                     blockers.append(f"claim-without-evidence:{claim_id}")
@@ -220,6 +238,7 @@ def check_records(passport_path: Path, research_root: Path, research_id: str,
         "stage": passport["stage"], "stage_status": passport["stage_status"],
         "submission_status": ("blocked" if blockers else "eligible-for-human-review") if submission else "not-checked",
         "registered_claims": len(claims), "critical_claims": sum(c["critical"] for c in claims.values()),
+        "active_claims": len(active_claims), "withdrawn_claims": len(claims) - len(active_claims),
         "semantic_extraction": coverage["semantic_extraction"], "scientific_truth": "not-verified",
         "blockers": blockers,
         "artifacts": [{"id": x["id"], "current": x["current"]} for x in artifacts.values()],

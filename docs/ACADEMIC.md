@@ -41,7 +41,7 @@ flowchart TD
 
 项目路由维护方法；各研究项目保存材料。每项研究使用 research_id，状态清单记录工作流 SHA。主张有稳定 ID，证据指向实际取得的来源、证明、数据或运行记录。三个记录示例及完整契约见 [模板](../templates/academic/README.md) 和 [科研状态契约](../workflows/academic-state.md)。
 
-`academic-check` 只读检查显式研究根目录中的文件。它核对研究 ID、源 SHA、摘要、审查输入绑定和已登记主张的检查覆盖。文件修改后，旧审查可能成为 stale；只更新清单中的文件摘要不会刷新审查。复核后追加相同检查与主张范围的 supersedes 记录，保留历史。
+`academic-check` 只读检查显式研究根目录中的文件。它核对研究 ID、源 SHA、摘要、审查输入绑定和已登记主张的检查覆盖。文件修改后，旧审查可能成为 stale；只更新清单中的文件摘要不会刷新审查。复核后追加相同检查且覆盖旧主张范围的 supersedes 记录，保留历史。撤回主张通过 withdrawn 和撤回理由记录，不删除历史 ID 与证据。
 
 一致性检查可以通过，而投稿前置检查仍被 unknown、未运行、过期、未解决失败或缺失记录阻断。阶段 complete 也不能替代投稿检查。通过 `--submission` 最多输出 eligible-for-human-review，scientific_truth 始终为 not-verified。
 

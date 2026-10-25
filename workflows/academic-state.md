@@ -18,6 +18,8 @@ artifacts 的每项包含 id、研究根目录内相对 path、原始文件字�
 
 coverage.semantic_extraction 使用 unknown 或 human-attested；后者必须有真实的人工核查记录，不能替人声明已读。coverage.unregistered_candidates 列出尚未处置的候选主张。注册账本的覆盖率无法证明全文语义提取完整。
 
+修订中撤回主张时保留原 ID，使用 disposition: withdrawn 和 withdrawal_reason，保留其历史材料。默认 disposition 为 active。投稿门槛检查 active 主张；撤回不等于删除历史错误，整稿 coverage 和修订审查需要重新确认。
+
 审查 check 使用 coverage、reference-existence、claim-support、mathematical-rigor、experiment-validity、novelty-scope、originality、journal-compliance、review-resolution。kind 使用 tool-readback / artifact-check / human-check / self-report。passed 必须有可观察证据，self-report 不能独立产生 passed。工具检查、人工判断与模型分析分别记录。
 
 ## 版本与过期
@@ -26,7 +28,7 @@ input_bindings 把输入 artifact ID 映射到检查时的 SHA-256。passed 记�
 
 修改稿件、公式、数据、来源或主张账本后，比较实际文件摘要、清单摘要与审查绑定。受影响的旧审查标记为 stale，保留原始报告。status 与 validity 分开：旧 passed + stale 不满足当前门槛。格式改动也会使绑定该稿件字节的审查过期；可执行有记录的定向复核，不能自动继承 passed。
 
-更新材料摘要只能表示当前文件版本已经登记，不能清除旧审查。复核后追加新审查，用 supersedes 明确替代相同 check、相同 claim_ids 范围的旧记录。不得覆盖、删除未解决问题或通过追加另一个 passed 隐藏旧 failed。
+更新材料摘要只能表示当前文件版本已经登记，不能清除旧审查。复核后追加新审查，用 supersedes 明确替代相同 check 且覆盖旧 claim_ids 范围的记录，可以扩大范围，不能丢弃旧主张。不得覆盖、删除未解决问题或通过追加另一个 passed 隐藏旧 failed、unknown 或 not-run。
 
 ## 交接与恢复
 

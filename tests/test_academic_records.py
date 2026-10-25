@@ -205,6 +205,48 @@ class AcademicRecordTests(unittest.TestCase):
         after = {p.name: self.digest(p) for p in self.root.iterdir()}
         self.assertEqual(before, after)
 
+    def test_unknown_cannot_be_hidden_by_a_duplicate_pass(self):
+        original = self.audit("claim-support")
+        new = copy.deepcopy(original)
+        new["id"] = "a-new"
+        original["status"] = "unknown"
+        self.audits["audits"].append(new)
+        self.save_audits()
+        self.assertIn("unresolved-audit:" + original["id"], self.check()["blockers"])
+
+    def test_human_read_scope_cannot_be_inferred(self):
+        self.claims["coverage"]["semantic_extraction"] = "human-attested"
+        self.save_json("claims.json", self.claims)
+        next(a for a in self.artifacts if a["id"] == "claims")["sha256"] = self.digest(self.root / "claims.json")
+        for audit in self.audits["audits"]:
+            audit["input_bindings"]["claims"] = self.digest(self.root / "claims.json")
+        self.save_audits()
+        self.assertIn("unsubstantiated-human-coverage-attestation", self.check()["blockers"])
+
+    def test_duplicate_json_keys_are_rejected(self):
+        path = self.root / "claims.json"
+        path.write_text(path.read_text().replace('"schema_version": 1,', '"schema_version": 2, "schema_version": 1,'))
+        with self.assertRaisesRegex(core.RouterError, "Duplicate JSON key"):
+            self.check()
+
+    def test_withdrawn_claim_is_retained_without_active_obligation(self):
+        self.claims["claims"][1].update(disposition="withdrawn", withdrawal_reason="Author removed the unsupported uniqueness claim.")
+        self.save_json("claims.json", self.claims)
+        claims_digest = self.digest(self.root / "claims.json")
+        next(a for a in self.artifacts if a["id"] == "claims")["sha256"] = claims_digest
+        for audit in self.audits["audits"]:
+            audit["input_bindings"]["claims"] = claims_digest
+        old = self.audit("mathematical-rigor")
+        old["status"] = "failed"
+        new = copy.deepcopy(old)
+        new.update(id="a-na", claim_ids=[], status="not-applicable", reason="No active mathematical claim remains.", supersedes=[])
+        self.audits["audits"].append(new)
+        self.save_audits()
+        result = self.check()
+        self.assertEqual(result["withdrawn_claims"], 1)
+        self.assertEqual(result["active_claims"], 4)
+        self.assertEqual(result["submission_status"], "eligible-for-human-review")
+
     def test_cli_consistency_and_submission_are_distinct(self):
         self.audit("claim-support")["status"] = "not-run"
         self.save_audits()

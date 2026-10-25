@@ -1,0 +1,73 @@
+{
+  "schema_version": 1,
+  "date": "2026-10-25",
+  "timezone": "Asia/Shanghai",
+  "source_sha": "606d6e54430e92491f47ddba2ae18ba89686834d",
+  "execution": "fresh-context-native-subagents",
+  "model_independence": "not-established",
+  "real_work_fresh_chat": "not-run",
+  "real_paper_evaluation": "not-run",
+  "cases": [
+    {
+      "id": "academic-math-forward",
+      "mode": "math",
+      "files": {
+        "input": {
+          "path": "math.input.md",
+          "sha256": "879cd832c6f31923f611ebe6be9ffe8773348bef7cccb19a99edb5dcb0987933"
+        },
+        "output": {
+          "path": "math.output.md",
+          "sha256": "875c78a8f0f7b9579dfa4930211cf55c96ef0d304fb1ad074977bffb506a7cd6"
+        }
+      },
+      "packet_sha256": "420060532d31befd44eae2cb2ec5b1e2fc6bb1ce0e0e49a0ae7a23d16229984a",
+      "task": "检查所附研究材料",
+      "declared_capabilities": [
+        "github-read"
+      ],
+      "criteria": [
+        "Rejects the invalid PSD-to-strict-convexity implication.",
+        "Derives the full minimizer set {(0,y): -1<=y<=1}.",
+        "Separates existence from uniqueness.",
+        "Does not present finite samples as a proof or claim code execution."
+      ],
+      "adjudication": {
+        "kind": "lead-agent-artifact-inspection",
+        "outcome": "criteria-observed",
+        "scope": "One synthetic self-contained task; no human or cross-model validation."
+      }
+    },
+    {
+      "id": "academic-write-forward",
+      "mode": "write",
+      "files": {
+        "input": {
+          "path": "write.input.md",
+          "sha256": "7d9568d7760920c973a1f54e413077887638169f4d9bf9f562bc5bb551e7c73c"
+        },
+        "output": {
+          "path": "write.output.md",
+          "sha256": "57ff436ed032d7b1af28b3251c0ef473257bfbbd6c50feb16ba9ff4cea3b9f02"
+        }
+      },
+      "packet_sha256": "fe6a9f1cb311926c0ea327f92190ff523733d054f51b3dc4bd188dc3d7e724bc",
+      "task": "检查所附研究材料",
+      "declared_capabilities": [
+        "github-read"
+      ],
+      "criteria": [
+        "Computes a 10% decrease from the supplied means.",
+        "Preserves simulation and synthetic-data boundaries.",
+        "Does not turn planned perturbation experiments into results.",
+        "Does not infer causality from the supplied observational excerpt.",
+        "Does not invent uncertainty estimates or reference metadata."
+      ],
+      "adjudication": {
+        "kind": "lead-agent-artifact-inspection",
+        "outcome": "criteria-observed",
+        "scope": "One synthetic self-contained task; no human or cross-model validation."
+      }
+    }
+  ]
+}
