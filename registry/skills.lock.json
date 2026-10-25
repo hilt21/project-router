@@ -1,6 +1,30 @@
 {
   "schema_version": 1,
   "skills": {
+    "audit-mathematical-rigor": {
+      "path": "skills/audit-mathematical-rigor/SKILL.md",
+      "activation": "document",
+      "files": {
+        "skills/audit-mathematical-rigor/SKILL.md": "0db0fd3ffcea8fc39b3faf738d9ed642b50c30b67e8eba53fa92f79ad3bb80ce",
+        "skills/audit-mathematical-rigor/agents/openai.yaml": "44d8b817ca8346bad41d7861ad3268af4904d75e6577645156bad09e47bbfb13"
+      }
+    },
+    "audit-publication-readiness": {
+      "path": "skills/audit-publication-readiness/SKILL.md",
+      "activation": "document",
+      "files": {
+        "skills/audit-publication-readiness/SKILL.md": "b8abba8c20bc212b939bf64caaf251d72b32b750186230b6eb5dd8fbe04b3cf1",
+        "skills/audit-publication-readiness/agents/openai.yaml": "035072e037f4334a2b68b8039dcaa3d0f9c37c979878918d3994ed1f7e186a61"
+      }
+    },
+    "build-literature-evidence": {
+      "path": "skills/build-literature-evidence/SKILL.md",
+      "activation": "document",
+      "files": {
+        "skills/build-literature-evidence/SKILL.md": "cfc7803b9beaf899e06480973075ca8421de12350656572744a57c7a647a11b4",
+        "skills/build-literature-evidence/agents/openai.yaml": "c0312b76a33f2d9650529d3f59bae95218870ac604e6b81a9647a308c8151f96"
+      }
+    },
     "capture-router-feedback": {
       "path": "skills/capture-router-feedback/SKILL.md",
       "activation": "document",
@@ -25,12 +49,44 @@
         "skills/research-open-source/agents/openai.yaml": "2b257212beff36175663cf3b41f929a33d7197a51f4c1a4d358263ccc93dcf27"
       }
     },
+    "review-academic-manuscript": {
+      "path": "skills/review-academic-manuscript/SKILL.md",
+      "activation": "document",
+      "files": {
+        "skills/review-academic-manuscript/SKILL.md": "1b9f412ad0943af639d3f00310608659a6d45bb4b7edf68b0febec95f656f885",
+        "skills/review-academic-manuscript/agents/openai.yaml": "eafbf909db564fbf9cd90e107459518703b157bef413e3dd4a8e4fb7685ba292"
+      }
+    },
+    "scope-academic-research": {
+      "path": "skills/scope-academic-research/SKILL.md",
+      "activation": "document",
+      "files": {
+        "skills/scope-academic-research/SKILL.md": "186f3d34984b1dfaa2fc73c78090192c8eab36e761ce5498014e5bac89352b40",
+        "skills/scope-academic-research/agents/openai.yaml": "87f8071debcfbc84487019311bbf096c1dcca7c6bc9330b5fe4baa517a11917a"
+      }
+    },
+    "validate-research-experiments": {
+      "path": "skills/validate-research-experiments/SKILL.md",
+      "activation": "document",
+      "files": {
+        "skills/validate-research-experiments/SKILL.md": "5d0edcc0b1ea063d93f3bdb056f80386b0baf8294c5946b323ad5091221c1f64",
+        "skills/validate-research-experiments/agents/openai.yaml": "9b412cd1fe8eecfbe28d2aab5ed84f2f422df07612f328dbafec5b7d22d14f24"
+      }
+    },
     "verify-delivery": {
       "path": "skills/verify-delivery/SKILL.md",
       "activation": "document",
       "files": {
         "skills/verify-delivery/SKILL.md": "a3bffe103b5ca191731ee78fe463c86fd12a603c68423ebf5ff1603c358efcd1",
         "skills/verify-delivery/agents/openai.yaml": "15cc858ba29ef6bc94f7c5fb44f071bf1c75d28a4568fab21c832f338e677597"
+      }
+    },
+    "write-academic-manuscript": {
+      "path": "skills/write-academic-manuscript/SKILL.md",
+      "activation": "document",
+      "files": {
+        "skills/write-academic-manuscript/SKILL.md": "26a1f90538f0ea2a21433e42079587315e13bcc52b49e6076566caf38fc3129d",
+        "skills/write-academic-manuscript/agents/openai.yaml": "0f5681c6e27c50d5129f108b80dbeb34dd1f0418d0a4476f525faa11e3e0b0d3"
       }
     }
   }

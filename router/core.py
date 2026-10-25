@@ -169,12 +169,56 @@ def check_lock(root: Path) -> None:
         raise RouterError("Skill lock mismatch; review changes before running lock --write")
 
 
-def instruction_paths(root: Path, project: str) -> list[str]:
+def route_config(root: Path, project: str) -> dict:
     cfg = config(root)
-    skills = registry(root, cfg)
     if project not in cfg["routes"]:
         raise RouterError(f"Unknown project ID: {project}")
-    result, active = [], []
+    route, _ = document(root, cfg["routes"][project])
+    if route.get("id") != project or route.get("schema_version") not in {1, 2}:
+        raise RouterError("Route ID or schema mismatch")
+    modes = strings(route, "modes", True)
+    if not modes or any(not ID.fullmatch(mode) for mode in modes):
+        raise RouterError("Route needs valid modes")
+    strings(route, "skills", True)
+    if route["schema_version"] == 1:
+        if any(key in route for key in ("mode_config", "default_mode", "needs_input_modes")):
+            raise RouterError("Mode configuration requires route schema 2")
+        return route
+    if route.get("default_mode") not in modes:
+        raise RouterError("default_mode must name a declared mode")
+    if set(strings(route, "needs_input_modes")) - set(modes):
+        raise RouterError("Unknown needs_input mode")
+    profiles = route.get("mode_config")
+    if not isinstance(profiles, dict) or set(profiles) != set(modes):
+        raise RouterError("mode_config must cover exactly the declared modes")
+    allowed = {"includes", "rules", "skills", "required_capabilities", "optional_capabilities"}
+    for mode, profile in profiles.items():
+        if not isinstance(profile, dict) or set(profile) - allowed:
+            raise RouterError(f"Invalid mode configuration: {mode}")
+        for key in allowed:
+            strings(profile, key)
+    return route
+
+
+def resolve_mode(route: dict, task: str, explicit=None) -> str:
+    if route["schema_version"] == 1:
+        return select_mode(route["modes"], task, explicit)
+    chosen = explicit if explicit is not None else route["default_mode"]
+    if chosen not in route["modes"]:
+        raise RouterError(f"Unsupported mode: {chosen}")
+    return chosen
+
+
+def instruction_graph(root: Path, project: str, mode=None) -> dict:
+    cfg = config(root)
+    skills = registry(root, cfg)
+    route = route_config(root, project)
+    chosen = resolve_mode(route, "", mode)
+    if chosen not in route["modes"]:
+        raise RouterError("Route does not support resolved mode")
+    profile = route.get("mode_config", {}).get(chosen, {})
+    result, active, selected = [], [], []
+    required, optional = set(), set()
 
     def visit(path):
         if path in active:
@@ -190,9 +234,20 @@ def instruction_paths(root: Path, project: str) -> list[str]:
         refs = strings(meta, "includes") + strings(meta, "rules")
         if "workflow" in meta:
             refs.append(meta["workflow"])
-        for name in strings(meta, "skills"):
+        names = strings(meta, "skills")
+        if path == cfg["routes"][project]:
+            refs += strings(profile, "includes") + strings(profile, "rules")
+            names += strings(profile, "skills")
+            required.update(strings(profile, "required_capabilities"))
+            optional.update(strings(profile, "optional_capabilities"))
+        required.update(strings(meta, "required_capabilities"))
+        optional.update(strings(meta, "optional_capabilities"))
+        for name in names:
             if name not in skills:
                 raise RouterError(f"Unknown skill: {name}")
+            if name not in selected:
+                selected.append(name)
+            required.update(strings(skills[name], "required_capabilities"))
             refs.append(skills[name]["path"])
         result.append(path)
         for ref in refs:
@@ -200,10 +255,17 @@ def instruction_paths(root: Path, project: str) -> list[str]:
         active.pop()
 
     visit(cfg["routes"][project])
+    if (required | optional) - set(cfg["capabilities"]):
+        raise RouterError("Unknown instruction capability")
     total = sum(len(read_text(root, p).encode()) for p in result)
     if total > cfg["max_packet_bytes"]:
         raise RouterError(f"Instruction packet exceeds byte budget: {total}")
-    return result
+    return {"paths": result, "skills": selected, "required_capabilities": required,
+            "optional_capabilities": optional - required}
+
+
+def instruction_paths(root: Path, project: str, mode=None) -> list[str]:
+    return instruction_graph(root, project, mode)["paths"]
 
 
 def select_mode(modes: list[str], task: str, explicit=None) -> str:
@@ -233,28 +295,24 @@ def plan(root: Path, project: str, task: str, capabilities: list[str], mode=None
     check_lock(root)
     if set(capabilities) - set(cfg["capabilities"]):
         raise RouterError("Unknown capabilities: " + ", ".join(sorted(set(capabilities) - set(cfg["capabilities"]))))
-    paths = instruction_paths(root, project)
-    route, _ = document(root, cfg["routes"][project])
-    if route.get("id") != project or route.get("schema_version") != 1:
-        raise RouterError("Route ID or schema mismatch")
-    modes = strings(route, "modes", True)
-    chosen = select_mode(modes, task, mode)
-    if chosen not in modes:
+    route = route_config(root, project)
+    chosen = resolve_mode(route, task, mode)
+    if chosen not in route["modes"]:
         raise RouterError("Route does not support resolved mode")
-    required = set(strings(route, "required_capabilities"))
-    skills = registry(root, cfg)
-    selected = strings(route, "skills", True)
-    for name in selected:
-        required.update(skills[name].get("required_capabilities", []))
+    graph = instruction_graph(root, project, chosen)
+    paths, selected = graph["paths"], graph["skills"]
+    required, optional = graph["required_capabilities"], graph["optional_capabilities"]
     # A mention of images may be a negation or a request for a brief. The host
     # resolves the requested stage and passes the intended action explicitly.
     if generate_images:
         required.add("image-generation")
     missing = sorted(required - set(capabilities))
+    input_modes = route.get("needs_input_modes", ["select-channel"])
     return {
         "schema_version": 1, "project_id": project, "mode": chosen,
-        "status": "needs-input" if chosen == "select-channel" else "blocked" if missing else "ready",
+        "status": "blocked" if missing else "needs-input" if chosen in input_modes else "ready",
         "source": git_identity(root), "required_capabilities": sorted(required), "missing_capabilities": missing,
+        "optional_capabilities": sorted(optional), "missing_optional_capabilities": sorted(optional - set(capabilities)),
         "intended_actions": ["generate-images"] if generate_images else [],
         "skills": [{"id": name, "activation": "document"} for name in selected],
         "documents": [{"path": p, "sha256": hashlib.sha256(read_text(root, p).encode()).hexdigest()} for p in paths],
@@ -268,6 +326,8 @@ def packet(root: Path, result: dict) -> str:
     text = "# Execution packet\n\n" + json.dumps(result, ensure_ascii=False, indent=2) + "\n"
     for item in result["documents"]:
         text += f"\n## Source: {item['path']}\n\nSHA-256: {item['sha256']}\n\n" + read_text(root, item["path"])
+    if len(text.encode("utf-8")) > config(root)["max_packet_bytes"]:
+        raise RouterError(f"Execution packet exceeds byte budget: {len(text.encode('utf-8'))}")
     return text
 
 
@@ -276,14 +336,13 @@ def validate(root: Path) -> dict:
     check_lock(root)
     projects = []
     for project, path in cfg["routes"].items():
-        meta, _ = document(root, path)
-        if meta.get("id") != project or meta.get("schema_version") != 1:
-            raise RouterError(f"Invalid route: {path}")
-        if not strings(meta, "modes", True):
-            raise RouterError(f"Empty modes: {path}")
-        if set(strings(meta, "required_capabilities")) - set(cfg["capabilities"]):
-            raise RouterError(f"Unknown route capability: {path}")
-        projects.append({"id": project, "documents": len(instruction_paths(root, project))})
+        meta = route_config(root, project)
+        modes = []
+        for mode in meta["modes"]:
+            result = plan(root, project, "", cfg["capabilities"], mode)
+            modes.append({"mode": mode, "documents": len(result["documents"]),
+                          "packet_bytes": len(packet(root, result).encode("utf-8"))})
+        projects.append({"id": project, "modes": modes})
     for file in root.rglob("*.md"):
         if any(p.startswith(".") or p in {"build", "__pycache__"} for p in file.relative_to(root).parts):
             continue
@@ -436,11 +495,21 @@ def feedback_body(receipt: dict, category: str, observation: str, expected: str,
 
 
 def evaluate(root: Path) -> dict:
-    suite = load_yaml(root, "evals/routing.yaml")
-    if suite.get("schema_version") != 1 or not isinstance(suite.get("cases"), list):
-        raise RouterError("Invalid routing suite")
+    cases, identifiers = [], set()
+    for path in sorted((root / "evals").glob("*routing.yaml")):
+        suite = load_yaml(root, path.relative_to(root).as_posix())
+        if suite.get("schema_version") != 1 or not isinstance(suite.get("cases"), list):
+            raise RouterError("Invalid routing suite")
+        for case in suite["cases"]:
+            case_id = case.get("id")
+            if not isinstance(case_id, str) or case_id in identifiers:
+                raise RouterError("Invalid or duplicate routing case ID")
+            identifiers.add(case_id)
+            cases.append(case)
+    if not cases:
+        raise RouterError("Missing routing cases")
     results = []
-    for case in suite["cases"]:
+    for case in cases:
         try:
             result = plan(root, case["project_id"], case["task"], case["capabilities"], case.get("mode"), case.get("generate_images", False))
             failures = [f"{k}: expected {v!r}, got {result.get(k)!r}" for k, v in case["expected"].items() if result.get(k) != v]

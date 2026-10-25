@@ -1,0 +1,4 @@
+interface:
+  display_name: "Scope Academic Research"
+  short_description: "Define falsifiable questions and study boundaries."
+  default_prompt: "Use $scope-academic-research on the current research materials and report evidence gaps."

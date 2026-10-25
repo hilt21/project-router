@@ -9,12 +9,14 @@
 | 验证 | CLI、工具回读和产物检查 | 分开记录静态、行为及真实平台证据 |
 | 迭代 | Issues、PR、release records | 从证据提出修改并支持回滚 |
 
-配置图包含 route 的 rules、workflow、skills 和文档 includes。CLI 检查断链、重复键、引用环、跨项目规则、skills 完整性和执行包大小。图外的研究材料不进入规则图。
+配置图包含 route 的公共 rules、workflow、skills、文档 includes，以及 schema 2 当前模式的依赖。CLI 校验每种模式，执行包仅载入选定模式；完整包大小含元数据和文件标识。图外的研究材料不进入规则图。
 
-四个自定义 skills 都注册为 `document`。读取 SKILL.md 不等于原生 skill 调用。外部成熟 skill 在验证许可证、来源 SHA、工具和宿主兼容性后，才可经 PR 引入。首版没有传递依赖安装器和模型 API。
+十一个自定义 skills 都注册为 `document`，其中七个服务科研阶段。读取 SKILL.md 不等于原生 skill 调用。外部成熟 skill 在验证许可证、来源 SHA、工具和宿主兼容性后，才可经 PR 引入。当前没有传递依赖安装器和模型 API。
 
 同一任务固定源 SHA。仓库 main 上的交付文档和稳定指针可以晚于源提交；执行时以指针里的源提交为准。发布记录不可改写，回滚通过切换指针产生新的 Git 提交。
 
 `plan` 和 `packet` 不发起网络请求。项目 ID、声明能力和可选显式模式由调用方提供。CLI 无法证明模型是否完整执行了 skill，也无法约束模型或宿主工具的权限。
 
 云端 Work 的插件 hooks 不能作为可靠的任务结束事件。反馈是工作流步骤，存在遗漏可能。入口读取、工具声明与回执都需要实际证据；缺少证据标记为未知。
+
+科研项目使用 research_id 隔离研究状态。Material Passport 索引主张证据与审查；审查绑定实际材料摘要。只读 `academic-check` 检查显式指定的本地记录、摘要和登记门槛，不执行实验、不联网、不修改研究文件。其通过结果不证明科学真实性，投稿检查最多输出 eligible-for-human-review。

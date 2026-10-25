@@ -1,0 +1,4 @@
+interface:
+  display_name: "Review Academic Manuscript"
+  short_description: "Review evidence and track revisions without claim drift."
+  default_prompt: "Use $review-academic-manuscript on the current research materials and report evidence gaps."

@@ -1,0 +1,15 @@
+{
+  "schema_version": 1,
+  "research_id": "my-study",
+  "coverage": {"semantic_extraction": "unknown", "unregistered_candidates": []},
+  "claims": [
+    {
+      "id": "c1",
+      "text": "EXAMPLE ONLY: replace with an exact claim from the current manuscript.",
+      "kind": "external-fact",
+      "critical": true,
+      "manuscript": {"artifact_id": "draft", "locator": "Introduction, paragraph 1"},
+      "evidence": [{"artifact_id": "source-a", "locator": "Replace with an actually read passage, page, figure or section"}]
+    }
+  ]
+}

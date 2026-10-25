@@ -1,0 +1,17 @@
+{
+  "schema_version": 1,
+  "project_id": "academic-research",
+  "research_id": "my-study",
+  "workflow_sha": "0000000000000000000000000000000000000000",
+  "stage": "literature",
+  "stage_status": "partial",
+  "artifacts": [
+    {"id": "draft", "path": "manuscript.md", "sha256": "0000000000000000000000000000000000000000000000000000000000000000"},
+    {"id": "source-a", "path": "sources/source-a.md", "sha256": "0000000000000000000000000000000000000000000000000000000000000000"},
+    {"id": "claims", "path": "claims.json", "sha256": "0000000000000000000000000000000000000000000000000000000000000000"}
+  ],
+  "claim_ledger": "claims",
+  "audit_ledger": {"path": "audits.json", "sha256": "0000000000000000000000000000000000000000000000000000000000000000"},
+  "pending_decisions": [],
+  "next_step": "Retrieve and read the original source passage for claim c1."
+}

@@ -1,0 +1,19 @@
+{
+  "schema_version": 1,
+  "research_id": "my-study",
+  "audits": [
+    {
+      "id": "a1",
+      "check": "claim-support",
+      "status": "not-run",
+      "kind": "self-report",
+      "claim_ids": ["c1"],
+      "input_bindings": {},
+      "evidence": [],
+      "reason": "EXAMPLE ONLY: the original source passage has not been checked.",
+      "blocking_findings": ["Core claim support remains unverified."],
+      "limitations": ["Bibliographic existence cannot establish claim support."],
+      "supersedes": []
+    }
+  ]
+}

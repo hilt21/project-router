@@ -1,0 +1,224 @@
+{
+  "schema_version": 1,
+  "date": "2026-10-25",
+  "timezone": "Asia/Shanghai",
+  "status": "passed",
+  "layer": "local-static-and-deterministic",
+  "source": {
+    "kind": "working-tree",
+    "base_sha": "606d6e54430e92491f47ddba2ae18ba89686834d"
+  },
+  "input_file_sha256": {
+    "project-router.yaml": "5ff2b231075b83030055b8ac4be6cd7e41cd6bcc8d6d01c3f60ba37333138783",
+    "registry/skills.lock.json": "b403b4c5e0ca0b75ec32c099bcb15fa0ce4042b180d8471f71da9024e04a2d3c",
+    "registry/skills.yaml": "245c680616f0770c7327581d59ac6c5e1e8d4bd95cbb6324cd9e2c9564ec74d5",
+    "router/__init__.py": "d82729cccb6c9a274164f5c508935f81654c004538a23e4dcf3e596610bbdca8",
+    "router/__main__.py": "935a1c1166b0c1ea35a82256345000bf2c73ded718d77773bc27a71ecce28f7d",
+    "router/academic.py": "5568611275296064a6ebacbba8fe93e7c832921753b53be7d7f6bb74f73a3400",
+    "router/cli.py": "b2e5adc8907b0c3c4ebdb665a9da2585ecc511c19203998fce22009ed3ef3890",
+    "router/core.py": "33c95e982d5ede3a28bd124e0baf90fcee6ebabc276936e28660f069b2dded7c",
+    "routes/academic-research.md": "ab9f504c3c6ea82df2f9bc9c6eac52045e8802373e21b3bdf278a54dda4605f9",
+    "routes/content-studio.md": "f96249d6e9a3d0abfa2441fba50edde2475bb021fdbae9caac068949f04b2810",
+    "routes/new-project.md": "0b93e14755af3bccf9c4fe82dd0b35fbf011c9f7c0d8b00a3caf1489de16bce4",
+    "rules/academic.md": "43414b2140e555c7cb6a668a90374c5c9875737ea41242aaf64aa979d93cbfb0",
+    "rules/content.md": "0c3b376c353625517c09d36648347f159f1b5ee923d519cbd44083c9a45c8c4d",
+    "rules/research.md": "ff0eb66ff6e8cd2780ccb89e93946953d4efc5cb4b22c6377fa85605b108db08",
+    "rules/shared.md": "f76513b26487448e186601e67d12f3a3ce2919a4045d345d96134dda9b6c743b",
+    "skills/audit-mathematical-rigor/SKILL.md": "0db0fd3ffcea8fc39b3faf738d9ed642b50c30b67e8eba53fa92f79ad3bb80ce",
+    "skills/audit-mathematical-rigor/agents/openai.yaml": "44d8b817ca8346bad41d7861ad3268af4904d75e6577645156bad09e47bbfb13",
+    "skills/audit-publication-readiness/SKILL.md": "b8abba8c20bc212b939bf64caaf251d72b32b750186230b6eb5dd8fbe04b3cf1",
+    "skills/audit-publication-readiness/agents/openai.yaml": "035072e037f4334a2b68b8039dcaa3d0f9c37c979878918d3994ed1f7e186a61",
+    "skills/build-literature-evidence/SKILL.md": "cfc7803b9beaf899e06480973075ca8421de12350656572744a57c7a647a11b4",
+    "skills/build-literature-evidence/agents/openai.yaml": "c0312b76a33f2d9650529d3f59bae95218870ac604e6b81a9647a308c8151f96",
+    "skills/capture-router-feedback/SKILL.md": "cf35584e2578f739a92d130a776f076bbe6c0c487dbd4bfcff6ddf08e07ab8e5",
+    "skills/capture-router-feedback/agents/openai.yaml": "35f370cfe8e4778f6b0d86f9b70adeb0e13dbe0824cecfd0e2f9e667b5524fb9",
+    "skills/craft-channel-content/SKILL.md": "ab43a528efd3404e1e3a8f6d61c7809e6690417b3b2cc7e4fb970d5261bd39cc",
+    "skills/craft-channel-content/agents/openai.yaml": "ad372c0c316fcea85fc1ee50f670b489e3b1ab8e336b2775217c439f273ebc31",
+    "skills/research-open-source/SKILL.md": "53c03600a0409966ff315ed2348767e57d11c471453f28bd7e6a46f1684b61ff",
+    "skills/research-open-source/agents/openai.yaml": "2b257212beff36175663cf3b41f929a33d7197a51f4c1a4d358263ccc93dcf27",
+    "skills/review-academic-manuscript/SKILL.md": "1b9f412ad0943af639d3f00310608659a6d45bb4b7edf68b0febec95f656f885",
+    "skills/review-academic-manuscript/agents/openai.yaml": "eafbf909db564fbf9cd90e107459518703b157bef413e3dd4a8e4fb7685ba292",
+    "skills/scope-academic-research/SKILL.md": "186f3d34984b1dfaa2fc73c78090192c8eab36e761ce5498014e5bac89352b40",
+    "skills/scope-academic-research/agents/openai.yaml": "87f8071debcfbc84487019311bbf096c1dcca7c6bc9330b5fe4baa517a11917a",
+    "skills/validate-research-experiments/SKILL.md": "5d0edcc0b1ea063d93f3bdb056f80386b0baf8294c5946b323ad5091221c1f64",
+    "skills/validate-research-experiments/agents/openai.yaml": "9b412cd1fe8eecfbe28d2aab5ed84f2f422df07612f328dbafec5b7d22d14f24",
+    "skills/verify-delivery/SKILL.md": "a3bffe103b5ca191731ee78fe463c86fd12a603c68423ebf5ff1603c358efcd1",
+    "skills/verify-delivery/agents/openai.yaml": "15cc858ba29ef6bc94f7c5fb44f071bf1c75d28a4568fab21c832f338e677597",
+    "skills/write-academic-manuscript/SKILL.md": "26a1f90538f0ea2a21433e42079587315e13bcc52b49e6076566caf38fc3129d",
+    "skills/write-academic-manuscript/agents/openai.yaml": "0f5681c6e27c50d5129f108b80dbeb34dd1f0418d0a4476f525faa11e3e0b0d3",
+    "tests/test_academic_records.py": "430af7662e60778b96ac18bf85b104ee62cd9b0379e11769e5347617740c8d59",
+    "tests/test_academic_routes.py": "a56e6c405398c57297d9b47af30b5a84b151ee0b9fa86403357fa8509fba535e",
+    "tests/test_modes.py": "8495a587845e7576b2a479b0397f38fd9f85ac4b984e384302e4dc656dc4b7a9",
+    "tests/test_router.py": "38f8fc574977966082d7ae931220f54f7e5c5488b8e8926576a7bd82563e3ff5",
+    "workflows/academic-state.md": "a187a127f42debea71f0514155b239d8842a4f232ae8ddc1cfcf91c21bdd3a5b",
+    "workflows/academic.md": "ab229a275eae609c167b9e4620298ee8c94ef8c687014ec814ca5cb26d2005f1",
+    "workflows/content.md": "8c5932e33e75231ea7515de0d08bc680550949caf6a80953e624be1e1a66530f",
+    "workflows/research.md": "22617e5e111195aa78f92c053d633c9b987e8cb1ac4f29ae08f1f10d78cda679",
+    "pyproject.toml": "d6528eaf5383eb0dbfc9da09d20fd6cb823149d8b64df94476ae48e9167e7fef"
+  },
+  "checks": [
+    {
+      "command": [
+        "python",
+        "-m",
+        "router",
+        "lock",
+        "--check"
+      ],
+      "exit_code": 0,
+      "status": "passed"
+    },
+    {
+      "command": [
+        "python",
+        "-m",
+        "router",
+        "validate"
+      ],
+      "exit_code": 0,
+      "status": "passed",
+      "projects": [
+        {
+          "id": "new-project",
+          "modes": [
+            {
+              "mode": "research",
+              "documents": 6,
+              "packet_bytes": 9529
+            }
+          ]
+        },
+        {
+          "id": "content-studio",
+          "modes": [
+            {
+              "mode": "wechat",
+              "documents": 6,
+              "packet_bytes": 10151
+            },
+            {
+              "mode": "linkedin",
+              "documents": 6,
+              "packet_bytes": 10153
+            },
+            {
+              "mode": "select-channel",
+              "documents": 6,
+              "packet_bytes": 10165
+            }
+          ]
+        },
+        {
+          "id": "academic-research",
+          "modes": [
+            {
+              "mode": "select-stage",
+              "documents": 6,
+              "packet_bytes": 17230
+            },
+            {
+              "mode": "scope",
+              "documents": 7,
+              "packet_bytes": 19087
+            },
+            {
+              "mode": "literature",
+              "documents": 7,
+              "packet_bytes": 19607
+            },
+            {
+              "mode": "math",
+              "documents": 7,
+              "packet_bytes": 19451
+            },
+            {
+              "mode": "experiment",
+              "documents": 7,
+              "packet_bytes": 19460
+            },
+            {
+              "mode": "write",
+              "documents": 7,
+              "packet_bytes": 19671
+            },
+            {
+              "mode": "review",
+              "documents": 7,
+              "packet_bytes": 19507
+            },
+            {
+              "mode": "submission",
+              "documents": 7,
+              "packet_bytes": 20171
+            },
+            {
+              "mode": "pipeline",
+              "documents": 6,
+              "packet_bytes": 17283
+            }
+          ]
+        }
+      ],
+      "skills": 11
+    },
+    {
+      "command": [
+        "python",
+        "-m",
+        "router",
+        "eval"
+      ],
+      "exit_code": 0,
+      "status": "passed",
+      "routing_cases": 38
+    },
+    {
+      "command": [
+        "python",
+        "-m",
+        "unittest",
+        "discover",
+        "-s",
+        "tests",
+        "-v"
+      ],
+      "exit_code": 0,
+      "status": "passed",
+      "tests": 72,
+      "result_tail": [
+        "Ran 72 tests in 6.214s",
+        "",
+        "OK"
+      ]
+    },
+    {
+      "command": [
+        "python",
+        "evals/probes/check_artifacts.py"
+      ],
+      "exit_code": 0,
+      "status": "passed"
+    },
+    {
+      "command": [
+        "python",
+        "-m",
+        "pip",
+        "install",
+        "-e",
+        ".",
+        "--no-build-isolation",
+        "--no-deps"
+      ],
+      "exit_code": 0,
+      "status": "passed",
+      "scope": "Editable package installed; console command verified via its actual user-bin path.",
+      "console_path": "/root/.local/bin/project-router"
+    }
+  ],
+  "forward_probes": "evals/probes/academic/manifest.json",
+  "work_fresh_chat": "not-run",
+  "work_compaction": "not-run",
+  "private_repository": "not-run",
+  "real_paper_effectiveness": "not-run"
+}

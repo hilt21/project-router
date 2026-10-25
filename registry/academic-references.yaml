@@ -1,0 +1,44 @@
+schema_version: 1
+reviewed_at: '2026-10-25'
+source:
+  repository: Imbad0202/academic-research-skills-codex
+  commit_sha: 8d6a1f856ee3da9d3a5e2b7f292b3dfe72b592c5
+  declared_version: 3.23.1
+  declared_license: CC-BY-NC-4.0
+  relationship: design-reference
+implementation:
+  source: local
+  license: MIT
+  method: independently-authored-instructions-and-code
+  imported_files: []
+  installed_plugins: []
+mechanisms:
+  - name: Research question scoping
+    source_path: skills/academic-research-suite/ars/deep-research/WORKFLOW.md
+    local_skill: scope-academic-research
+  - name: Literature evidence and citation verification
+    source_path: skills/academic-research-suite/ars/deep-research/agents/source_verification_agent.md
+    local_skill: build-literature-evidence
+  - name: Claim and material provenance
+    source_path: skills/academic-research-suite/ars/academic-pipeline/references/claim_verification_protocol.md
+    local_contract: workflows/academic-state.md
+  - name: Integrity checkpoints
+    source_path: skills/academic-research-suite/ars/academic-pipeline/references/integrity_review_protocol.md
+    local_skill: audit-publication-readiness
+  - name: Multiple review perspectives
+    source_path: skills/academic-research-suite/ars/academic-paper-reviewer/WORKFLOW.md
+    local_skill: review-academic-manuscript
+  - name: Evidence-bound writing
+    source_path: skills/academic-research-suite/ars/academic-paper/references/anti_leakage_protocol.md
+    local_skill: write-academic-manuscript
+  - name: Revision and rereview
+    source_path: skills/academic-research-suite/ars/academic-paper/WORKFLOW.md
+    local_skill: review-academic-manuscript
+  - name: Experiment validation
+    source_path: skills/academic-research-suite/ars/experiment-agent/WORKFLOW.md
+    local_skill: validate-research-experiments
+local_extensions:
+  - Mathematical assumptions, units, boundary cases, proofs, and counterexamples
+  - Search-bounded novelty and explicit literature coverage gaps
+  - Journal-specific requirements and conservative evidence-bound readiness
+  - Read-only artifact freshness checks and explicit audit supersession

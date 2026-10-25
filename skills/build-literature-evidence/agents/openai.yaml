@@ -1,0 +1,4 @@
+interface:
+  display_name: "Build Literature Evidence"
+  short_description: "Trace sources, claims, and bounded research novelty."
+  default_prompt: "Use $build-literature-evidence on the current research materials and report evidence gaps."

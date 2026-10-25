@@ -28,6 +28,12 @@ def main(argv=None):
         cmd.add_argument("--capability", action="append", default=[])
     cmd = commands.add_parser("receipt-check")
     cmd.add_argument("path", type=Path)
+    cmd = commands.add_parser("academic-check", help="Check local research records; does not certify scientific truth")
+    cmd.add_argument("passport", type=Path)
+    cmd.add_argument("--research-root", type=Path, required=True)
+    cmd.add_argument("--research-id", required=True)
+    cmd.add_argument("--snapshot-sha", required=True)
+    cmd.add_argument("--submission", action="store_true", help="Check recorded submission prerequisites for human review")
     cmd = commands.add_parser("feedback-draft")
     cmd.add_argument("--receipt", type=Path, required=True)
     cmd.add_argument("--category", required=True)
@@ -61,6 +67,10 @@ def main(argv=None):
             if args.command == "packet":
                 print(core.packet(root, result))
                 return 0 if result["status"] == "ready" else 2
+        elif args.command == "academic-check":
+            from .academic import check_records
+            result = check_records(args.passport, args.research_root, args.research_id,
+                                   args.snapshot_sha, args.submission)
         elif args.command in {"receipt-check", "feedback-draft"}:
             path = args.path if args.command == "receipt-check" else args.receipt
             data = json.loads(path.read_text(encoding="utf-8"))

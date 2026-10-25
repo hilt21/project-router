@@ -1,0 +1,4 @@
+interface:
+  display_name: "Audit Mathematical Rigor"
+  short_description: "Check assumptions, derivations, and counterexamples."
+  default_prompt: "Use $audit-mathematical-rigor on the current research materials and report evidence gaps."

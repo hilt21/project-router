@@ -32,11 +32,12 @@ class RouterTests(unittest.TestCase):
         return subprocess.check_output(["git", "-C", str(self.root), *args], text=True, stderr=subprocess.DEVNULL).strip()
 
     def test_repository_validates(self):
-        self.assertEqual(core.validate(self.root)["skills"], 4)
+        self.assertEqual(core.validate(self.root)["skills"], 11)
 
-    def test_twenty_route_cases(self):
+    def test_legacy_and_academic_route_cases(self):
         result = core.evaluate(self.root)
-        self.assertEqual(len(result["cases"]), 20)
+        self.assertEqual(len(core.load_yaml(self.root, "evals/routing.yaml")["cases"]), 20)
+        self.assertEqual(len(result["cases"]), 38)
         self.assertEqual(result["status"], "passed", result)
         self.assertEqual(result["behavioral_verification"], "not-run")
 
