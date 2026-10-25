@@ -17,7 +17,7 @@
 
 `channels/stable.json` 指向可复现的 MVP 预览版本。`stable` 表示固定的分发入口；当前成熟度为 `preview`，真实新建 Work 对话、上下文压缩恢复和私有仓库访问仍需按 [验收步骤](docs/WORK_ACCEPTANCE.md) 验证。详见 [QA 报告](docs/QA.md)。
 
-学术研究候选快照通过 `channels/preview.json` 分发，阶段与证据契约见 [科研使用说明](docs/ACADEMIC.md)。七个阶段分别处理问题、文献、数理、实验、写作、评审和投稿准备，按需加载。
+学术研究候选快照通过 `channels/preview.json` 分发，阶段与证据契约见 [科研使用说明](docs/ACADEMIC.md)。七个阶段分别处理问题、文献、数理、实验、写作、评审和投稿准备，按需加载。v0.2.0-rc.2 已完成真实 Work 新对话、缺材料和跨对话回执恢复的限定检查，观察及未测范围见 [真实 Work 科研验收](docs/qa/academic-work-ui.md)。
 
 ## 系统如何工作
 
