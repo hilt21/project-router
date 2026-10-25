@@ -37,8 +37,8 @@
       "path": "skills/craft-channel-content/SKILL.md",
       "activation": "document",
       "files": {
-        "skills/craft-channel-content/SKILL.md": "ab43a528efd3404e1e3a8f6d61c7809e6690417b3b2cc7e4fb970d5261bd39cc",
-        "skills/craft-channel-content/agents/openai.yaml": "ad372c0c316fcea85fc1ee50f670b489e3b1ab8e336b2775217c439f273ebc31"
+        "skills/craft-channel-content/SKILL.md": "da38537c9bebc4a1d98bc6573f466d9c989a5edbf9412e188c2b7805234106ad",
+        "skills/craft-channel-content/agents/openai.yaml": "2ade3cd9927d4c4679e226d6c3028050af3b6448ab55cfdefef0f2b0c4016900"
       }
     },
     "research-open-source": {

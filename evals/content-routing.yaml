@@ -1,0 +1,62 @@
+schema_version: 1
+cases:
+  - id: content-v2-host-selects-channel
+    project_id: content-studio
+    task: 微信公众号素材中提到LinkedIn
+    capabilities: [web-search]
+    expected: {mode: select-channel, status: needs-input}
+  - id: content-v2-quoted-other-platform
+    project_id: content-studio
+    mode: wechat
+    task: 只写公众号正文，原文提到LinkedIn
+    capabilities: [web-search]
+    expected: {mode: wechat, status: ready, intended_actions: []}
+  - id: content-v2-dual-no-question
+    project_id: content-studio
+    mode: dual
+    task: 共用事实底稿，分别写微信公众号和LinkedIn
+    capabilities: [web-search]
+    expected: {mode: dual, status: ready}
+  - id: content-v2-recommendation-resolved
+    project_id: content-studio
+    mode: linkedin
+    task: 受众是国际工程师，宿主已推荐LinkedIn
+    capabilities: [web-search]
+    expected: {mode: linkedin, status: ready}
+  - id: content-v2-topics-only
+    project_id: content-studio
+    mode: wechat
+    task: 提供三个公众号选题，先别写正文
+    capabilities: [web-search]
+    expected: {status: ready, intended_actions: []}
+  - id: content-v2-visuals-only
+    project_id: content-studio
+    mode: wechat
+    task: 为DHH主题规划两张图片，先别生图
+    capabilities: [web-search]
+    expected: {status: ready, intended_actions: [], missing_capabilities: []}
+  - id: content-v2-direct-generation
+    project_id: content-studio
+    mode: wechat
+    task: 按已选方案直接生图
+    generate_images: true
+    capabilities: [web-search, image-generation]
+    expected: {status: ready, intended_actions: [generate-images], mutations_authorized: false}
+  - id: content-v2-history-no-current-generation
+    project_id: content-studio
+    mode: wechat
+    task: 回放曾经生成过图片的历史任务，本轮只要视觉方案
+    capabilities: [web-search]
+    expected: {status: ready, intended_actions: []}
+  - id: content-v2-source-check-blocked
+    project_id: content-studio
+    mode: wechat
+    task: 核实DHH来华目的
+    capabilities: []
+    expected: {status: blocked, missing_capabilities: [web-search]}
+  - id: content-v2-invalid-stage-as-mode
+    project_id: content-studio
+    mode: generate
+    task: 直接生图
+    capabilities: [web-search, image-generation]
+    expected_error: Unsupported mode

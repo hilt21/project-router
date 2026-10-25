@@ -1,6 +1,6 @@
 # 评测分层
 
-`routing.yaml` 保留原有二十个案例，`academic-routing.yaml` 增加十八个科研案例，验证确定性项目路由、显式模式、能力缺失和错误处理。`python -m router eval` 读取所有 `*routing.yaml`，不调用模型，不证明文案质量或 skill 实际执行。
+`routing.yaml` 保留二十个基准案例，内容调用随 schema 2 迁移为显式平台选择；`academic-routing.yaml` 有十八个科研案例，`content-routing.yaml` 增加十个内容案例。它们验证确定性项目路由、显式模式、能力缺失和错误处理。`python -m router eval` 读取所有 `*routing.yaml`，不调用模型，不证明文案质量或 skill 实际执行。
 
 单元故障测试覆盖断链、循环、路径越界、跨项目引用、锁文件漂移、证据误报和版本回滚。
 
