@@ -30,4 +30,5 @@ jobs:
       - run: python -m router validate
       - run: python -m router eval
       - run: python evals/probes/check_artifacts.py
+      - run: python evals/run_academic_lifecycle.py
       - run: python -m unittest discover -s tests -v

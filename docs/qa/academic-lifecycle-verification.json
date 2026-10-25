@@ -1,0 +1,107 @@
+{
+  "schema_version": 1,
+  "date": "2026-10-25",
+  "timezone": "Asia/Shanghai",
+  "status": "passed",
+  "layer": "local-regression-and-cli-lifecycle",
+  "baseline": {
+    "source_sha": "7f5358d9824612c70ff35aa985d5d67fd48bd676",
+    "new_regression_cases": 2,
+    "observed_errors": 2,
+    "error": "Audit omits required input bindings"
+  },
+  "source": {
+    "kind": "working-tree",
+    "base_sha": "7f5358d9824612c70ff35aa985d5d67fd48bd676"
+  },
+  "input_file_sha256": {
+    "router/academic.py": "79e50fdf5aabb2e6c5f34265d48db6b206ea5b770ac217756b020a89c97d316a",
+    "tests/test_academic_records.py": "f795c9fceb0d161e2d503a049d4baf852777fd93d2a8843bcd0052ed31dd946a",
+    "evals/run_academic_lifecycle.py": "bf2c2e9e9d03af6b89c2f21a28bcafbf40fe438a92d871aae46be69317ffc828",
+    "workflows/academic-state.md": "e10ee5b003fd4fa8910e5d28b05eaef768c32769c9165f5afc3faf4313164ad5",
+    ".github/workflows/validate.yml": "1a399dce76dd638abc1a0a61e2022abedf713b12f90c911231dbb958517ac426",
+    "pyproject.toml": "9527d7aa3ebd61ed1bb3d124adb31ddf33ca2fe1c359b9a88cc82e60c8c093be"
+  },
+  "checks": [
+    {
+      "command": [
+        "python",
+        "-m",
+        "router",
+        "lock",
+        "--check"
+      ],
+      "exit_code": 0,
+      "status": "passed"
+    },
+    {
+      "command": [
+        "python",
+        "-m",
+        "router",
+        "validate"
+      ],
+      "exit_code": 0,
+      "status": "passed"
+    },
+    {
+      "command": [
+        "python",
+        "-m",
+        "router",
+        "eval"
+      ],
+      "exit_code": 0,
+      "status": "passed",
+      "routing_cases": 38
+    },
+    {
+      "command": [
+        "python",
+        "-m",
+        "unittest",
+        "discover",
+        "-s",
+        "tests",
+        "-v"
+      ],
+      "exit_code": 0,
+      "status": "passed",
+      "tests": 74
+    },
+    {
+      "command": [
+        "python",
+        "evals/probes/check_artifacts.py"
+      ],
+      "exit_code": 0,
+      "status": "passed"
+    },
+    {
+      "command": [
+        "python",
+        "evals/run_academic_lifecycle.py",
+        "--output",
+        "docs/qa/academic-lifecycle-trace.json"
+      ],
+      "exit_code": 0,
+      "status": "passed",
+      "lifecycle_cases": 12
+    }
+  ],
+  "trace_sha256": "bbb71307b374f637884602a19bfa66f1ac1d32a2ff0b9cada9802106cf8fccbd",
+  "work_ui": {
+    "status": "blocked-authentication",
+    "observed_url": "https://chatgpt.com/",
+    "visible_controls": [
+      "登录",
+      "免费注册"
+    ],
+    "new_project_created": false,
+    "new_conversation_created": false
+  },
+  "real_work_compaction": "not-run",
+  "private_repository": "not-run",
+  "real_paper_effectiveness": "not-run",
+  "human_domain_review": "not-run"
+}

@@ -1,0 +1,197 @@
+{
+  "schema_version": 1,
+  "status": "passed",
+  "layer": "synthetic-local-cli-lifecycle",
+  "workflow_sha": "cbc30f719c1815d191108229a09a9f87fe2b05d2",
+  "cases": [
+    {
+      "case": "initial-math-finding-blocks",
+      "exit_code": 2,
+      "status": "blocked",
+      "submission_status": "blocked",
+      "stage": "math",
+      "workflow_sha": "cbc30f719c1815d191108229a09a9f87fe2b05d2",
+      "blockers": [
+        "unresolved-audit:mathematical-rigor-initial",
+        "missing-current-pass:mathematical-rigor:c1"
+      ],
+      "error": null,
+      "read_only": true
+    },
+    {
+      "case": "edited-proof-stales-prior-review",
+      "exit_code": 2,
+      "status": "blocked",
+      "submission_status": "blocked",
+      "stage": "math",
+      "workflow_sha": "cbc30f719c1815d191108229a09a9f87fe2b05d2",
+      "blockers": [
+        "audit-stale:coverage-initial",
+        "audit-stale:reference-existence-initial",
+        "audit-stale:claim-support-initial",
+        "audit-stale:mathematical-rigor-initial",
+        "audit-stale:experiment-validity-initial",
+        "audit-stale:novelty-scope-initial",
+        "audit-stale:originality-initial",
+        "audit-stale:journal-compliance-initial",
+        "audit-stale:review-resolution-initial",
+        "unresolved-audit:mathematical-rigor-initial",
+        "missing-not-applicable-record:claim-support",
+        "missing-current-pass:coverage:c1",
+        "missing-not-applicable-record:experiment-validity",
+        "missing-current-pass:journal-compliance:c1",
+        "missing-current-pass:mathematical-rigor:c1",
+        "missing-not-applicable-record:novelty-scope",
+        "missing-current-pass:originality:c1",
+        "missing-not-applicable-record:reference-existence",
+        "missing-current-pass:review-resolution:c1"
+      ],
+      "error": null,
+      "read_only": true
+    },
+    {
+      "case": "corrected-current-records",
+      "exit_code": 0,
+      "status": "passed",
+      "submission_status": "eligible-for-human-review",
+      "stage": "math",
+      "workflow_sha": "cbc30f719c1815d191108229a09a9f87fe2b05d2",
+      "blockers": [],
+      "error": null,
+      "read_only": true
+    },
+    {
+      "case": "new-evidence-preserves-stale-history",
+      "exit_code": 2,
+      "status": "blocked",
+      "submission_status": "blocked",
+      "stage": "experiment",
+      "workflow_sha": "cbc30f719c1815d191108229a09a9f87fe2b05d2",
+      "blockers": [
+        "audit-stale:coverage-corrected",
+        "audit-stale:reference-existence-corrected",
+        "audit-stale:claim-support-corrected",
+        "audit-stale:mathematical-rigor-corrected",
+        "audit-stale:experiment-validity-corrected",
+        "audit-stale:novelty-scope-corrected",
+        "audit-stale:originality-corrected",
+        "audit-stale:journal-compliance-corrected",
+        "audit-stale:review-resolution-corrected",
+        "missing-not-applicable-record:claim-support",
+        "missing-current-pass:coverage:c1",
+        "missing-current-pass:coverage:c2",
+        "missing-current-pass:experiment-validity:c2",
+        "missing-current-pass:journal-compliance:c1",
+        "missing-current-pass:journal-compliance:c2",
+        "missing-current-pass:mathematical-rigor:c1",
+        "missing-not-applicable-record:novelty-scope",
+        "missing-current-pass:originality:c1",
+        "missing-current-pass:originality:c2",
+        "missing-not-applicable-record:reference-existence",
+        "missing-current-pass:review-resolution:c1",
+        "missing-current-pass:review-resolution:c2"
+      ],
+      "error": null,
+      "read_only": true
+    },
+    {
+      "case": "new-evidence-rereview-closes",
+      "exit_code": 0,
+      "status": "passed",
+      "submission_status": "eligible-for-human-review",
+      "stage": "review",
+      "workflow_sha": "cbc30f719c1815d191108229a09a9f87fe2b05d2",
+      "blockers": [],
+      "error": null,
+      "read_only": true
+    },
+    {
+      "case": "fresh-process-resume",
+      "exit_code": 0,
+      "status": "passed",
+      "submission_status": "eligible-for-human-review",
+      "stage": "review",
+      "workflow_sha": "cbc30f719c1815d191108229a09a9f87fe2b05d2",
+      "blockers": [],
+      "error": null,
+      "read_only": true
+    },
+    {
+      "case": "wrong-research-context-rejected",
+      "exit_code": 1,
+      "status": "error",
+      "submission_status": null,
+      "stage": null,
+      "workflow_sha": null,
+      "blockers": [],
+      "error": "Research ID mismatch: passport",
+      "read_only": true
+    },
+    {
+      "case": "foreign-ledger-rejected",
+      "exit_code": 1,
+      "status": "error",
+      "submission_status": null,
+      "stage": null,
+      "workflow_sha": null,
+      "blockers": [],
+      "error": "Research ID mismatch: audit ledger",
+      "read_only": true
+    },
+    {
+      "case": "resume-keeps-original-snapshot",
+      "exit_code": 0,
+      "status": "passed",
+      "submission_status": "eligible-for-human-review",
+      "stage": "review",
+      "workflow_sha": "cbc30f719c1815d191108229a09a9f87fe2b05d2",
+      "blockers": [],
+      "error": null,
+      "read_only": true
+    },
+    {
+      "case": "silent-snapshot-switch-blocked",
+      "exit_code": 2,
+      "status": "blocked",
+      "submission_status": "blocked",
+      "stage": "review",
+      "workflow_sha": "cbc30f719c1815d191108229a09a9f87fe2b05d2",
+      "blockers": [
+        "workflow-snapshot-mismatch"
+      ],
+      "error": null,
+      "read_only": true
+    },
+    {
+      "case": "pending-author-decision-blocks",
+      "exit_code": 2,
+      "status": "blocked",
+      "submission_status": "blocked",
+      "stage": "review",
+      "workflow_sha": "cbc30f719c1815d191108229a09a9f87fe2b05d2",
+      "blockers": [
+        "pending-research-decisions"
+      ],
+      "error": null,
+      "read_only": true
+    },
+    {
+      "case": "final-records-remain-noncertifying",
+      "exit_code": 0,
+      "status": "passed",
+      "submission_status": "eligible-for-human-review",
+      "stage": "submission",
+      "workflow_sha": "cbc30f719c1815d191108229a09a9f87fe2b05d2",
+      "blockers": [],
+      "error": null,
+      "read_only": true
+    }
+  ],
+  "case_count": 12,
+  "execution": "fresh-python-process-per-check",
+  "scientific_truth": "not-verified",
+  "real_work_new_chat": "not-run",
+  "real_work_compaction": "not-run",
+  "private_repository": "not-run",
+  "real_paper_effectiveness": "not-run"
+}

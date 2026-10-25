@@ -2,6 +2,8 @@
 
 科研扩展候选版的独立范围、证据和待验证项见 [academic-v0.2.0.md](qa/academic-v0.2.0.md)。下文保留 v0.1.0 的验收记录。
 
+后续生命周期验收复现了新增证据后的历史审查缺陷，修复与十二个本地 CLI 场景见 [academic-lifecycle.md](qa/academic-lifecycle.md)。
+
 日期：2026-10-24（北京时间）。版本：v0.1.0 预览。
 
 | 层 | 结果 | 证据与范围 |
