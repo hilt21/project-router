@@ -55,10 +55,12 @@
 - 当前维护会话用固定远程 SHA 完整回读 14 个文件，正文、Git blob SHA 与已测试文件一致，详见 [回读记录](content-readback.json)。这不计为新建内容项目对话测试。
 - `python evals/check_content_replay.py` 校验保存产物的摘要、执行包身份、正文长度和画幅，不判定事实真假、视觉质量或传播效果。
 
+发布文件提交后的 [首次 CI](https://github.com/hilt21/project-router/actions/runs/40201491995) 在回滚单测中失败：测试临时清空 releases，报告中的单版本相对链接随之断开。修复只将该引用改为路径标识，保留原回滚测试和完整断链检查。归档完整执行包时同样保留为 `.txt` 快照，避免将历史文档内部的相对链接重新解释为归档目录中的链接。内容、执行规则和不可变发布源均未因此改写。
+
 ## 未验证范围与启用
 
 真实新建 Work 内容项目对话、上下文压缩恢复、图片生成及成图手机预览、外部发布、真实传播数据均未由本轮验证。直接生图无需额外确认的规则已加入，但未用实际生图调用验证该分支。
 
-变更通过 PR 提供审阅，[v0.1.1 发布记录](../../releases/v0.1.1.json)与 stable 指针在同一 PR 内准备，源提交固定为 `c8908d102f7c499643e525fab069e73b106497ac`。分发清单只保留原 stable 的 new-project 与 content-studio；学术研究 preview 仍为 v0.2.0-rc.2、源 SHA `5010dce4d4b2edc1b18398a5f868cb8cf5a10cfc`。这次发布不会将科研候选入口推广到 stable。
+变更通过 PR 提供审阅，v0.1.1 发布记录（`releases/v0.1.1.json`）与 stable 指针在同一 PR 内准备，源提交固定为 `c8908d102f7c499643e525fab069e73b106497ac`。分发清单只保留原 stable 的 new-project 与 content-studio；学术研究 preview 仍为 v0.2.0-rc.2、源 SHA `5010dce4d4b2edc1b18398a5f868cb8cf5a10cfc`。这次发布不会将科研候选入口推广到 stable。
 
 依据 [发布规则](../RELEASING.md)，候选 PR 不自动合并。合并后新任务读取新版本；进行中任务仍保留原 SHA。当前内容项目可在批准后将长指令替换为 [短入口正文](../../bootstrap/content-studio.md)，随后只需维护仓库并发布版本。
