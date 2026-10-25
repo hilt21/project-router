@@ -24,3 +24,45 @@ skills:
     activation: document
     license: MIT
     required_capabilities: []
+  scope-academic-research:
+    path: skills/scope-academic-research/SKILL.md
+    source: local
+    activation: document
+    license: MIT
+    required_capabilities: []
+  build-literature-evidence:
+    path: skills/build-literature-evidence/SKILL.md
+    source: local
+    activation: document
+    license: MIT
+    required_capabilities: [web-search]
+  audit-mathematical-rigor:
+    path: skills/audit-mathematical-rigor/SKILL.md
+    source: local
+    activation: document
+    license: MIT
+    required_capabilities: []
+  validate-research-experiments:
+    path: skills/validate-research-experiments/SKILL.md
+    source: local
+    activation: document
+    license: MIT
+    required_capabilities: []
+  write-academic-manuscript:
+    path: skills/write-academic-manuscript/SKILL.md
+    source: local
+    activation: document
+    license: MIT
+    required_capabilities: []
+  review-academic-manuscript:
+    path: skills/review-academic-manuscript/SKILL.md
+    source: local
+    activation: document
+    license: MIT
+    required_capabilities: []
+  audit-publication-readiness:
+    path: skills/audit-publication-readiness/SKILL.md
+    source: local
+    activation: document
+    license: MIT
+    required_capabilities: []

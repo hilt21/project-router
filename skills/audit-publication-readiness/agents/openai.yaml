@@ -1,0 +1,4 @@
+interface:
+  display_name: "Audit Publication Readiness"
+  short_description: "Check submission evidence and unresolved blockers."
+  default_prompt: "Use $audit-publication-readiness on the current research materials and report evidence gaps."

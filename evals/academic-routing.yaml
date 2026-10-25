@@ -1,0 +1,114 @@
+schema_version: 1
+cases:
+  - id: academic-scope
+    project_id: academic-research
+    task: 收敛研究问题
+    mode: scope
+    capabilities: [github-read]
+    expected: {mode: scope, status: ready, missing_optional_capabilities: [web-search]}
+  - id: academic-math-without-compute
+    project_id: academic-research
+    task: 检查推导，不运行代码
+    mode: math
+    capabilities: [github-read]
+    expected: {mode: math, status: ready, missing_optional_capabilities: [artifact-read, code-execution]}
+  - id: academic-math-with-tools
+    project_id: academic-research
+    task: 复算推导
+    mode: math
+    capabilities: [github-read, artifact-read, code-execution]
+    expected: {status: ready, missing_optional_capabilities: []}
+  - id: academic-literature-no-search
+    project_id: academic-research
+    task: 查原始论文
+    mode: literature
+    capabilities: [github-read]
+    expected: {status: blocked, missing_capabilities: [web-search]}
+  - id: academic-literature-ready
+    project_id: academic-research
+    task: 检查文献和创新范围
+    mode: literature
+    capabilities: [github-read, web-search]
+    expected: {mode: literature, status: ready}
+  - id: academic-submission-no-search
+    project_id: academic-research
+    task: 核实最新期刊要求
+    mode: submission
+    capabilities: [github-read]
+    expected: {status: blocked, missing_capabilities: [web-search]}
+  - id: academic-submission-packet-only
+    project_id: academic-research
+    task: 检查投稿前置条件
+    mode: submission
+    capabilities: [github-read, web-search]
+    expected: {status: ready, behavioral_verification: not-run, mutations_authorized: false}
+  - id: academic-default-intake
+    project_id: academic-research
+    task: 帮我处理这些材料
+    capabilities: [github-read]
+    expected: {mode: select-stage, status: needs-input}
+  - id: academic-explicit-stage-keeps-intent
+    project_id: academic-research
+    task: 把这段数学分析用于LinkedIn，当前先检查公式
+    mode: math
+    capabilities: [github-read]
+    expected: {mode: math, status: ready}
+  - id: academic-experiment-plan
+    project_id: academic-research
+    task: 先设计消融实验
+    mode: experiment
+    capabilities: [github-read]
+    expected: {mode: experiment, status: ready, intended_actions: []}
+  - id: academic-write-existing-materials
+    project_id: academic-research
+    task: 只整理现有结果，不补造数据
+    mode: write
+    capabilities: [github-read]
+    expected: {mode: write, status: ready}
+  - id: academic-review
+    project_id: academic-research
+    task: 按已提供意见修订
+    mode: review
+    capabilities: [github-read]
+    expected: {mode: review, status: ready}
+  - id: academic-pipeline-intake
+    project_id: academic-research
+    task: 按完整研究流程推进
+    mode: pipeline
+    capabilities: [github-read]
+    expected:
+      mode: pipeline
+      status: ready
+      skills: [{id: verify-delivery, activation: document}]
+  - id: academic-no-github
+    project_id: academic-research
+    task: 检查证明
+    mode: math
+    capabilities: [code-execution]
+    expected: {status: blocked, missing_capabilities: [github-read]}
+  - id: academic-invalid-mode
+    project_id: academic-research
+    task: 写论文
+    mode: linkedin
+    capabilities: [github-read]
+    expected_error: Unsupported mode
+  - id: academic-packet-does-not-authorize-submission
+    project_id: academic-research
+    task: 投稿并公开所有数据
+    mode: submission
+    capabilities: [github-read, web-search, github-write]
+    expected: {mutations_authorized: false, intended_actions: []}
+  - id: academic-loader-missing-before-intake
+    project_id: academic-research
+    task: 从哪里开始
+    capabilities: []
+    expected: {mode: select-stage, status: blocked}
+  - id: academic-document-skill-not-native
+    project_id: academic-research
+    task: 检查数学推导
+    mode: math
+    capabilities: [github-read]
+    expected:
+      skills:
+        - {id: verify-delivery, activation: document}
+        - {id: audit-mathematical-rigor, activation: document}

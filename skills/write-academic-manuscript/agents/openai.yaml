@@ -1,0 +1,4 @@
+interface:
+  display_name: "Write Academic Manuscript"
+  short_description: "Write and format manuscripts from traceable evidence."
+  default_prompt: "Use $write-academic-manuscript on the current research materials and report evidence gaps."

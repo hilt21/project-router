@@ -1,0 +1,4 @@
+interface:
+  display_name: "Validate Research Experiments"
+  short_description: "Check study design, results, and reproducibility."
+  default_prompt: "Use $validate-research-experiments on the current research materials and report evidence gaps."

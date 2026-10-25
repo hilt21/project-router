@@ -2,7 +2,7 @@
 
 ## 任务与版本
 
-新任务先读取 main 的 `channels/stable.json`。核对 repository、schema_version、version 和完整 40 位 commit_sha。再按 commit_sha 读取配置和对应路由。后续文件全部固定到该 SHA，禁止混用 main。
+新任务先读取 main 的 `channels/<channel>.json`。频道来自本项目入口，未指定时为 stable，不静默切换。核对 repository、schema_version、version 和完整 40 位 commit_sha。再按 commit_sha 读取配置和对应路由。后续文件全部固定到该 SHA，禁止混用 main。
 
 main 的 release record 与稳定指针必须一致。源提交可以早于 release record。继续同一任务时使用原 SHA；明确新任务或用户要求升级时重新解析指针。上下文压缩后用回执恢复版本和完成状态，必要时重读源文件。
 

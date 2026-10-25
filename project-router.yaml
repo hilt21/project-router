@@ -7,8 +7,11 @@ lockfile: registry/skills.lock.json
 routes:
   new-project: routes/new-project.md
   content-studio: routes/content-studio.md
+  academic-research: routes/academic-research.md
 capabilities:
   - github-read
   - web-search
   - image-generation
   - github-write
+  - artifact-read
+  - code-execution

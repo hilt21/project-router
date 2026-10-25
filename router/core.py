@@ -495,11 +495,21 @@ def feedback_body(receipt: dict, category: str, observation: str, expected: str,
 
 
 def evaluate(root: Path) -> dict:
-    suite = load_yaml(root, "evals/routing.yaml")
-    if suite.get("schema_version") != 1 or not isinstance(suite.get("cases"), list):
-        raise RouterError("Invalid routing suite")
+    cases, identifiers = [], set()
+    for path in sorted((root / "evals").glob("*routing.yaml")):
+        suite = load_yaml(root, path.relative_to(root).as_posix())
+        if suite.get("schema_version") != 1 or not isinstance(suite.get("cases"), list):
+            raise RouterError("Invalid routing suite")
+        for case in suite["cases"]:
+            case_id = case.get("id")
+            if not isinstance(case_id, str) or case_id in identifiers:
+                raise RouterError("Invalid or duplicate routing case ID")
+            identifiers.add(case_id)
+            cases.append(case)
+    if not cases:
+        raise RouterError("Missing routing cases")
     results = []
-    for case in suite["cases"]:
+    for case in cases:
         try:
             result = plan(root, case["project_id"], case["task"], case["capabilities"], case.get("mode"), case.get("generate_images", False))
             failures = [f"{k}: expected {v!r}, got {result.get(k)!r}" for k, v in case["expected"].items() if result.get(k) != v]
