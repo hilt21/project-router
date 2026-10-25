@@ -1,0 +1,340 @@
+{
+  "title": "七年没来中国，他说像穿越了40年",
+  "wechat_body": "酒店派来一辆燃油奔驰，他竟觉得像回到了过去。\n\n这是 Ruby on Rails 创建者 DHH 七年后重访中国的一幕。\n\n在深圳、杭州、北京，他接连坐进中国品牌的电动 SUV，也参观了小米高度自动化的汽车工厂。他形容这次重访的变化感，仿佛已经隔了40年。\n\n我最在意的是奔驰这个细节：当新的产品体验成为日常，曾经的豪华，也得重新证明自己。\n\n他也承认，一周旅行会自带滤镜。这份见闻仍值得追问：我们评价一个行业的标尺，多久没更新了？",
+  "byline": {
+    "source_label": "原文：DHH《Seven years from China》，2026年10月24日",
+    "source_url": "https://world.hey.com/dhh/seven-years-from-china-a63b03cc",
+    "placement": "正文后独立列出，不计入正文篇幅。"
+  },
+  "content_strategy": {
+    "audience": "关注科技产品、工程实践与产业变化的中文读者",
+    "primary_angle": "用燃油奔驰带来的体验落差，让读者感知产品进步如何重塑判断豪华的标尺。",
+    "hook": "酒店派来一辆燃油奔驰，他竟觉得像回到了过去。",
+    "hook_payoff": "正文交代作者此前连续体验中国电动 SUV，图2展开两种体验的对照。",
+    "core_judgment": "新的产品体验成为日常后，曾经的豪华也需要重新证明自身价值。",
+    "judgment_type": "本文判断，基于作者的访问见闻，不是独立行业测量。"
+  },
+  "visuals": [
+    {
+      "image_number": 1,
+      "role": "封面",
+      "information_job": "以七年与40年的感受反差吸引停留，并用原文摘句说明这是作者的比喻。",
+      "format": {
+        "aspect_ratio": "3:4",
+        "suggested_canvas_px": [
+          1080,
+          1440
+        ],
+        "medium": "文字为主的编辑式封面，底部配置清楚标注的原文引文卡。",
+        "status": "planned-only"
+      },
+      "composition": {
+        "grid": "12列；左右安全边距72px；所有文字左对齐。",
+        "top": "y=90～160px，放置作者身份眉题。",
+        "headline": "y=210～740px，三行排列；第三行的40为唯一超大视觉焦点。",
+        "evidence_card": "x=72px、y=880px、宽936px、高260px，使用浅蓝灰底色，内边距40px。",
+        "footer": "y=1200～1340px，先放比喻说明，再放来源署名；来源文字可分两行。",
+        "subject": "数字7与40、中文标题、英文原文摘句。画面不依赖人物肖像或城市照片。"
+      },
+      "hierarchy": [
+        "第一眼读到40年，再读完整标题。",
+        "第二眼识别DHH及其技术背景。",
+        "第三眼读到原文摘句和比喻说明。"
+      ],
+      "palette": {
+        "background": "#F5F2E9",
+        "primary_text": "#171A1E",
+        "highlight": "#D95335",
+        "evidence_card": "#E5ECF0",
+        "secondary_text": "#3D5666",
+        "usage": "橙红只用于40；其余文字保持深色与浅底的高对比。"
+      },
+      "typography": {
+        "chinese": "思源黑体或Noto Sans CJK SC",
+        "latin": "Inter或Noto Sans",
+        "eyebrow_px": 34,
+        "headline_px": 84,
+        "numeral_40_px": 188,
+        "unit_year_px": 84,
+        "quote_px": 42,
+        "boundary_px": 36,
+        "source_px": 32,
+        "weights": "主标题700～900；证据摘句500；来源400。",
+        "line_height": "标题1.1；引文和说明1.3；不使用细字。"
+      },
+      "exact_text": {
+        "eyebrow": "DHH · Ruby on Rails 创建者",
+        "headline_lines": [
+          "七年没来中国",
+          "他说像穿越了",
+          "40年"
+        ],
+        "evidence_label": "英文原文摘句",
+        "evidence_quote": "It might as well have been forty years.",
+        "boundary": "40年，是他形容变化之大的比喻。",
+        "source": "DHH · Seven years from China\n2026.10.24"
+      },
+      "image_text_relationship": "封面兑现已选题目；具体原因由正文和图2解释。原文引文卡是排版引文，不伪装成网页截图。",
+      "platform_adaptation": [
+        "以360px宽预览，检查主标题与比喻说明能否直接阅读。",
+        "另检查居中1:1裁切；完整标题尽量置于中心区域，来源在完整竖图内保留。",
+        "主标题与边界说明均使用真实文字排版；未来若使用生图，中文和英文引文在后期单独排版并逐字校验。"
+      ],
+      "asset_plan": "当前不需外部照片。需要真实截图时，应从原网页截取并标明裁切位置，不绘制仿真浏览器界面。",
+      "constraints": [
+        "不把7年与40年画成等式、增长倍数或数据图。",
+        "不添加中国领先世界40年等扩大原意的结论。",
+        "不使用虚构的旧中国与新中国对比照片。",
+        "本轮只交视觉方案，不生成图片。"
+      ],
+      "supporting_claim_ids": [
+        "C1"
+      ]
+    },
+    {
+      "image_number": 2,
+      "role": "解释图",
+      "information_job": "通过中国电动 SUV 与燃油奔驰的体验对照，解释Hook，并把作者见闻与本文判断分开。",
+      "format": {
+        "aspect_ratio": "3:4",
+        "suggested_canvas_px": [
+          1080,
+          1440
+        ],
+        "medium": "上下堆叠的两张观察卡，加一张本文判断卡；使用精确文字排版。",
+        "status": "planned-only"
+      },
+      "composition": {
+        "grid": "左右安全边距72px；卡片宽936px；卡片内边距40px。",
+        "heading": "y=76～242px，标题分两行，行宽控制在14个汉字左右。",
+        "observation_card_1": "y=285～535px，左上角标观察01；保留清楚的卡片标题和一行体验描述。",
+        "observation_card_2": "y=575～825px，左上角标观察02；与第一张保持同一尺寸和字重，避免暗示量化比较。",
+        "reading_link": "两张观察卡之间使用短线和对照二字，引导阅读，不画性能优劣坐标。",
+        "interpretation_card": "y=880～1125px，使用浅橙底，眉题标明本文判断，与两张观察卡区分。",
+        "footer": "y=1170～1350px，边界说明在前，来源署名在后。",
+        "subject": "两种乘车体验的文字对照，不安排未经核验的车型照片或车标。"
+      },
+      "hierarchy": [
+        "先读提问式标题，承接正文Hook。",
+        "再读两张作者观察卡，理解体验反差。",
+        "最后读本文判断与一周旅行的边界。"
+      ],
+      "palette": {
+        "background": "#F5F2E9",
+        "primary_text": "#171A1E",
+        "observation_cards": "#E5ECF0",
+        "interpretation_card": "#FBE4D9",
+        "small_labels": "#3D5666",
+        "highlight": "#D95335",
+        "usage": "观察卡用同色；本文判断用浅橙色，避免将创作者推断混入来源事实。"
+      },
+      "typography": {
+        "chinese": "思源黑体或Noto Sans CJK SC",
+        "latin": "Inter或Noto Sans",
+        "title_px": 62,
+        "card_label_px": 34,
+        "card_heading_px": 44,
+        "card_body_px": 40,
+        "judgment_px": 48,
+        "boundary_px": 36,
+        "source_px": 32,
+        "line_height": "标题1.15；卡片正文1.35；每行尽量不超过18个汉字。",
+        "weights": "标题和结论700；事实描述500；来源400。"
+      },
+      "exact_text": {
+        "title_lines": [
+          "一辆奔驰，为什么",
+          "让他想起过去？"
+        ],
+        "observation_1_label": "作者观察 01",
+        "observation_1_heading": "接连乘坐中国品牌电动 SUV",
+        "observation_1_body": "他写到：车厢安静，座椅可后仰。",
+        "observation_2_label": "作者观察 02",
+        "observation_2_heading": "酒店派来的燃油奔驰",
+        "observation_2_body": "他的感受：像回到了过去。",
+        "interpretation_label": "本文判断",
+        "interpretation_lines": [
+          "体验更新了，",
+          "评价豪华的标尺也会更新。"
+        ],
+        "boundary": "作者也提醒：一周旅行可能自带滤镜。",
+        "source": "来源：DHH · Seven years from China\n2026.10.24"
+      },
+      "image_text_relationship": "图2只解释奔驰这一条最有记忆点的线索，不重复罗列所有城市和工厂；补充的启发明确标注为本文判断。",
+      "platform_adaptation": [
+        "在360px宽预览中，观察卡正文约13px，结论约16px；按实际字体检查可读性。",
+        "标题最多两行、每张卡事实描述最多两行；出现拥挤时删字，不缩小正文字号。",
+        "来源与作者旅行滤镜的提醒保留在完整画面中。"
+      ],
+      "asset_plan": "用排版卡片完成解释，无需调用生图。若以后增加照片，只使用身份、车型和授权均清楚的真实素材。",
+      "constraints": [
+        "所有体验描述归属于DHH，不写成普遍测评结论。",
+        "不添加性能评分、销量柱状图、领先年数或未经核实的数据。",
+        "不宣称电动车体验能够证明所有中国汽车优于所有奔驰车型。",
+        "本轮只交视觉方案，不生成图片。"
+      ],
+      "supporting_claim_ids": [
+        "C2",
+        "C3"
+      ]
+    }
+  ],
+  "editorial_note": {
+    "question": "DHH 这次来中国是为了 Omarchy 吗？",
+    "conclusion": "可以确认此行包含Omarchy相关工作与交流；现有证据不足以断言这是他来华的唯一目的或首要目的。",
+    "confirmed_evidence": [
+      {
+        "claim_id": "C4",
+        "point": "DHH在原文中比较了与中美企业围绕Omarchy的交流内容及后续推进速度。",
+        "source_id": "S1",
+        "evidence_type": "本人访问后的一手叙述"
+      },
+      {
+        "claim_id": "C5",
+        "point": "GOSIM深圳2026英文官方议程列有DHH的Omarchy主题演讲，日期为2026年10月17日。",
+        "source_id": "S2",
+        "evidence_type": "活动主办方公布的演讲安排；议程本身不能独立证明实际演讲内容"
+      }
+    ],
+    "recommended_wording": "这次来华，DHH有Omarchy相关的演讲安排和企业交流。",
+    "scope_of_verification": "交叉核对DHH英文原文与GOSIM英文官方演讲页面。原文也提到他在GOSIM与参会者会面。",
+    "unresolved": "未取得完整行程、首要动机或唯一来访目的的直接证据。",
+    "placement": "仅作编辑备注，不放进本篇公众号正文或两张图片。"
+  },
+  "sources": [
+    {
+      "source_id": "S1",
+      "url": "https://world.hey.com/dhh/seven-years-from-china-a63b03cc",
+      "title": "Seven years from China",
+      "author": "David Heinemeier Hansson",
+      "published_date": "2026-10-24",
+      "accessed_date": "2026-10-25",
+      "language": "en",
+      "source_type": "作者本人发布的访问随笔",
+      "claims": [
+        {
+          "claim_id": "C1",
+          "claim": "作者自述七年后访问深圳、杭州、北京，并以仿佛隔了40年形容变化。",
+          "evidence_nature": "作者自述与比喻；不是对全国发展年数的测量",
+          "locator": "重访深圳、杭州、北京与变化感受的段落"
+        },
+        {
+          "claim_id": "C2",
+          "claim": "作者描述中国电动SUV与酒店燃油奔驰的体验反差。",
+          "evidence_nature": "个人乘车体验与主观评价",
+          "locator": "国产电动SUV与酒店燃油奔驰的相邻段落"
+        },
+        {
+          "claim_id": "C3",
+          "claim": "作者参观小米汽车工厂，也承认约一周的旅行可能带有滤镜。",
+          "evidence_nature": "个人参访见闻与作者自行提出的观察局限",
+          "locator": "参访小米汽车工厂与承认旅行滤镜的段落"
+        },
+        {
+          "claim_id": "C4",
+          "claim": "作者提到与中国企业就Omarchy进行交流。",
+          "evidence_nature": "本人对交流经历的叙述，不等于完整来访目的说明",
+          "locator": "比较中美企业Omarchy交流与后续推进的段落"
+        }
+      ]
+    },
+    {
+      "source_id": "S2",
+      "url": "https://shenzhen2026.gosim.org/schedule/p-123-omarchy-beautiful-fun-agentic-linux/",
+      "title": "Omarchy: Beautiful, Fun & Agentic Linux",
+      "publisher": "GOSIM Shenzhen 2026",
+      "published_date": null,
+      "event_date": "2026-10-17",
+      "accessed_date": "2026-10-25",
+      "language": "en",
+      "source_type": "主办方英文官方议程",
+      "claims": [
+        {
+          "claim_id": "C5",
+          "claim": "官方安排DHH在10月17日09:10至09:25介绍Omarchy。",
+          "evidence_nature": "公开演讲安排",
+          "locator": "Date、Time、Talk overview与Speakers栏目"
+        }
+      ]
+    }
+  ],
+  "limitations": [
+    "本文依据作者的一周访问见闻，不将他的主观体验扩展为全国性统计结论。",
+    "40年为作者比喻，标题与图1均保留归属；不解释为中国在七年内客观完成40年的发展。",
+    "Omarchy相关行程有一手来源支持，首要目的与唯一目的仍未知。",
+    "未将无法直接打开核对的X帖子或二次转载作为定案证据。",
+    "依照本轮隔离要求，未读取其他项目文件或过往会话、写作样本。",
+    "未生成图片，未发布，传播数据为unknown。"
+  ],
+  "loaded_skills": [
+    {
+      "id": "craft-channel-content",
+      "activation": "document",
+      "source": "candidate.packet.md内嵌skills/craft-channel-content/SKILL.md全文",
+      "sha256": "da38537c9bebc4a1d98bc6573f466d9c989a5edbf9412e188c2b7805234106ad",
+      "native_installed": false
+    },
+    {
+      "id": "verify-delivery",
+      "activation": "document",
+      "source": "candidate.packet.md内嵌skills/verify-delivery/SKILL.md全文",
+      "sha256": "a3bffe103b5ca191731ee78fe463c86fd12a603c68423ebf5ff1603c358efcd1",
+      "native_installed": false
+    },
+    {
+      "id": "write-like-me",
+      "activation": "native-skill-read",
+      "source": "skill://plugin_connector_1p_8ad8b138a8dc8191a1087a834cb737cd/write-like-me/SKILL.md",
+      "native_installed": true,
+      "application": "目标渠道与本轮隔离要求优先；未检索历史写作资料，按packet的公众号短文规范完成。"
+    }
+  ],
+  "receipt": {
+    "project_id": "content-studio",
+    "source_sha": "482ad0481ae052f58eb3a54677f134bbe58fd611",
+    "completed_scope": [
+      "微信公众号贴图短文一篇",
+      "图1封面视觉Token",
+      "图2解释图视觉Token",
+      "Omarchy来华关联核实与编辑备注"
+    ],
+    "verification": {
+      "body_non_whitespace_characters": 201,
+      "requested_default_body_range": "50～300个非空白字符",
+      "character_count_excludes": [
+        "标题",
+        "出处",
+        "视觉说明",
+        "编辑备注"
+      ],
+      "primary_sources_read": [
+        "S1",
+        "S2"
+      ],
+      "exact_quote_words_in_visual_1": 8,
+      "content_review": {
+        "hook": "正文第二、三段说明人物、访问和乘车背景；图2进一步兑现奔驰的体验反差。",
+        "value": "用产品体验重塑评价标尺这一判断，为读者提供可转述的观察角度。",
+        "credibility": "两处一手英文来源，主观观察、比喻、本文判断及未知目的均单独标明。",
+        "memory_and_sharing": "以燃油奔驰这一具体反差形成记忆点；传播效果仍未验证。",
+        "retention": "延续科技产品与工程实践的观察角度，不添加强迫关注话术。"
+      },
+      "file_validation": {
+        "status": "passed",
+        "evidence_type": "artifact-parse-and-readback",
+        "checks": [
+          "JSON解析成功",
+          "必需字段齐全",
+          "两张视觉方案完整",
+          "正文非空白字符数合规",
+          "视觉事实主张均有来源映射",
+          "来源均为英文一手页面",
+          "未生图与未发布状态明确"
+        ]
+      },
+      "images": "not-generated",
+      "publication": "not-published",
+      "engagement_metrics": "unknown"
+    }
+  }
+}

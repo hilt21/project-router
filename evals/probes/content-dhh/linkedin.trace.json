@@ -1,0 +1,89 @@
+{
+  "project_id": "content-studio",
+  "mode": "linkedin",
+  "source_sha": "482ad0481ae052f58eb3a54677f134bbe58fd611",
+  "packet_path": "/workspace/scratch/57e674ce27e2/content-replays/linkedin.packet.md",
+  "packet_sha256": "019bfa7518e478f0279943d03b1895412e63df0abd5942a0e0ff5bd8d3bbc2aa",
+  "sources": [
+    {
+      "url": "https://world.hey.com/dhh/seven-years-from-china-a63b03cc",
+      "title": "Seven years from China",
+      "author": "David Heinemeier Hansson",
+      "publication_date": "2026-10-24",
+      "accessed_date": "2026-10-25",
+      "retrieval": "search_service.open",
+      "retrieval_ref": "turn7view0",
+      "evidence_type": "first-person account of a one-week visit",
+      "claim_mapping": [
+        {
+          "claim": "The author returned after seven years away.",
+          "source_lines": [
+            7,
+            9
+          ]
+        },
+        {
+          "claim": "He reported electric vehicles, quieter streets and a highly automated Xiaomi factory.",
+          "source_lines": [
+            10,
+            15,
+            17,
+            19
+          ]
+        },
+        {
+          "claim": "He acknowledged the selective view of a one-week trip.",
+          "source_lines": [
+            26
+          ]
+        }
+      ]
+    }
+  ],
+  "loaded_skills": [
+    {
+      "id": "craft-channel-content",
+      "activation": "document",
+      "source": "/workspace/scratch/57e674ce27e2/content-replays/linkedin.packet.md",
+      "embedded_path": "skills/craft-channel-content/SKILL.md",
+      "source_sha": "482ad0481ae052f58eb3a54677f134bbe58fd611",
+      "sha256": "da38537c9bebc4a1d98bc6573f466d9c989a5edbf9412e188c2b7805234106ad"
+    },
+    {
+      "id": "verify-delivery",
+      "activation": "document",
+      "source": "/workspace/scratch/57e674ce27e2/content-replays/linkedin.packet.md",
+      "embedded_path": "skills/verify-delivery/SKILL.md",
+      "source_sha": "482ad0481ae052f58eb3a54677f134bbe58fd611",
+      "sha256": "a3bffe103b5ca191731ee78fe463c86fd12a603c68423ebf5ff1603c358efcd1"
+    },
+    {
+      "id": "write-like-me",
+      "activation": "host-skill",
+      "source": "skill://plugin_connector_1p_8ad8b138a8dc8191a1087a834cb737cd/write-like-me/SKILL.md",
+      "application": "Read in full; continued without writing-reference retrieval to honor the isolated replay input boundary."
+    }
+  ],
+  "unverified_items": [
+    "The travel observations are attributed to the author and were not independently corroborated.",
+    "The discussion of gradual change, mental models and field-observation practices is editorial inference, not a tested empirical finding.",
+    "No personal writing references were retrieved; no personal style match is claimed.",
+    "LinkedIn audience response and distribution performance are unknown; the post has not been published."
+  ],
+  "validation": {
+    "body_word_count_by_whitespace": 227,
+    "source_line_word_count_by_whitespace": 2,
+    "word_count_rule": "Body only; the Source line is excluded.",
+    "within_100_to_300_words": true,
+    "single_english_post": true,
+    "source_observations_attributed": true,
+    "inference_signaled": true,
+    "mobile_format": "Short paragraphs and four compact action bullets.",
+    "has_em_dash_or_en_dash": false,
+    "direct_quotes_from_source": false,
+    "visuals_created": false,
+    "publication_status": "not-published",
+    "output_sha256": "c4ea6392981ff8fb74f7254410db14b463ad69dba3c83730a9f3f312410b1c5f",
+    "verification_basis": "Original-source tool read and artifact read-back; editorial judgments are not external performance evidence."
+  }
+}

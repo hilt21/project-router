@@ -22,3 +22,5 @@ python -m router packet --project content-studio --mode dual --task '共用证�
 ```
 
 图像工具声明与授权仍由宿主判断，只有本次确实要生图时才传入 `--generate-images`。Python 只编译规则，不生成内容、不执行发布。
+
+DHH 历史选题的旧版与候选版云端产物、LinkedIn 仅正文任务和验收边界见 [验收报告](qa/content-pipeline.md)。

@@ -1,0 +1,403 @@
+{
+  "title": "七年没来中国，他说像穿越了40年",
+  "channel": "微信公众号贴图短文",
+  "status": "文案与视觉方案完成，未生图，未发布",
+  "wechat_body": "在中国坐上一辆奔驰，DHH竟觉得自己退回了过去。\n\n接连体验国产电动SUV后，他换回酒店派来的燃油奔驰，感受到强烈落差。曾经的豪华标杆，在这次旅途中突然显得落后。\n\n七年后重访深圳、杭州、北京，这位Ruby on Rails创造者形容变化像隔了四十年。他看到的还有高铁、自动化车厂，以及技术交流后迅速跟进的人。\n\n我的判断：这篇游记最值得读的，是一个人的旧坐标被现实重新校准。也要记住，这是他一周见闻的感受；作者自己也承认，短途旅行容易自带滤镜。",
+  "hook": "在中国坐上一辆奔驰，DHH竟觉得自己退回了过去。",
+  "hook_rationale": "用作者对燃油奔驰的意外感受制造具体冲突，再交代国产电动车带来的体验参照变化。Hook 是中文转述，不伪装成原文逐字引语。",
+  "body_character_count": {
+    "chinese_han_characters": 177,
+    "all_non_whitespace_characters": 215,
+    "method": "仅统计正文；中文字符口径按 Unicode 汉字计数，另列含英文与标点的非空白字符总数；标题、图中文字、来源与编辑备注不计入正文。",
+    "requirement": "150 至 250 个中文字符",
+    "passed": true
+  },
+  "visuals": [
+    {
+      "id": "figure_1",
+      "role": "封面",
+      "aspect_ratio": "3:4",
+      "canvas_px": {
+        "width": 1440,
+        "height": 1920
+      },
+      "purpose": "让读者先感到七年间隔与四十年体感的反差，再进入奔驰体验的具体故事。",
+      "visual_subject": "以巨型数字 40 和一道斜切的时间窗为视觉中心；窗内用当代城市、列车与电动车的抽象轮廓提示观察对象。所有场景均为编辑概念示意。",
+      "visual_tokens": {
+        "composition": [
+          "四周安全边距 96px；上方 12% 为栏目与人物身份，中间 55% 为主标题和数字，下方 23% 为城市与交通的抽象图形，底部 10% 为观察范围和来源。",
+          "40 占画面宽度约 70%，靠左对齐；数字略压住时间窗的前缘，形成空间深度。",
+          "时间窗从画面右下斜向左上打开，像纸张被折起的一角。用明暗变化表现认知更新，不画年度增长坐标。",
+          "三城名称并列排布，不用路线箭头暗示原文未交代的访问先后。"
+        ],
+        "information_hierarchy": [
+          {
+            "level": 1,
+            "text": "40年",
+            "treatment": "数字最大，采用无衬线极粗体；年字约为数字高度的 25%。"
+          },
+          {
+            "level": 2,
+            "text": "七年没来中国\n他说像穿越了",
+            "treatment": "位于巨型数字上方，分两行，字重 800，整块左对齐。"
+          },
+          {
+            "level": 3,
+            "text": "DHH 中国见闻",
+            "treatment": "顶端小号栏目字，跟随封面网格对齐。"
+          },
+          {
+            "level": 4,
+            "text": "深圳 · 杭州 · 北京",
+            "treatment": "图形区域旁的小号城市标签。"
+          },
+          {
+            "level": 5,
+            "text": "一周见闻 · 个人观察\n“40年”为感受性比喻",
+            "treatment": "底部保留清楚可读的限定信息。"
+          }
+        ],
+        "exact_on_image_text": [
+          "DHH 中国见闻",
+          "七年没来中国",
+          "他说像穿越了",
+          "40年",
+          "深圳 · 杭州 · 北京",
+          "一周见闻 · 个人观察",
+          "“40年”为感受性比喻",
+          "来源：DHH / HEY World / 2026.10.24",
+          "编辑概念图"
+        ],
+        "palette": {
+          "background": "#F3F1E8",
+          "primary_ink": "#131713",
+          "accent_40": "#E74525",
+          "city_window": "#16736A",
+          "secondary_text": "#4B544E"
+        },
+        "typography": {
+          "family": "思源黑体或 Noto Sans CJK SC；数字使用同系列无衬线体",
+          "headline_px": 94,
+          "number_px": 520,
+          "city_label_px": 38,
+          "qualifier_px": 36,
+          "source_px": 30,
+          "line_spacing": "主标题约 1.15 倍，中文不拉大字距。"
+        },
+        "style": "当代杂志封面，粗字体，丝网印刷般的实色块，轻纸张颗粒，克制的编辑拼贴。",
+        "geometry_and_material": "纸面折角、低细节建筑轮廓、简洁列车窗与电动车线条；不依赖品牌徽标。",
+        "camera_and_light": "平面正视为主；时间窗内部允许轻微等距视角，统一柔和侧光，避免赛博霓虹。",
+        "human_representation": "不放未经核实的人物肖像，不生成或暗示 DHH 真实乘车照片；用图形和文字承担人物叙事。",
+        "negative_tokens": [
+          "2019 灰暗贫困与 2026 科幻城市的虚构照片对照",
+          "7 年等于实际发展 40 年的公式或统计图",
+          "虚构 DHH 表情或现场合影",
+          "国旗、政治人物、奖杯等额外情绪符号",
+          "飞行汽车、悬浮轨道、真实品牌拼接",
+          "奔驰标志作为被嘲讽的巨大主体",
+          "小字过密、英文抢占主标题"
+        ]
+      },
+      "production_brief": "制作一张 3:4 中文编辑封面，以暖白、墨黑、朱红和深绿形成强对比。标题按提供的文字分层，40 为最大视觉锚点，纸面时间窗承接城市、列车和电动车的抽象轮廓。底部明确写出个人观察和比喻限定。先制作无字底图，再用排版工具叠加准确中文。所有画面均为概念示意，不制作纪实假照。",
+      "fact_alignment": {
+        "source_ids": [
+          "S1"
+        ],
+        "rule": "数字 7 是两次访问的间隔；40 是作者表达变化之大的比喻。封面不将其转换为可量化结论。"
+      },
+      "generation_status": "not-run"
+    },
+    {
+      "id": "figure_2",
+      "role": "解释图",
+      "aspect_ratio": "3:4",
+      "canvas_px": {
+        "width": 1440,
+        "height": 1920
+      },
+      "purpose": "解释四十年体感来自哪些具体观察，把封面的情绪落到三个可追溯的场景。",
+      "visual_subject": "三张纵向堆叠的观察卡片，分别画车厢座椅、机械臂产线和交流后继续推进事项的对话图标。",
+      "visual_tokens": {
+        "composition": [
+          "安全边距 96px；顶部 17% 放问题标题与限定副标题，中部 62% 放三张等宽卡片，底部 21% 放观察边界与来源。",
+          "卡片垂直堆叠，卡间距 28px；每张左侧约 28% 为图标，右侧约 72% 为标题与一句解释。",
+          "三个图标使用相同线宽和墨黑描边；编号 01、02、03 只表示阅读顺序，不表示测量排名或城市访问顺序。",
+          "底部限定用深绿底、暖白字的整块区域，避免被当作可忽略的脚注。"
+        ],
+        "information_hierarchy": [
+          {
+            "level": 1,
+            "text": "为什么7年\n像隔了40年？",
+            "treatment": "顶部两行大标题，40 用朱红强调。"
+          },
+          {
+            "level": 2,
+            "text": "DHH 游记里的三个现场",
+            "treatment": "紧接标题，说明观察主体。"
+          },
+          {
+            "level": 3,
+            "text": "01 乘车体验\n02 制造现场\n03 交流节奏",
+            "treatment": "三张卡片各一个粗体标题。"
+          },
+          {
+            "level": 4,
+            "text": "40年是比喻\n观察窗口约一周",
+            "treatment": "底部限定区域的主句，字重 700。"
+          }
+        ],
+        "exact_on_image_text": [
+          "为什么7年",
+          "像隔了40年？",
+          "DHH 游记里的三个现场",
+          "01 乘车体验",
+          "接连乘坐国产电动SUV后，",
+          "燃油奔驰让他感觉回到过去。",
+          "02 制造现场",
+          "在小米北京车厂，",
+          "他看到高度自动化的产线。",
+          "03 交流节奏",
+          "与中国科技公司交流后，",
+          "他对跟进速度印象深刻。",
+          "40年是比喻",
+          "观察窗口约一周",
+          "三个场景均为作者个人观察，非全国抽样。",
+          "来源：DHH / Seven years from China",
+          "2026.10.24 · HEY World",
+          "图形均为编辑示意"
+        ],
+        "palette": {
+          "background": "#F3F1E8",
+          "text_and_icon": "#131713",
+          "number_accent": "#E74525",
+          "card_fill": "#FFFFFF",
+          "boundary_panel": "#16736A",
+          "boundary_text": "#FFFFFF"
+        },
+        "typography": {
+          "family": "思源黑体或 Noto Sans CJK SC，与图 1 一致",
+          "headline_px": 92,
+          "card_heading_px": 48,
+          "card_copy_px": 40,
+          "boundary_heading_px": 48,
+          "boundary_copy_px": 34,
+          "source_px": 30,
+          "line_spacing": "说明文字约 1.35 倍，控制每行约 14 至 18 个全角字符。"
+        },
+        "illustration_details": [
+          "乘车卡片：安静车厢与座椅的通用线描，不画品牌徽标，不把体验感受做成客观评分。",
+          "制造卡片：两只机械臂与一段车身产线，保留一位手持平板的监督者；标明示意，不称无人车厂。",
+          "交流卡片：两个人物轮廓、对话框、勾选事项；不虚构聊天截图、响应秒数、合作协议或融资结果。"
+        ],
+        "style": "与封面同一套杂志视觉，信息卡片清楚，图标克制，手机上一屏可顺序读完。",
+        "camera_and_light": "平面矢量视角，不使用摄影镜头效果；卡片只有极轻阴影。",
+        "negative_tokens": [
+          "全国统一水平或中外优劣排名",
+          "任何未经独立核验的交付量、车价、自动化百分比",
+          "把 996 画成成功因果公式",
+          "虚构聊天记录和合同",
+          "统计坐标、百分比进度条、国力排行榜",
+          "拥挤的多重时间轴"
+        ]
+      },
+      "production_brief": "制作一张 3:4 中文解释图，沿用图 1 的暖白底、墨黑字、朱红强调和深绿限定区。上方提出七年为何像四十年的问题，中间三个纵向卡片分别解释乘车、制造与交流体验。所有文字按 exact_on_image_text 排版，图标均为概念示意。底部用高可读性面板标出四十年是比喻和一周观察窗口。无需绘制精确数据图。",
+      "fact_alignment": {
+        "source_ids": [
+          "S1"
+        ],
+        "rule": "三张卡片都是作者在特定行程中的观察。图中不用这些观察推断全国平均水平，也不增加汽车或工厂量化数据。"
+      },
+      "generation_status": "not-run"
+    }
+  ],
+  "editorial_note": {
+    "question": "DHH 这次来中国是为了 Omarchy 吗？",
+    "finding": "本次来华与 Omarchy 有明确关联，Omarchy 是公开行程中的重要工作主题。将整趟行程概括为只为 Omarchy 而来，现有材料不足以支持。",
+    "evidence": [
+      {
+        "source_id": "S2",
+        "type": "官方公开安排",
+        "detail": "GOSIM 深圳 2026 官方英文议程列出 DHH 于 2026 年 10 月 17 日 09:10 至 09:25 的 Omarchy 主题演讲，内容是面向智能体时代的 Linux 计算环境。议程本身证明安排，不能单独证明活动已按计划进行。"
+      },
+      {
+        "source_id": "S3",
+        "type": "主办方活动页",
+        "detail": "同日深圳社区活动围绕 Omarchy 安装、演示与 DHH 交流展开，进一步证明此行存在明确的 Omarchy 社区工作安排。"
+      },
+      {
+        "source_id": "S1",
+        "type": "本人事后回顾",
+        "detail": "他在游记中回顾 GOSIM 及与中国科技公司的 Omarchy 交流，支持这些活动与本次来访直接相关。"
+      },
+      {
+        "source_id": "S4",
+        "type": "本人出发前预告的搜索摘要",
+        "detail": "DHH 本人 X 帖的英文搜索摘要将今年的中国计划、Omarchy 与 10 月 17 日 GOSIM 深圳演讲联系起来。完整帖文抓取返回 403，此项只作辅助证据。"
+      }
+    ],
+    "confirmed_vs_inferred": {
+      "confirmed": "官方列有 Omarchy 演讲和社区活动；DHH 本人回顾此行中的 Omarchy 交流。",
+      "inference": "Omarchy 可概括为此行的重要工作主题。这是对公开安排与本人回顾的综合判断。",
+      "unknown": "完整私人行程、各项安排的相对权重，以及来华的唯一或首要动机。"
+    },
+    "recommended_wording": "DHH 此次来华参加 GOSIM，并围绕 Omarchy 与开发者和科技公司交流。",
+    "avoid_wording": [
+      "他七年后专程只为 Omarchy 来中国。",
+      "他此次是来中国融资或签约。"
+    ],
+    "placement": "仅保留为编辑备注，不挤入公众号短正文，也不加入两张图的主叙事。"
+  },
+  "sources": [
+    {
+      "id": "S1",
+      "url": "https://world.hey.com/dhh/seven-years-from-china-a63b03cc",
+      "title": "Seven years from China",
+      "author": "David Heinemeier Hansson",
+      "published_date": "2026-10-24",
+      "source_type": "作者本人英文游记，一手来源",
+      "retrieval_status": "全文已读取",
+      "claims": [
+        "七年未访后前往深圳、杭州、北京；将变化之大比作隔了四十年。",
+        "连续体验国产电动SUV后，酒店派来的燃油奔驰令他产生回到过去的感受。",
+        "参观小米北京车厂，注意到高度自动化的生产线。",
+        "赞赏科技交流及后续推进节奏；文章明确讨论与中国公司的 Omarchy 交流。",
+        "作者承认一周左右的旅行可能带有乐观滤镜。"
+      ],
+      "claim_scope": "除文章日期与文中行程叙述外，上述感受均归属于作者，未包装为对全国的独立客观调查。",
+      "web_reference_ids": [
+        "turn3view0",
+        "turn3search0"
+      ]
+    },
+    {
+      "id": "S2",
+      "url": "https://shenzhen2026.gosim.org/schedule/p-123-omarchy-beautiful-fun-agentic-linux/",
+      "title": "Omarchy: Beautiful, Fun & Agentic Linux",
+      "source_type": "GOSIM 官方英文议程，一手来源",
+      "retrieval_status": "正文已读取",
+      "claims": [
+        "DHH 的 Omarchy 主题演讲列于 2026 年 10 月 17 日 09:10 至 09:25，属于大会主旨演讲。"
+      ],
+      "claim_scope": "公开议程证明活动安排，不单独证明出席或执行结果。",
+      "web_reference_ids": [
+        "turn6view1"
+      ]
+    },
+    {
+      "id": "S3",
+      "url": "https://www.startupgrind.com/events/details/startup-grind-shenzhen-presents-open-registration-this-saturday-dhh-will-come-to-shenzhen-omarchy-installation-party-and-more-community-sharing/",
+      "title": "[Open Registration] This Saturday, DHH will come to Shenzhen, Omarchy installation party and more community sharing!",
+      "source_type": "Startup Grind 深圳英文活动页，主办及支持方活动信息",
+      "retrieval_status": "正文已读取",
+      "claims": [
+        "2026 年 10 月 17 日的深圳社区活动计划包括 Omarchy 安装、社区演示和与 DHH 交流。"
+      ],
+      "claim_scope": "作为公开活动安排的辅助证据；不据此宣称所有环节已执行。",
+      "web_reference_ids": [
+        "turn5view2"
+      ]
+    },
+    {
+      "id": "S4",
+      "url": "https://x.com/dhh/status/2094652010905636988",
+      "title": "DHH 关于赴中国及 GOSIM 深圳的英文预告",
+      "source_type": "本人公开帖，当前仅搜索摘要可见",
+      "retrieval_status": "搜索摘要已读取；直接打开返回 403",
+      "claims": [
+        "搜索摘要显示 DHH 将赴华计划与 Omarchy 联系，并预告在 GOSIM 深圳 10 月 17 日演讲。"
+      ],
+      "claim_scope": "仅作辅助，不作为全文已核实的独立证据。",
+      "web_reference_ids": [
+        "turn4search0",
+        "turn5view0"
+      ]
+    },
+    {
+      "id": "S5",
+      "url": "https://shenzhen2026.gosim.org/speakers/dhh/",
+      "title": "David Heinemeier Hansson (DHH)",
+      "source_type": "GOSIM 官方英文讲者页，一手来源",
+      "retrieval_status": "正文已读取",
+      "claims": [
+        "DHH 是 Ruby on Rails 与 Omarchy 的创造者；讲者页链接其 Omarchy 主题演讲。"
+      ],
+      "web_reference_ids": [
+        "turn5view1"
+      ]
+    }
+  ],
+  "limitations": [
+    "七年与四十年的反差来自作者的个人感受；未对中国整体发展速度作量化核验。",
+    "奔驰、电动SUV、工厂与交流体验均按作者叙述转述，未独立复原现场。",
+    "未采用原文中的汽车交付量、价格、马力或工厂自动化百分比，避免在本次任务中扩展未经独立核验的数据。",
+    "DHH 的 X 预告只能读到搜索摘要，直接访问返回 403。",
+    "原文链接的 GOSIM YouTube 视频抓取受限，未观看或核验完整视频；相关结论使用官方议程及作者事后回顾。",
+    "没有证据确认 Omarchy 是唯一来华目的，也未核实融资、签约或商业合作成果。",
+    "两张图均停留在可执行的视觉方案；未生成图像，未进行实际排版或手机预览。",
+    "仅使用指定 packet 作为项目规则，未读取其他项目文件或历史会话资料。"
+  ],
+  "loaded_skills": [
+    {
+      "id": "craft-channel-content",
+      "activation": "document",
+      "source": "指定 baseline.packet.md 内嵌完整 SKILL.md",
+      "document_path": "skills/craft-channel-content/SKILL.md",
+      "sha256": "ab43a528efd3404e1e3a8f6d61c7809e6690417b3b2cc7e4fb970d5261bd39cc",
+      "native_installation_claimed": false,
+      "applied_to": [
+        "公众号正文与 Hook",
+        "两张 3:4 视觉方案",
+        "观点归属与来源映射"
+      ]
+    },
+    {
+      "id": "verify-delivery",
+      "activation": "document",
+      "source": "指定 baseline.packet.md 内嵌完整 SKILL.md",
+      "document_path": "skills/verify-delivery/SKILL.md",
+      "sha256": "a3bffe103b5ca191731ee78fe463c86fd12a603c68423ebf5ff1603c358efcd1",
+      "native_installation_claimed": false,
+      "applied_to": [
+        "正文字符计数",
+        "原始英文来源回读",
+        "图文事实一致性",
+        "JSON 写入后解析与必要字段检查"
+      ]
+    }
+  ],
+  "receipt": {
+    "project_id": "content-studio",
+    "source_sha": "6ef26eb04e1219c6aa9b73d662eb2f0e9512460d",
+    "rules_source": "/workspace/scratch/57e674ce27e2/content-replays/baseline.packet.md",
+    "checked_on": "2026-10-25",
+    "verification_evidence": [
+      {
+        "kind": "tool_readback",
+        "item": "指定 packet 已完整读取。"
+      },
+      {
+        "kind": "tool_readback",
+        "item": "DHH 英文原文、GOSIM 英文议程与讲者页、英文社区活动页已读取。"
+      },
+      {
+        "kind": "artifact_check",
+        "item": "正文 177 个汉字，含英文及标点的非空白字符共 215 个。"
+      },
+      {
+        "kind": "artifact_check",
+        "item": "最终文件写入后按 JSON 重新解析，检查必需字段、两张图、3:4 画幅及未生图未发布状态。"
+      }
+    ],
+    "not_verified": [
+      "图像实际生成质量",
+      "排版与手机预览效果",
+      "任何发布结果",
+      "唯一来华动机",
+      "受限 X 与 YouTube 的完整内容"
+    ],
+    "external_actions": {
+      "image_generation": "not-run",
+      "publication": "not-run"
+    }
+  }
+}

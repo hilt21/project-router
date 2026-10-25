@@ -1,0 +1,122 @@
+{
+  "repository": "hilt21/project-router",
+  "snapshot_sha": "76605c32b77a54eb6ac3bf0f19ec87a665da2f50",
+  "published_tree_sha": "f56cf84c016b2d1cad469cc180f1e213fb9f2fa5",
+  "local_source_sha": "482ad0481ae052f58eb3a54677f134bbe58fd611",
+  "method": "GitHub connector full-file fetch at fixed ref, text equality against the validated local snapshot; identical Git trees verified separately",
+  "surface": "current Work maintenance conversation; not a fresh content project chat",
+  "files": [
+    {
+      "path": "registry/skills.yaml",
+      "ref": "76605c32b77a54eb6ac3bf0f19ec87a665da2f50",
+      "blob_sha": "96db6877db161511f66f170cbb4993ed7107f986",
+      "range": "full-file",
+      "matched": true,
+      "sha256": "245c680616f0770c7327581d59ac6c5e1e8d4bd95cbb6324cd9e2c9564ec74d5"
+    },
+    {
+      "path": "registry/skills.lock.json",
+      "ref": "76605c32b77a54eb6ac3bf0f19ec87a665da2f50",
+      "blob_sha": "7c5e357581fd4671dec444384058c04bf1f78083",
+      "range": "full-file",
+      "matched": true,
+      "sha256": "c1e386518e7f645abf87aa7edc832019f7c618e7fbb1d9e1b67dccc6bf86e2a2"
+    },
+    {
+      "path": "BOOTSTRAP.md",
+      "ref": "76605c32b77a54eb6ac3bf0f19ec87a665da2f50",
+      "blob_sha": "07c290b116a8cb89810ddde4d3a42c553725d017",
+      "range": "full-file",
+      "matched": true,
+      "sha256": "b6d9d221e379f28745c069c8ec3e1bc38e03ae83695c8cd311a8e56d79c82b8f"
+    },
+    {
+      "path": "templates/content-feedback.md",
+      "ref": "76605c32b77a54eb6ac3bf0f19ec87a665da2f50",
+      "blob_sha": "7d528c8059c83a728fe881e7cb550767575ec67e",
+      "range": "full-file",
+      "matched": true,
+      "sha256": "6b725fd5c893df36a7134b610d172aa71faf1d6aac322d030633506d757c0b93"
+    },
+    {
+      "path": "skills/craft-channel-content/SKILL.md",
+      "ref": "76605c32b77a54eb6ac3bf0f19ec87a665da2f50",
+      "blob_sha": "56ec11c0fdaf6f05d214beb8d4d508f773d5cd95",
+      "range": "full-file",
+      "matched": true,
+      "sha256": "da38537c9bebc4a1d98bc6573f466d9c989a5edbf9412e188c2b7805234106ad"
+    },
+    {
+      "path": "project-router.yaml",
+      "ref": "76605c32b77a54eb6ac3bf0f19ec87a665da2f50",
+      "blob_sha": "d895896225ed95d0733086e180899410ebb2433b",
+      "range": "full-file",
+      "matched": true,
+      "sha256": "5ff2b231075b83030055b8ac4be6cd7e41cd6bcc8d6d01c3f60ba37333138783"
+    },
+    {
+      "path": "skills/verify-delivery/SKILL.md",
+      "ref": "76605c32b77a54eb6ac3bf0f19ec87a665da2f50",
+      "blob_sha": "e35bd7d486dec5df1edbc339c227ed4a4a93bd40",
+      "range": "full-file",
+      "matched": true,
+      "sha256": "a3bffe103b5ca191731ee78fe463c86fd12a603c68423ebf5ff1603c358efcd1"
+    },
+    {
+      "path": "workflows/content.md",
+      "ref": "76605c32b77a54eb6ac3bf0f19ec87a665da2f50",
+      "blob_sha": "36f0b7658c85d5fc8fb95081d72b5ba69b0dcae7",
+      "range": "full-file",
+      "matched": true,
+      "sha256": "5f3793e0eee6a70c65623ec8222a5c8f2d8adba5595a3a473128d493ef288578"
+    },
+    {
+      "path": "docs/PROTOCOL.md",
+      "ref": "76605c32b77a54eb6ac3bf0f19ec87a665da2f50",
+      "blob_sha": "f3a42f2da9d0a889d13052a85b891beb90169000",
+      "range": "full-file",
+      "matched": true,
+      "sha256": "4c1ab1c83d2bd830dc6b4b749cde719b95e314ae7afb8aa0baa0dcca0589d44a"
+    },
+    {
+      "path": "routes/content-studio.md",
+      "ref": "76605c32b77a54eb6ac3bf0f19ec87a665da2f50",
+      "blob_sha": "e08aba18f25f24b8ae783f77d09363e75835c3f5",
+      "range": "full-file",
+      "matched": true,
+      "sha256": "de4e66c6baae43dcceae982ed6d0a72b0d2b22372b610ea4073fc376f678cbae"
+    },
+    {
+      "path": "rules/content-wechat.md",
+      "ref": "76605c32b77a54eb6ac3bf0f19ec87a665da2f50",
+      "blob_sha": "71b7fd57ade7df8535132e5a4ee4cf5d820c075f",
+      "range": "full-file",
+      "matched": true,
+      "sha256": "7f803f2457f0deabdcf89ddf7153c6dd68245920f867ffd6999f193287c29991"
+    },
+    {
+      "path": "rules/content-linkedin.md",
+      "ref": "76605c32b77a54eb6ac3bf0f19ec87a665da2f50",
+      "blob_sha": "60de36bee84e45a0ca7c9efeb1950204a8e32df8",
+      "range": "full-file",
+      "matched": true,
+      "sha256": "eea8d9718da630db0bb314b4139c9a856b05ac99c949077bb6d7ca12bd716d7d"
+    },
+    {
+      "path": "rules/shared.md",
+      "ref": "76605c32b77a54eb6ac3bf0f19ec87a665da2f50",
+      "blob_sha": "082dc2754c81dff56cbe996eba4bfdffdc8ddd70",
+      "range": "full-file",
+      "matched": true,
+      "sha256": "f76513b26487448e186601e67d12f3a3ce2919a4045d345d96134dda9b6c743b"
+    },
+    {
+      "path": "rules/content.md",
+      "ref": "76605c32b77a54eb6ac3bf0f19ec87a665da2f50",
+      "blob_sha": "911df5d534c76e80173cd96477f61c65ac38ba3d",
+      "range": "full-file",
+      "matched": true,
+      "sha256": "00446d9b448bfafcdbc517a4c580815efc70ff20caafd573352c0c8cbec7dfab"
+    }
+  ]
+}
