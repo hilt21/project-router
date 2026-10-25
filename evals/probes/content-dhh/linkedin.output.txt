@@ -1,0 +1,26 @@
+An old mental model can survive years of new information.
+
+In “Seven years from China,” David Heinemeier Hansson describes returning after seven years away. On his trip, electric vehicles, quieter streets and a highly automated Xiaomi factory made changes he had followed remotely feel concrete.
+
+He also acknowledges that a one-week visit offers a selective view.
+
+The lesson I take for engineering and product leaders is about keeping our assumptions current.
+
+When change arrives in small increments, each update can feel unsurprising. The cumulative shift is easy to miss. Familiarity can leave us comparing today's market with a version we remember.
+
+A quarterly deck may report each change accurately while leaving that mental model intact.
+
+Periodically, return to the work itself:
+
+• Use a competing product for a complete workflow.
+• Sit beside a customer through a difficult task.
+• Visit the team or production line behind a performance claim.
+• Write down what now feels ordinary that would have surprised you three years ago.
+
+Bring those observations back to your data. Check them against other perspectives. Then revisit the assumptions behind your roadmap, architecture and investment decisions.
+
+A useful outcome of a visit is a precise revision: which assumption changed, what evidence changed it, and what decision should follow?
+
+Familiarity needs maintenance. Schedule time to see the current version of the world you think you know.
+
+Source: https://world.hey.com/dhh/seven-years-from-china-a63b03cc

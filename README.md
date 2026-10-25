@@ -49,7 +49,7 @@ python -m router packet --project new-project --task '调研开源方案' --capa
 python -m router packet --project academic-research --mode math --task '检查当前推导' --capability github-read
 ```
 
-内容模式可显式指定 `--mode wechat` 或 `--mode linkedin`。自动辅助只识别明确渠道词；双渠道或未指定渠道返回 `needs-input`，由宿主利用当前上下文澄清或拆分。
+内容路由采用 schema 2。宿主按请求及上下文显式传入 `--mode wechat`、`--mode linkedin` 或 `--mode dual`，仅加载对应平台规范。省略时进入 `select-channel`，由宿主推荐或必要时澄清；明确双渠道时直接选择 dual。CLI 不再通过内容关键词猜渠道，调用方迁移时需要传入 mode。创作阶段、证据与复盘约束见 [内容工作流](docs/CONTENT.md)。
 
 科研阶段由宿主依据请求选择并传入 `--mode`。省略时进入 `select-stage` 盘点；`pipeline` 只在明确要求完整流程时使用。可选计算能力缺失不会阻塞推理，但相应验证保持未运行。
 

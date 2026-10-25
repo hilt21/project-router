@@ -1,0 +1,1 @@
+素材：https://world.hey.com/dhh/seven-years-from-china-a63b03cc 。选题已确定：“七年没来中国，他说像穿越了40年”。请写一篇微信公众号贴图短文，把开头Hook写得更有冲击力，并为图1封面和图2解释图规划详细视觉Token。另外核实：DHH这次来中国是为了Omarchy吗？核实结果作为编辑备注。暂不生图、不发布。查阅原始英文来源，使用所提供的执行包作为唯一项目规则。输出JSON，包括title、wechat_body、visuals、editorial_note、sources、limitations、loaded_skills。
