@@ -29,4 +29,22 @@
 
 已保存的合成探针、单元测试和 GitHub 入口回读各自记录，不能更新以上真实 Work 状态。领域专家复核与实际期刊决定分别需要对应证据。
 
-2026-10-25 的浏览器检查到达 ChatGPT 未登录页面，观察到登录和注册控件，未进入项目或创建对话。该次真实 Work 验收状态为 blocked-authentication。十二个本地生命周期场景的证据与界限见 [生命周期验收](qa/academic-lifecycle.md)；本地跨进程恢复不会更新上表中的真实 Work 压缩恢复状态。
+2026-10-25 首次浏览器检查到达 ChatGPT 未登录页面，该次检查保留 blocked-authentication 历史记录。用户随后授权并完成登录验证；后续进入获准创建的临时项目，保存入口并创建三个真实 Work 对话。十二个本地生命周期场景的证据与界限见 [生命周期验收](qa/academic-lifecycle.md)。
+
+## 2026-10-25 后续实际观察
+
+候选版为 preview v0.2.0-rc.2，源 SHA 为 `5010dce4d4b2edc1b18398a5f868cb8cf5a10cfc`。下表补充上面的初始状态，适用范围仅为该候选版及本轮合成任务。stable 频道、已有发布记录和源快照保持原值。
+
+| 测试 | 本轮状态 | 观察边界 |
+| --- | --- | --- |
+| 科研新建 Work 对话 | passed-scoped | 入口保存后回读一致；明确数学请求进入 math，报告固定 SHA，正确否定错误唯一性推导 |
+| 远程读取回执 | metadata-matched | 回执列出的 12 个 blob SHA 与独立 GitHub 回读一致；未获得完整逐项调用日志，不能据此证明全部正文已读 |
+| 明确阶段缺材料 | passed-scoped | 独立研究保持 math / blocked，要求命题、证明和假设，没有编造审查结果 |
+| 同项目 research_id 隔离 | observed-no-contamination | 两个研究的可见回复未混用公式、主张或结论；单例观察，宿主记忆隔离未验证 |
+| 跨对话回执恢复 | passed-scoped | 将真实前一对话的 JSON 回执交给新对话，保留 ID、SHA、失败主张及未验证项，没有升级为 passed |
+| 文件化研究护照与长研究恢复 | not-run | 本轮只传递 JSON 回执，没有读取持久化 passport、claim ledger 或 audit ledger |
+| 宿主上下文压缩恢复 | not-run | 新建对话传递回执没有触发宿主实际压缩 |
+| 频道变化期间固定版本及新任务升级 | not-run | 本轮没有修改频道指针 |
+| 两个宿主项目隔离、私有访问、真实材料变更、真实论文效果 | not-run | 分别需要相应材料与运行证据 |
+
+详细步骤、证据等级和未测项见 [真实 Work 科研验收](qa/academic-work-ui.md) 与 [结构化观察](qa/academic-work-ui-observations.json)。发布文件中的 verification 是发布时记录；本轮结果作为后续证据补充，不能回写或扩大历史通过范围。

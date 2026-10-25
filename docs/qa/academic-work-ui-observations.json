@@ -1,0 +1,220 @@
+{
+  "schema_version": 1,
+  "recorded_date": "2026-10-25",
+  "timezone": "Asia/Shanghai",
+  "evidence_kind": "real-chatgpt-work-ui-scoped-observation",
+  "repository": "hilt21/project-router",
+  "channel": "preview",
+  "version": "v0.2.0-rc.2",
+  "workflow_sha": "5010dce4d4b2edc1b18398a5f868cb8cf5a10cfc",
+  "source_tree_sha": "7a6d3ae2c6c9da44957c78b0d7d6d142f2c10074",
+  "tools": [
+    "browser-visible-ui",
+    "github-connector-readback"
+  ],
+  "environment": {
+    "authenticated_ui_observed": true,
+    "project_kind": "temporary-authorized-qa-project",
+    "composer_mode": "Work",
+    "visible_model": "GPT-6.1 Sol",
+    "memory_mode": "default",
+    "project_only_memory_work_compatibility": "UI says unavailable",
+    "host_memory_isolation": "not-verified"
+  },
+  "counts": {
+    "new_work_conversations": 3,
+    "user_submissions": 4,
+    "research_ids": 2
+  },
+  "installation": {
+    "bootstrap_path": "bootstrap/academic-research.md",
+    "bootstrap_ref": "5010dce4d4b2edc1b18398a5f868cb8cf5a10cfc",
+    "settings_saved_and_readback_equal": true,
+    "screenshot": "academic-work-ui-bootstrap.jpg",
+    "screenshot_sha256": "6a707e86de9e300a8b3b9a572e5eb2d3fc522d4a4b6592d3be40ed603861dc46",
+    "screenshot_scope": "Cropped project name and first visible bootstrap lines; complete textarea equality was checked separately"
+  },
+  "scenarios": [
+    {
+      "id": "A1",
+      "research_id": "work-qa-a",
+      "kind": "new-math-task",
+      "status": "passed-scoped",
+      "stage": "math",
+      "observations": [
+        "Reports fixed preview version and SHA",
+        "Rejects strict convexity, unique stationary point, and unique minimizer",
+        "Finds minimizer set {0} x [-1,1]",
+        "Rejects finite sampling as general uniqueness proof"
+      ]
+    },
+    {
+      "id": "A2",
+      "research_id": "work-qa-a",
+      "kind": "read-receipt-and-handoff",
+      "status": "passed-scoped",
+      "observations": [
+        "Reports 12 path/ref/blob records",
+        "Uses unknown for unavailable exact line ranges and channel read-time main commit",
+        "Preserves refuted and invalid-proof original claims",
+        "Does not claim formal passed audit"
+      ],
+      "full_text_read_verification": "not-independently-observed"
+    },
+    {
+      "id": "B",
+      "research_id": "work-qa-b",
+      "kind": "explicit-stage-missing-material",
+      "status": "passed-scoped",
+      "stage": "math",
+      "stage_status": "blocked",
+      "observations": [
+        "Asks for proposition, complete proof, definitions and assumptions",
+        "No A material or conclusions in visible response",
+        "Material, claim and audit records reported empty"
+      ],
+      "research_isolation": "single-case-no-contamination-observed",
+      "anomalies": [
+        "Host-generated conversation title included an unrelated suffix; body did not; cause not verified"
+      ]
+    },
+    {
+      "id": "C",
+      "research_id": "work-qa-a",
+      "kind": "cross-conversation-json-handoff",
+      "status": "passed-scoped",
+      "stage": "math",
+      "workflow_sha": "5010dce4d4b2edc1b18398a5f868cb8cf5a10cfc",
+      "observations": [
+        "Keeps historical complete scoped to prior review activity",
+        "Preserves refuted and invalid-proof history",
+        "Current passed audit not supported; missing original material and digest",
+        "Does not mark stale without knowing whether materials changed",
+        "Reports no channel pointer read and no version switch"
+      ],
+      "channel_nonread_verification": "response-declaration-only",
+      "host_compaction_triggered": false,
+      "persisted_passport_read": false
+    }
+  ],
+  "read_receipt_verification": {
+    "classification": "reported-metadata-matched-against-independent-github-readback",
+    "matched": 12,
+    "total": 12,
+    "records": [
+      {
+        "path": "channels/preview.json",
+        "ref": "main",
+        "claimed_blob_sha": "e3bb6d777693c5382c3beb766586bd6f95d9a3a9",
+        "expected_blob_sha": "e3bb6d777693c5382c3beb766586bd6f95d9a3a9",
+        "matches": true
+      },
+      {
+        "path": "BOOTSTRAP.md",
+        "claimed_blob_sha": "07c290b116a8cb89810ddde4d3a42c553725d017",
+        "expected_blob_sha": "07c290b116a8cb89810ddde4d3a42c553725d017",
+        "matches": true,
+        "ref": "5010dce4d4b2edc1b18398a5f868cb8cf5a10cfc"
+      },
+      {
+        "path": "routes/academic-research.md",
+        "claimed_blob_sha": "ef3ec2c24fcab84e3fa795290e5393c813154fa1",
+        "expected_blob_sha": "ef3ec2c24fcab84e3fa795290e5393c813154fa1",
+        "matches": true,
+        "ref": "5010dce4d4b2edc1b18398a5f868cb8cf5a10cfc"
+      },
+      {
+        "path": "project-router.yaml",
+        "claimed_blob_sha": "d895896225ed95d0733086e180899410ebb2433b",
+        "expected_blob_sha": "d895896225ed95d0733086e180899410ebb2433b",
+        "matches": true,
+        "ref": "5010dce4d4b2edc1b18398a5f868cb8cf5a10cfc"
+      },
+      {
+        "path": "rules/shared.md",
+        "claimed_blob_sha": "082dc2754c81dff56cbe996eba4bfdffdc8ddd70",
+        "expected_blob_sha": "082dc2754c81dff56cbe996eba4bfdffdc8ddd70",
+        "matches": true,
+        "ref": "5010dce4d4b2edc1b18398a5f868cb8cf5a10cfc"
+      },
+      {
+        "path": "rules/academic.md",
+        "claimed_blob_sha": "6b35fcb9a39be7d5b08aee58092a7bdac2c7d10f",
+        "expected_blob_sha": "6b35fcb9a39be7d5b08aee58092a7bdac2c7d10f",
+        "matches": true,
+        "ref": "5010dce4d4b2edc1b18398a5f868cb8cf5a10cfc"
+      },
+      {
+        "path": "workflows/academic.md",
+        "claimed_blob_sha": "25983ac38a8a99b2a06a89035b81e1f411ac78de",
+        "expected_blob_sha": "25983ac38a8a99b2a06a89035b81e1f411ac78de",
+        "matches": true,
+        "ref": "5010dce4d4b2edc1b18398a5f868cb8cf5a10cfc"
+      },
+      {
+        "path": "registry/skills.yaml",
+        "claimed_blob_sha": "96db6877db161511f66f170cbb4993ed7107f986",
+        "expected_blob_sha": "96db6877db161511f66f170cbb4993ed7107f986",
+        "matches": true,
+        "ref": "5010dce4d4b2edc1b18398a5f868cb8cf5a10cfc"
+      },
+      {
+        "path": "registry/skills.lock.json",
+        "claimed_blob_sha": "10e4021dca327513d090a927df6a0fb0cc1c0e0a",
+        "expected_blob_sha": "10e4021dca327513d090a927df6a0fb0cc1c0e0a",
+        "matches": true,
+        "ref": "5010dce4d4b2edc1b18398a5f868cb8cf5a10cfc"
+      },
+      {
+        "path": "workflows/academic-state.md",
+        "claimed_blob_sha": "30f0c586ed4edfbfb5ceeda900a669bbffa9c22c",
+        "expected_blob_sha": "30f0c586ed4edfbfb5ceeda900a669bbffa9c22c",
+        "matches": true,
+        "ref": "5010dce4d4b2edc1b18398a5f868cb8cf5a10cfc"
+      },
+      {
+        "path": "skills/audit-mathematical-rigor/SKILL.md",
+        "claimed_blob_sha": "7981ad7b70cc8e5a1360ada751ed556aba95eb5c",
+        "expected_blob_sha": "7981ad7b70cc8e5a1360ada751ed556aba95eb5c",
+        "matches": true,
+        "ref": "5010dce4d4b2edc1b18398a5f868cb8cf5a10cfc"
+      },
+      {
+        "path": "skills/verify-delivery/SKILL.md",
+        "claimed_blob_sha": "e35bd7d486dec5df1edbc339c227ed4a4a93bd40",
+        "expected_blob_sha": "e35bd7d486dec5df1edbc339c227ed4a4a93bd40",
+        "matches": true,
+        "ref": "5010dce4d4b2edc1b18398a5f868cb8cf5a10cfc"
+      }
+    ],
+    "limitations": [
+      "Complete per-file Work tool input/output log unavailable",
+      "Reported full-text ranges and read order not independently observed",
+      "Work-side skill SHA-256 against lockfile not verified",
+      "Blob SHA matching does not prove content was fully read"
+    ]
+  },
+  "unverified": [
+    "host-context-compaction",
+    "persisted-passport-and-ledger-recovery",
+    "pointer-update-during-task",
+    "new-task-pointer-upgrade",
+    "two-host-project-isolation",
+    "host-memory-isolation",
+    "tool-unavailable-fallback",
+    "loading-failure",
+    "private-repository-access",
+    "real-research-material-change",
+    "real-paper-effectiveness",
+    "independent-domain-expert-review",
+    "host-filesystem-audit"
+  ],
+  "publication": {
+    "contains_private_chat_links": false,
+    "contains_full_chat_transcripts": false,
+    "existing_release_records_changed": false,
+    "channel_changed": false,
+    "stable_promoted": false
+  },
+  "source_ci": "https://github.com/hilt21/project-router/actions/runs/40172378058"
+}
