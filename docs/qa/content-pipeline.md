@@ -51,6 +51,7 @@
 - 48 个确定性路由案例、80 个单元与故障测试通过；其中新增六项平台隔离、双渠道和动作边界测试。
 - Skill Creator 校验与锁文件检查通过；单平台执行包约 17KB，双平台约 19KB，均低于 40KB 预算。
 - [初始源提交 CI](https://github.com/hilt21/project-router/actions/runs/40200470464) 的 Python 3.11 和 3.12 任务均通过。
+- 包含全部产物、完整性脚本及 CI 步骤的发布源提交 `c8908d102f7c499643e525fab069e73b106497ac` 已通过 [完整 CI](https://github.com/hilt21/project-router/actions/runs/40201228327)。执行规则、skill 与编译器相对云端回放源没有变化，只有证据与校验步骤增加。
 - 当前维护会话用固定远程 SHA 完整回读 14 个文件，正文、Git blob SHA 与已测试文件一致，详见 [回读记录](content-readback.json)。这不计为新建内容项目对话测试。
 - `python evals/check_content_replay.py` 校验保存产物的摘要、执行包身份、正文长度和画幅，不判定事实真假、视觉质量或传播效果。
 
@@ -58,4 +59,6 @@
 
 真实新建 Work 内容项目对话、上下文压缩恢复、图片生成及成图手机预览、外部发布、真实传播数据均未由本轮验证。直接生图无需额外确认的规则已加入，但未用实际生图调用验证该分支。
 
-变更通过 PR 提供审阅，发布记录与频道指针在同一 PR 内准备。依据 [发布规则](../RELEASING.md)，候选 PR 不自动合并。合并后新任务读取新版本；进行中任务仍保留原 SHA。学术研究 preview 指针保持原版本。
+变更通过 PR 提供审阅，[v0.1.1 发布记录](../../releases/v0.1.1.json)与 stable 指针在同一 PR 内准备，源提交固定为 `c8908d102f7c499643e525fab069e73b106497ac`。分发清单只保留原 stable 的 new-project 与 content-studio；学术研究 preview 仍为 v0.2.0-rc.2、源 SHA `5010dce4d4b2edc1b18398a5f868cb8cf5a10cfc`。这次发布不会将科研候选入口推广到 stable。
+
+依据 [发布规则](../RELEASING.md)，候选 PR 不自动合并。合并后新任务读取新版本；进行中任务仍保留原 SHA。当前内容项目可在批准后将长指令替换为 [短入口正文](../../bootstrap/content-studio.md)，随后只需维护仓库并发布版本。
