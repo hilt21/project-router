@@ -19,6 +19,10 @@
         "output": {
           "path": "math.output.md",
           "sha256": "875c78a8f0f7b9579dfa4930211cf55c96ef0d304fb1ad074977bffb506a7cd6"
+        },
+        "packet": {
+          "path": "math.packet.txt",
+          "sha256": "420060532d31befd44eae2cb2ec5b1e2fc6bb1ce0e0e49a0ae7a23d16229984a"
         }
       },
       "packet_sha256": "420060532d31befd44eae2cb2ec5b1e2fc6bb1ce0e0e49a0ae7a23d16229984a",
@@ -49,6 +53,10 @@
         "output": {
           "path": "write.output.md",
           "sha256": "57ff436ed032d7b1af28b3251c0ef473257bfbbd6c50feb16ba9ff4cea3b9f02"
+        },
+        "packet": {
+          "path": "write.packet.txt",
+          "sha256": "fe6a9f1cb311926c0ea327f92190ff523733d054f51b3dc4bd188dc3d7e724bc"
         }
       },
       "packet_sha256": "fe6a9f1cb311926c0ea327f92190ff523733d054f51b3dc4bd188dc3d7e724bc",
@@ -69,5 +77,9 @@
         "scope": "One synthetic self-contained task; no human or cross-model validation."
       }
     }
-  ]
+  ],
+  "source_kind": "local-git-commit",
+  "source_tree_sha": "23ed40a637a6660dd64f9967860637c0530a5065",
+  "published_equivalent_sha": "abe49d97a86fd96c67296d4ee5f0325539613f2e",
+  "published_equivalent_tree_sha": "23ed40a637a6660dd64f9967860637c0530a5065"
 }

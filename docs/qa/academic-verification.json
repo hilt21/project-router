@@ -53,7 +53,8 @@
     "workflows/academic-state.md": "a187a127f42debea71f0514155b239d8842a4f232ae8ddc1cfcf91c21bdd3a5b",
     "workflows/academic.md": "ab229a275eae609c167b9e4620298ee8c94ef8c687014ec814ca5cb26d2005f1",
     "workflows/content.md": "8c5932e33e75231ea7515de0d08bc680550949caf6a80953e624be1e1a66530f",
-    "workflows/research.md": "22617e5e111195aa78f92c053d633c9b987e8cb1ac4f29ae08f1f10d78cda679"
+    "workflows/research.md": "22617e5e111195aa78f92c053d633c9b987e8cb1ac4f29ae08f1f10d78cda679",
+    "pyproject.toml": "d6528eaf5383eb0dbfc9da09d20fd6cb823149d8b64df94476ae48e9167e7fef"
   },
   "checks": [
     {
@@ -197,6 +198,22 @@
       ],
       "exit_code": 0,
       "status": "passed"
+    },
+    {
+      "command": [
+        "python",
+        "-m",
+        "pip",
+        "install",
+        "-e",
+        ".",
+        "--no-build-isolation",
+        "--no-deps"
+      ],
+      "exit_code": 0,
+      "status": "passed",
+      "scope": "Editable package installed; console command verified via its actual user-bin path.",
+      "console_path": "/root/.local/bin/project-router"
     }
   ],
   "forward_probes": "evals/probes/academic/manifest.json",

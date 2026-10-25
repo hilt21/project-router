@@ -14,7 +14,7 @@
 
 ## 独立上下文任务探针
 
-固定源为 `606d6e54430e92491f47ddba2ae18ba89686834d`，保存 [执行清单](../../evals/probes/academic/manifest.json)、原始输入和输出。后续变更集中于记录检查器和契约；七个领域 skill 的内容未修改。
+探针执行包由本地提交 `606d6e54430e92491f47ddba2ae18ba89686834d` 生成，其文件树与 [公开等价提交](https://github.com/hilt21/project-router/commit/abe49d97a86fd96c67296d4ee5f0325539613f2e) 完全相同，树 SHA 为 `23ed40a637a6660dd64f9967860637c0530a5065`。[执行清单](../../evals/probes/academic/manifest.json) 保存映射、完整执行包、原始输入和输出摘要。后续变更集中于记录检查器和契约；七个领域 skill 的内容未修改。
 
 | 探针 | 观察到的交付行为 | 证据 |
 | --- | --- | --- |

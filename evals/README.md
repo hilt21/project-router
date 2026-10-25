@@ -10,4 +10,4 @@
 
 科研的两项合成任务探针见 [manifest](probes/academic/manifest.json)，保留源 SHA、输入、输出摘要与逐项观察。使用新上下文的原生子任务执行，未建立跨模型独立性；主 agent 回读产物进行有边界的语义判断。没有无 skill 对照，因此不能把结果归因为 skill 的净增益。
 
-`probes/check_artifacts.py` 验证已保存探针文件的摘要与原有内容长度约束。它不重新执行模型，不把词匹配或完整性检查记为语义正确性。探针包可在 manifest 的 clean source_sha 下按相同 project、mode 和声明能力重建，校验 packet_sha256 后使用保存的原始 input。
+`probes/check_artifacts.py` 验证已保存探针输入、完整执行包和输出的摘要，以及原有内容长度约束。它不重新执行模型，不把词匹配或完整性检查记为语义正确性。source_sha 是生成执行包时的本地 Git 提交，published_equivalent_sha 是文件树完全一致的 GitHub 提交。可直接使用保存的 packet 和 input 复现任务；从公开等价提交重新编译时核对文档摘要，提交身份元数据随公开 SHA 更新。
