@@ -205,6 +205,43 @@ class AcademicRecordTests(unittest.TestCase):
         after = {p.name: self.digest(p) for p in self.root.iterdir()}
         self.assertEqual(before, after)
 
+    def add_new_evidence_claim(self):
+        (self.root / "new-source.md").write_text("Synthetic evidence added during revision.\n")
+        self.artifacts.append({"id": "new-source", "path": "new-source.md", "sha256": self.digest(self.root / "new-source.md")})
+        self.claims["claims"].append({
+            "id": "c6", "text": "New synthetic external claim.", "kind": "external-fact", "critical": True,
+            "manuscript": {"artifact_id": "draft", "locator": "paragraph 6"},
+            "evidence": [{"artifact_id": "new-source", "locator": "section 1"}],
+        })
+        self.save_json("claims.json", self.claims)
+        next(a for a in self.artifacts if a["id"] == "claims")["sha256"] = self.digest(self.root / "claims.json")
+        self.save_audits()
+
+    def test_new_evidence_stales_history_without_making_it_malformed(self):
+        self.add_new_evidence_claim()
+        result = self.check()
+        self.assertEqual(result["submission_status"], "blocked")
+        self.assertIn("audit-stale:" + self.audit("coverage")["id"], result["blockers"])
+        self.assertIn("missing-current-pass:claim-support:c6", result["blockers"])
+
+    def test_revision_with_new_evidence_can_supersede_historical_audits(self):
+        self.add_new_evidence_claim()
+        original_audits = list(self.audits["audits"])
+        for old in original_audits:
+            new = copy.deepcopy(old)
+            new["id"] = old["id"] + "-revised"
+            if old["check"] in {"reference-existence", "claim-support"}:
+                new["claim_ids"].append("c6")
+            new["input_bindings"] = {a["id"]: a["sha256"] for a in self.artifacts}
+            new["supersedes"] = [old["id"]]
+            self.audits["audits"].append(new)
+        self.save_audits()
+        result = self.check()
+        self.assertEqual(result["submission_status"], "eligible-for-human-review")
+        historical = [a for a in result["audits"] if a["superseded"]]
+        self.assertEqual(len(historical), len(original_audits))
+        self.assertTrue(all(a["validity"] == "stale" for a in historical))
+
     def test_unknown_cannot_be_hidden_by_a_duplicate_pass(self):
         original = self.audit("claim-support")
         new = copy.deepcopy(original)

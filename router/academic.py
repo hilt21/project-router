@@ -172,6 +172,8 @@ def check_records(passport_path: Path, research_root: Path, research_id: str,
         require(all(isinstance(x, str) and x.strip() for x in findings + limitations), "Invalid audit finding")
         bindings = binding_map(audit.get("input_bindings"), "audit input_bindings")
         require(set(bindings) <= set(artifacts), "Audit binds an unknown artifact")
+        current = audit_current and all(artifacts[x]["current"] and artifacts[x]["sha256"] == digest
+                                        for x, digest in bindings.items())
         previous = identifiers(audit.get("supersedes", []), "supersedes")
         for old in previous:
             require(old in audits and old not in superseded, "Superseded audit must be an active earlier record")
@@ -180,7 +182,10 @@ def check_records(passport_path: Path, research_root: Path, research_id: str,
             superseded.add(old)
         if audit["status"] in {"passed", "not-applicable"}:
             required_inputs = {claims_id}
-            if audit["status"] == "passed":
+            # Historical audits bind an earlier claim population. They remain
+            # stale records; new evidence must not retroactively alter their
+            # schema requirements. Current passes still bind every input.
+            if current and audit["status"] == "passed":
                 bound_claims = list(active_claims.values()) if audit["check"] in GLOBAL_CHECKS else [claims[x] for x in targets]
                 for claim in bound_claims:
                     required_inputs.add(claim["manuscript"]["artifact_id"])
@@ -190,8 +195,6 @@ def check_records(passport_path: Path, research_root: Path, research_id: str,
         if audit["status"] == "passed":
             require(audit["kind"] != "self-report" and bool(evidence), "Passing audit requires observable evidence")
             require(not findings, "Passing audit cannot retain blocking findings")
-        current = audit_current and all(artifacts[x]["current"] and artifacts[x]["sha256"] == digest
-                                        for x, digest in bindings.items())
         audits[audit_id] = {**audit, "current": current}
 
     active = [audit for key, audit in audits.items() if key not in superseded]

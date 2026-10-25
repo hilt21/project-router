@@ -45,6 +45,8 @@ flowchart TD
 
 一致性检查可以通过，而投稿前置检查仍被 unknown、未运行、过期、未解决失败或缺失记录阻断。阶段 complete 也不能替代投稿检查。通过 `--submission` 最多输出 eligible-for-human-review，scientific_truth 始终为 not-verified。
 
+新增主张和证据时，旧审查会因输入摘要变化而过期，保留其历史范围。新材料不会追溯改变旧记录的契约要求；复核后追加覆盖当前输入的 supersedes 记录。这个完整过程可用 `python evals/run_academic_lifecycle.py` 在隔离的合成研究中重放。
+
 投稿检查覆盖所有已登记主张。存在性与支持性、数学、实验和检索边界按主张类型检查；coverage、原创性、期刊合规、修订问题处理检查整份已登记材料。不适用项需要当前账本绑定和理由。登记覆盖不证明全文语义完整，也不能证明作者或工具真的做过被记录的工作。
 
 ## 验证与边界
