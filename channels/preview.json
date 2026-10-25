@@ -1,0 +1,30 @@
+{
+  "schema_version": 1,
+  "repository": "hilt21/project-router",
+  "version": "v0.2.0-rc.1",
+  "commit_sha": "cbc30f719c1815d191108229a09a9f87fe2b05d2",
+  "routes": {
+    "new-project": "routes/new-project.md",
+    "content-studio": "routes/content-studio.md",
+    "academic-research": "routes/academic-research.md"
+  },
+  "created_at": "2026-10-25T06:09:28.201741+00:00",
+  "maturity": "preview",
+  "verification": {
+    "static": "passed",
+    "work_fresh_chat": "not-run",
+    "work_compaction": "not-run",
+    "private_repository": "not-run",
+    "github_ci": "passed",
+    "agent_probes": "bounded-synthetic-observations",
+    "real_paper_effectiveness": "not-run"
+  },
+  "evidence": {
+    "source_ci": "https://github.com/hilt21/project-router/actions/runs/40168037188",
+    "local_checks": "docs/qa/academic-verification.json",
+    "probe_manifest": "evals/probes/academic/manifest.json",
+    "qa_report": "docs/qa/academic-v0.2.0.md",
+    "source_tree_sha": "ec66e09d0111a5f16d34da095d7621ea343f501c",
+    "github_tree_readback": "matched"
+  }
+}
