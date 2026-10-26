@@ -61,6 +61,7 @@ CLI 针对当前工作树编译候选执行包。要复现发布版，先按稳�
 
 ## 维护文档
 
+- [个人 AI 工作流管理器 PRD](docs/PERSONAL_WORKFLOW_PRD.md)：个人产品方向、需求、验收标准与待决事项
 - [架构与边界](docs/ARCHITECTURE.md)
 - [科研工作流与本地证据检查](docs/ACADEMIC.md)
 - [加载协议与回执](docs/PROTOCOL.md)
