@@ -36,10 +36,10 @@ class FeedbackIntentContractTests(unittest.TestCase):
     def test_negative_cases_and_scoped_authorization(self):
         policy = read("feedback/README.md")
         for phrase in ("对当前一篇文案的临时改写", "未核实的推测",
-                       "不直接提升为持久规则", "不再为同一问题创建第二条 Issue",
+                       "不产生持久反馈", "不再为同一问题创建第二条 Issue",
                        "无授权时止于草稿", "项目 ID"):
             self.assertIn(phrase, policy)
-        self.assertIn("不得上传完整聊天", policy)
+        self.assertIn("不得上传完整对话", policy)
         self.assertIn("不依赖关键词自动分类器", read("docs/PROTOCOL.md"))
 
     def test_status_and_memory_distinction_are_observable(self):
