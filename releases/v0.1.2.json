@@ -1,0 +1,31 @@
+{
+  "schema_version": 1,
+  "repository": "hilt21/project-router",
+  "version": "v0.1.2",
+  "commit_sha": "28c8d529efa67bfd6c54befcebdc8788c48c5d9f",
+  "routes": {
+    "new-project": "routes/new-project.md",
+    "content-studio": "routes/content-studio.md"
+  },
+  "created_at": "2026-10-26T09:58:32.435Z",
+  "maturity": "preview",
+  "verification": {
+    "static": "passed",
+    "github_ci": "passed",
+    "wechat_title_boundary_tests": "passed",
+    "work_fresh_chat": "not-run",
+    "work_compaction": "not-run",
+    "private_repository": "not-run",
+    "work_title_generation": "not-run",
+    "wechat_platform_counter": "not-run",
+    "publication": "not-run"
+  },
+  "scope": "Add 20-character title preflight to content-studio WeChat image posts. Keep new-project unchanged and academic-research on its existing preview snapshot.",
+  "evidence": {
+    "source_ci": "https://github.com/hilt21/project-router/actions/runs/40303527566",
+    "change_pr": "https://github.com/hilt21/project-router/pull/9",
+    "feedback_issue": "https://github.com/hilt21/project-router/issues/8",
+    "tests": "tests/test_content.py",
+    "rule": "rules/content-wechat.md"
+  }
+}
