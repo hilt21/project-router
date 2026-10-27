@@ -1,7 +1,7 @@
 {
   "schema_version": 1,
-  "recorded_at": "2026-10-27T04:37:22.343588+00:00",
-  "base_sha": "b16b04742937d3a5ee5e2643da9d11e0413086aa",
+  "recorded_at": "2026-10-27T05:06:56.597916+00:00",
+  "base_sha": "d9707167ecf0214c87e74939f357b6a9afb08b92",
   "layer": "local-cli-and-static",
   "checks": [
     {
@@ -53,7 +53,7 @@
       "output_sha256": "59bb01eac90db2528ff14df986844a6254bd27a1d3dd5a1c3d5885ea9b47246b"
     },
     {
-      "command": "python scripts/check_release_history.py --base b16b04742937d3a5ee5e2643da9d11e0413086aa",
+      "command": "python scripts/check_release_history.py --base d9707167ecf0214c87e74939f357b6a9afb08b92",
       "exit_code": 0,
       "status": "passed",
       "output_sha256": "15e1490b5821af30db90baf5958d9c8b34a856cb6936fe2a8baf811e7fb5bc33"
@@ -62,7 +62,7 @@
       "command": "python -m unittest discover -s tests -v",
       "exit_code": 0,
       "status": "passed",
-      "output_sha256": "1241f954269cbb7c195ea203c12f0764d5587ce0d1819e76f0429ba08891a3d8",
+      "output_sha256": "7f8d534dc3c1f417b453c8b2584768294099a455dd56f91212fe21b19aa85832",
       "test_count": 97
     }
   ],
@@ -70,20 +70,21 @@
     "status": "complete",
     "pages": 4,
     "count": 306,
-    "snapshot_sha256": "039dcb8b1bd69fc25410184d170b2dc6e5ee72e8196b162be362c2b33fcec7e9"
+    "snapshot_sha256": "039dcb8b1bd69fc25410184d170b2dc6e5ee72e8196b162be362c2b33fcec7e9",
+    "scope": "initial successful snapshot reused; no fresh API collection in this update"
   },
   "external_skill_host_tests": "not-run",
   "human_acceptance": "not-run",
   "github_ci": "see-pull-request-checks",
   "channels_updated": false,
   "implementation_sha256": {
-    "router/catalog.py": "257ae798cb6a82373831a33a92dd2ef468140c6810761db94e8ca0db4244a756",
+    "router/catalog.py": "0aa4892f289a918e37dd4f6c36107914767122f81292961131e9393ad60ea560",
     "router/core.py": "8cbcc3a18f941a571ff0eabaa95df3fba91affe47c3c8e19f255564019e68d5c",
     "scripts/collect_skill_stars.py": "f1ee5e9b2fe25d8214458e48cffece4ba7db57c76ea6e3641763bf8ae902db8f",
     "tests/test_catalog.py": "d19587f69470957569159766cfa0b14bc23016e6e0de8a46b82966408e708dba",
     "catalog/skills/sources.yaml": "5aafc28c24e65544feca5b84c616f0ba2a395245a2327ed60024f7072a84558c",
     "catalog/skills/entries.yaml": "a3d26f995542f766ab7bc988a7729a6dd02fd30f376443e4b75a39551d3c61a5",
-    "catalog/skills/README.md": "c86163dc337f2a428dbf3906340040a03571a1c9714f82df8515ca5502ef081d",
+    "catalog/skills/README.md": "949fe9704551e4879a337edf3af09ed6ad7f3747f850a063cf0cdfd905ee120e",
     "catalog/skills/reviews/source-readings.json": "a0d8c3df2194f831d3263ff11288bee8a82ef51253a63ba4bae22f6ecb067925"
   },
   "discovery_scenarios": [
@@ -128,5 +129,14 @@
       "activation": "none",
       "host_verification": "not-run"
     }
-  ]
+  ],
+  "update_scope": "source directory About column and four-column layout",
+  "presentation_checks": {
+    "source_rows_verified": 54,
+    "original_about_display": "passed",
+    "empty_about_fallback": "passed",
+    "archived_marker": "passed",
+    "markdown_escaping": "passed",
+    "editorial_notes_preserved": "passed"
+  }
 }

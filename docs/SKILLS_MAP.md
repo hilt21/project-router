@@ -27,6 +27,8 @@ Skills Map 是技能储备目录，用于按任务发现候选、判断适配成
 
 `relationship` 表示与本地技能的关系：complements、overlaps 或 design-reference。`adoption` 为 candidate 或 reference。活动状态继续以活动注册表和路由依赖为准。当前 schema 不接受宿主通过记录；未来添加试用记录时需同时定义证据契约和检查。
 
+来源目录采用四列：来源、About（上游简介）、类型 / 状态、选用备注。About 直接显示 `upstream.description` 的原文，不翻译、不截断、不另存重复字段；上游没有简介时显示“上游未提供”。About 表示作者自述，不代表本仓库已验证其主张。类型、收藏状态及归档标记合并展示；选用备注来自人工维护的 `notes`，收藏同步不会覆盖。
+
 ## 查找
 
 从仓库根目录运行，使用 Python 3.11+ 和现有 PyYAML 依赖：

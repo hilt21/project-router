@@ -66,59 +66,61 @@
 
 以下仓库由关键词筛选进入；unreviewed 表示尚未审阅，不能解释为推荐。
 
-| 来源 | 类型 | 收藏状态 | 备注 |
+About 保留上游作者简介，随收藏同步更新；选用备注保留我们的判断。上游没有简介时显示“上游未提供”。
+
+| 来源 | About（上游简介） | 类型 / 状态 | 选用备注 |
 | --- | --- | --- | --- |
-| [affaan-m/ECC](https://github.com/affaan-m/ECC) | unreviewed | starred |  |
-| [anthropics/skills](https://github.com/anthropics/skills) | skill-collection | starred | 按技能逐文件检查许可证；文档技能和界面技能的许可证不可互相推定。 |
-| [BagelHole/DevOps-Security-Agent-Skills](https://github.com/BagelHole/DevOps-Security-Agent-Skills) | unreviewed | starred |  |
-| [BehiSecc/awesome-claude-skills](https://github.com/BehiSecc/awesome-claude-skills) | unreviewed | starred |  |
-| [blader/humanizer](https://github.com/blader/humanizer) | single-skill | starred | 内容编辑储备，保留事实、证据和用户原有表达。 |
-| [ciembor/agent-rules-books](https://github.com/ciembor/agent-rules-books) | unreviewed | starred |  |
-| [claude-office-skills/skills](https://github.com/claude-office-skills/skills) | unreviewed | starred |  |
-| [ComposioHQ/awesome-claude-skills](https://github.com/ComposioHQ/awesome-claude-skills) | unreviewed | starred |  |
-| [coreyhaines31/marketingskills](https://github.com/coreyhaines31/marketingskills) | unreviewed | starred |  |
-| [deanpeters/Product-Manager-Skills](https://github.com/deanpeters/Product-Manager-Skills) | unreviewed | starred |  |
-| [devcxl/mattpocock-skills-zh](https://github.com/devcxl/mattpocock-skills-zh) | unreviewed | starred |  |
-| [emilkowalski/skills](https://github.com/emilkowalski/skills) | unreviewed | starred |  |
-| [feichanggege/ecommerce-visual-copywriting-skill](https://github.com/feichanggege/ecommerce-visual-copywriting-skill) | unreviewed | starred |  |
-| [github/awesome-copilot](https://github.com/github/awesome-copilot) | unreviewed | starred |  |
-| [handsomestWei/patent-disclosure-skill](https://github.com/handsomestWei/patent-disclosure-skill) | unreviewed | starred |  |
-| [humanlayer/skills](https://github.com/humanlayer/skills) | unreviewed | starred |  |
-| [Imbad0202/academic-research-skills](https://github.com/Imbad0202/academic-research-skills) | unreviewed | starred |  |
-| [Imbad0202/academic-research-skills-codex](https://github.com/Imbad0202/academic-research-skills-codex) | reference | starred | 已有设计参考，固定来源继续以 registry/academic-references.yaml 为准。 |
-| [jeecgboot/JeecgBoot](https://github.com/jeecgboot/JeecgBoot) | unreviewed | starred |  |
-| [K-Dense-AI/scientific-agent-skills](https://github.com/K-Dense-AI/scientific-agent-skills) | unreviewed | starred |  |
-| [kepano/obsidian-skills](https://github.com/kepano/obsidian-skills) | unreviewed | starred |  |
-| [kunchenguid/kun](https://github.com/kunchenguid/kun) | unreviewed | starred |  |
-| [langgenius/dify](https://github.com/langgenius/dify) | unreviewed | starred |  |
-| [larashero3-dotcom/lieflat-charts](https://github.com/larashero3-dotcom/lieflat-charts) | unreviewed | starred |  |
-| [latent-spaces/brag](https://github.com/latent-spaces/brag) | unreviewed | starred |  |
-| [legeling/PromptHub](https://github.com/legeling/PromptHub) | unreviewed | starred |  |
-| [lencx/Minke](https://github.com/lencx/Minke) | unreviewed | starred |  |
-| [lencx/skills](https://github.com/lencx/skills) | unreviewed | starred |  |
-| [Leonxlnx/taste-skill](https://github.com/Leonxlnx/taste-skill) | unreviewed | starred |  |
-| [lishix520/academic-paper-skills](https://github.com/lishix520/academic-paper-skills) | unreviewed | starred |  |
-| [mattpocock/skills](https://github.com/mattpocock/skills) | skill-collection | starred | 工程需求、TDD 与复盘的储备；本次上游版本与已有 PRD 使用的 curated 包分别记录。 |
-| [MengTo/Skills](https://github.com/MengTo/Skills) | unreviewed | starred |  |
-| [microsoft/SkillOpt](https://github.com/microsoft/SkillOpt) | unreviewed | starred |  |
-| [mintdotgg/mint-playground](https://github.com/mintdotgg/mint-playground) | unreviewed | starred |  |
-| [mizzlelover/gongwen-gbt9704-skill](https://github.com/mizzlelover/gongwen-gbt9704-skill) | unreviewed | starred |  |
-| [multica-ai/andrej-karpathy-skills](https://github.com/multica-ai/andrej-karpathy-skills) | unreviewed | starred |  |
-| [mvanhorn/last30days-skill](https://github.com/mvanhorn/last30days-skill) | unreviewed | starred |  |
-| [nextlevelbuilder/ui-ux-pro-max-skill](https://github.com/nextlevelbuilder/ui-ux-pro-max-skill) | unreviewed | starred |  |
-| [nexu-io/open-design](https://github.com/nexu-io/open-design) | unreviewed | starred |  |
-| [obra/superpowers](https://github.com/obra/superpowers) | skill-collection | starred | 验证与调试方法储备；不整体采用其全局触发和编排规则。 |
-| [Orchestra-Research/AI-Research-SKILLs](https://github.com/Orchestra-Research/AI-Research-SKILLs) | unreviewed | starred |  |
-| [phuryn/pm-skills](https://github.com/phuryn/pm-skills) | unreviewed | starred |  |
-| [Pluviobyte/rnskill](https://github.com/Pluviobyte/rnskill) | unreviewed | starred |  |
-| [product-on-purpose/pm-skills](https://github.com/product-on-purpose/pm-skills) | unreviewed | starred |  |
-| [ruvnet/ruflo](https://github.com/ruvnet/ruflo) | unreviewed | starred |  |
-| [tt-a1i/archify](https://github.com/tt-a1i/archify) | unreviewed | starred |  |
-| [tw93/Kami](https://github.com/tw93/Kami) | unreviewed | starred |  |
-| [tw93/Waza](https://github.com/tw93/Waza) | unreviewed | starred |  |
-| [VoltAgent/awesome-agent-skills](https://github.com/VoltAgent/awesome-agent-skills) | unreviewed | starred |  |
-| [VoltAgent/awesome-openclaw-skills](https://github.com/VoltAgent/awesome-openclaw-skills) | unreviewed | starred |  |
-| [wheresryan22/anatomy](https://github.com/wheresryan22/anatomy) | single-skill | starred | 机械系统可视化储备；图形几何检查不能证明工程模型正确。 |
-| [yanliudesign/mono-color-skill](https://github.com/yanliudesign/mono-color-skill) | unreviewed | starred |  |
-| [yanliudesign/offer-toolkit-skill](https://github.com/yanliudesign/offer-toolkit-skill) | unreviewed | starred |  |
-| [ynulihao/AgentSkillOS](https://github.com/ynulihao/AgentSkillOS) | unreviewed | starred |  |
+| [affaan-m/ECC](https://github.com/affaan-m/ECC) | The agent harness performance optimization system. Skills, instincts, memory, security, and research-first development for Claude Code, Codex, Opencode, Cursor and beyond. | unreviewed / starred |  |
+| [anthropics/skills](https://github.com/anthropics/skills) | Public repository for Agent Skills | skill-collection / starred | 按技能逐文件检查许可证；文档技能和界面技能的许可证不可互相推定。 |
+| [BagelHole/DevOps-Security-Agent-Skills](https://github.com/BagelHole/DevOps-Security-Agent-Skills) | Agent-ready DevOps, security, infrastructure, and compliance knowledge base with 80+ skills across Kubernetes, Terraform, AWS/Azure/GCP, AI platform operations, container hardening, SOC2/ISO27001, and incident response—plus ready-to-run scripts, templates, and playbooks for SRE, platform, and security teams. | unreviewed / starred |  |
+| [BehiSecc/awesome-claude-skills](https://github.com/BehiSecc/awesome-claude-skills) | A curated list of Claude Skills. | unreviewed / starred |  |
+| [blader/humanizer](https://github.com/blader/humanizer) | Agent skill that removes signs of AI-generated writing from text | single-skill / starred | 内容编辑储备，保留事实、证据和用户原有表达。 |
+| [ciembor/agent-rules-books](https://github.com/ciembor/agent-rules-books) | AGENTS.md rules / skills for AI coding agents: Codex, Cursor &amp; Claude Code. Inspired by Clean Code, Refactoring, DDD, Clean Architecture and DDIA programming books. | unreviewed / starred |  |
+| [claude-office-skills/skills](https://github.com/claude-office-skills/skills) | A curated collection of practical Claude Skills for real-world office tasks | unreviewed / starred |  |
+| [ComposioHQ/awesome-claude-skills](https://github.com/ComposioHQ/awesome-claude-skills) | A curated list of awesome Claude Skills, resources, and tools for customizing Claude AI workflows | unreviewed / starred |  |
+| [coreyhaines31/marketingskills](https://github.com/coreyhaines31/marketingskills) | Marketing skills for Claude Code and AI agents. CRO, copywriting, SEO, analytics, and growth engineering. | unreviewed / starred |  |
+| [deanpeters/Product-Manager-Skills](https://github.com/deanpeters/Product-Manager-Skills) | Product Management skills framework built on battle-tested methods for Claude Code, Cowork, Codex, and AI agents. | unreviewed / starred |  |
+| [devcxl/mattpocock-skills-zh](https://github.com/devcxl/mattpocock-skills-zh) | Matt Pocock 技能集的中文翻译版 — 地道中文，原汁原味的技术术语。基于 mattpocock/skills 复刻。每日中午12点钟同步 | unreviewed / starred |  |
+| [emilkowalski/skills](https://github.com/emilkowalski/skills) | Skills for Designers and Engineers. | unreviewed / starred |  |
+| [feichanggege/ecommerce-visual-copywriting-skill](https://github.com/feichanggege/ecommerce-visual-copywriting-skill) | 电商视觉文案设计SOP Skill - 让电商设计小白也能一键做出5年资深设计经验的商品图片.兼容 Claude / Codex / Cursor / Workbuddy 等 SKILL.md Agent. AI-powered e-commerce visual strategy skill for main images, PDP/A+, copywriting, localization, evidence-aware compliance and image prompts. | unreviewed / starred |  |
+| [github/awesome-copilot](https://github.com/github/awesome-copilot) | Community-contributed instructions, agents, skills, and configurations to help you make the most of GitHub Copilot. | unreviewed / starred |  |
+| [handsomestWei/patent-disclosure-skill](https://github.com/handsomestWei/patent-disclosure-skill) | 中国专利.skill：专利点挖掘与交底书（发明/实用/外观）编写，通俗解读专利，嗅探政策动向，辅助审查答复。 | unreviewed / starred |  |
+| [humanlayer/skills](https://github.com/humanlayer/skills) | 上游未提供 | unreviewed / starred |  |
+| [Imbad0202/academic-research-skills](https://github.com/Imbad0202/academic-research-skills) | Academic Research Skills for Claude Code: research → write → review → revise → finalize | unreviewed / starred |  |
+| [Imbad0202/academic-research-skills-codex](https://github.com/Imbad0202/academic-research-skills-codex) | Codex-native Academic Research Skills suite for human-in-the-loop academic research workflows | reference / starred | 已有设计参考，固定来源继续以 registry/academic-references.yaml 为准。 |
+| [jeecgboot/JeecgBoot](https://github.com/jeecgboot/JeecgBoot) | 【低代码v2.0，一句话即可生成整个系统】企业级AI低代码平台，一键生成前后端代码甚至整个系统。 AI Skills 一句话画流程、设计表单、生成报表、大屏。内置 AI应用平台涵盖：AI聊天、知识库、流程编排、MCP插件等，兼容主流大模型。引领AI低代码「Skills 生成 → 在线配置 → 代码生成 → 手工合并-&gt;AI修改」开发模式，解决 Java 项目 90% 重复工作，提高效率又不失灵活。 | unreviewed / starred |  |
+| [K-Dense-AI/scientific-agent-skills](https://github.com/K-Dense-AI/scientific-agent-skills) | Turn any AI agent into an AI Scientist. The #1 Agent Skills library for science, used by 250,000+ scientists worldwide. 177 ready-to-use validated skills plus 100+ scientific databases covering biology, chemistry, medicine, and drug discovery. Compatible with Cursor, Claude Code, Codex, Pi, Antigravity, and the open Agent Skills standard. | unreviewed / starred |  |
+| [kepano/obsidian-skills](https://github.com/kepano/obsidian-skills) | Agent skills for Obsidian. Teach your agent to use Obsidian CLI and open formats including Markdown, Bases, JSON Canvas. | unreviewed / starred |  |
+| [kunchenguid/kun](https://github.com/kunchenguid/kun) | Think and build like a principal engineer. Leverage Kun's experience, knowledge, tools, workflows, and skills to help you get shit done. | unreviewed / starred |  |
+| [langgenius/dify](https://github.com/langgenius/dify) | Build Agentic workflows, RAG pipelines, with rich AI model and tool support on one collaborative workspace. Deploy on cloud, VPC, or self-hosted, so teams move from prototype to production without rebuilding the stack. | unreviewed / starred |  |
+| [larashero3-dotcom/lieflat-charts](https://github.com/larashero3-dotcom/lieflat-charts) | Data visualization Skill for AI Agents, turning data into polished, interactive HTML charts. 面向 AI Agents 的数据可视化 Skill，将数据快速生成精致、可交互的 HTML 图表。 | unreviewed / starred |  |
+| [latent-spaces/brag](https://github.com/latent-spaces/brag) | You built it. Now brag. Turn the project you just created into a short, shareable launch video with one command. | unreviewed / starred |  |
+| [legeling/PromptHub](https://github.com/legeling/PromptHub) | 一款包含了 Prompt管理，Skill管理，Agent管理的一站式AI工具箱，助你高效管理提示词，一键分发skills ，一站式管理Agent资产，并实现云同步，备份，版本管理 &#124; An all-in-one AI toolbox for prompt, agent, and skills management. Reuse prompts, distribute skills with one click, manage agent assets, and support cloud sync, backup, and version control | unreviewed / starred |  |
+| [lencx/Minke](https://github.com/lencx/Minke) | 🐳 DeepSeek Harness Desktop | unreviewed / starred |  |
+| [lencx/skills](https://github.com/lencx/skills) | 💡 Turn experience into repeatable execution. | unreviewed / starred |  |
+| [Leonxlnx/taste-skill](https://github.com/Leonxlnx/taste-skill) | Agent skills that give coding agents taste: art direction, reference images and a browser check instead of generic AI pages | unreviewed / starred |  |
+| [lishix520/academic-paper-skills](https://github.com/lishix520/academic-paper-skills) | Systematic framework for planning and writing academic papers using Claude Code. Includes strategist (planning) and composer (writing) skills with quality checkpoints. | unreviewed / starred |  |
+| [mattpocock/skills](https://github.com/mattpocock/skills) | Skills for Real Engineers. Straight from my .agents directory. | skill-collection / starred | 工程需求、TDD 与复盘的储备；本次上游版本与已有 PRD 使用的 curated 包分别记录。 |
+| [MengTo/Skills](https://github.com/MengTo/Skills) | Agent skills for designers and builders using Codex, Claude, Cursor, and other AI coding agents | unreviewed / starred |  |
+| [microsoft/SkillOpt](https://github.com/microsoft/SkillOpt) | SkillOpt is a text-space optimizer that trains reusable natural-language skills for frozen LLM agents through trajectory-driven edits, validation-gated updates, and deployable best_skill.md artifacts. | unreviewed / starred |  |
+| [mintdotgg/mint-playground](https://github.com/mintdotgg/mint-playground) | Open-source Three.js experiences built with Mint MCP and Mint Three.js Skills | unreviewed / starred |  |
+| [mizzlelover/gongwen-gbt9704-skill](https://github.com/mizzlelover/gongwen-gbt9704-skill) | 信息安全提醒：请勿上传企业禁止对外公开的文件；可在本地或企业内网部署大模型后使用。中文公文排版 Skill：按 GB/T 9704-2012 生成可编辑 DOCX。配套 CEB：https://github.com/mizzlelover/CEB | unreviewed / starred |  |
+| [multica-ai/andrej-karpathy-skills](https://github.com/multica-ai/andrej-karpathy-skills) | A single CLAUDE.md file to improve Claude Code behavior, derived from Andrej Karpathy's observations on LLM coding pitfalls. | unreviewed / starred |  |
+| [mvanhorn/last30days-skill](https://github.com/mvanhorn/last30days-skill) | AI agent skill that researches any topic across Reddit, X, YouTube, HN, Polymarket, and the web - then synthesizes a grounded summary | unreviewed / starred |  |
+| [nextlevelbuilder/ui-ux-pro-max-skill](https://github.com/nextlevelbuilder/ui-ux-pro-max-skill) | An AI skill that provides design intelligence for building professional UI/UX across multiple platforms. | unreviewed / starred |  |
+| [nexu-io/open-design](https://github.com/nexu-io/open-design) | The 1st Collaborative AI Design Agent Workspace. Local-first and open source. Create motion, prototypes, websites, apps, dashboards, presentations, images, and videos with your team and AI agents. Share work, exchange feedback, and iterate together in one workspace. | unreviewed / starred |  |
+| [obra/superpowers](https://github.com/obra/superpowers) | An agentic skills framework &amp; software development methodology that works. | skill-collection / starred | 验证与调试方法储备；不整体采用其全局触发和编排规则。 |
+| [Orchestra-Research/AI-Research-SKILLs](https://github.com/Orchestra-Research/AI-Research-SKILLs) | Comprehensive open-source library of AI research and engineering skills for any AI model. Package the skills and your claude code/codex/gemini agent will be an AI research agent with full horsepower. Maintained by Orchestra Research. | unreviewed / starred |  |
+| [phuryn/pm-skills](https://github.com/phuryn/pm-skills) | PM Skills Marketplace: 100+ agentic skills, commands, and plugins — from discovery to strategy, execution, launch, and growth. | unreviewed / starred |  |
+| [Pluviobyte/rnskill](https://github.com/Pluviobyte/rnskill) | 雪踏乌云的 AI Agent Skills 集合 | unreviewed / starred |  |
+| [product-on-purpose/pm-skills](https://github.com/product-on-purpose/pm-skills) | 68 plug-and-play, best-practice product management skills for AI agents: 30 Triple Diamond phase + 11 foundation + 12 utility + 15 tool (Foundation Sprint + Design Sprint). Plus 6 sub-agents, workflows, 200+ output samples, guides, and CI-enforced contracts. Apache 2.0. | unreviewed / starred |  |
+| [ruvnet/ruflo](https://github.com/ruvnet/ruflo) | 🌊 The original agent harness. Deploy intelligent multi-player swarms, coordinate autonomous workflows, and build conversational AI systems. Features adaptive memory, self-learning intelligence, federation, vector RAG integration, and native Claude Code / Codex / Hermes and many more Integrated | unreviewed / starred |  |
+| [tt-a1i/archify](https://github.com/tt-a1i/archify) | Turn any idea, plan, or codebase into a beautiful interactive diagram. An agent skill for Claude Code, Codex, and more. | unreviewed / starred |  |
+| [tw93/Kami](https://github.com/tw93/Kami) | 👩‍🚒 Good content deserves good paper. Layout rules and templates that let AI agents export PDF, PNG and editable PowerPoint. | unreviewed / starred |  |
+| [tw93/Waza](https://github.com/tw93/Waza) | 🥷 Engineering habits you already know, turned into skills AI assistants like Claude Code, Codex and Cursor can run. | unreviewed / starred |  |
+| [VoltAgent/awesome-agent-skills](https://github.com/VoltAgent/awesome-agent-skills) | A curated collection of 1000+ agent skills from official dev teams and the community, compatible with Claude Code, Codex, Gemini CLI, Cursor, and more. | unreviewed / starred |  |
+| [VoltAgent/awesome-openclaw-skills](https://github.com/VoltAgent/awesome-openclaw-skills) | The awesome collection of OpenClaw skills. 5,400+ skills filtered and categorized from the official OpenClaw Skills Registry.🦞 | unreviewed / starred |  |
+| [wheresryan22/anatomy](https://github.com/wheresryan22/anatomy) | An agent skill for creating detailed, interactive isometric illustrations of real-world machines and complex systems. Generates polished SVGs with optional WebGL shaders and 3D effects. | single-skill / starred | 机械系统可视化储备；图形几何检查不能证明工程模型正确。 |
+| [yanliudesign/mono-color-skill](https://github.com/yanliudesign/mono-color-skill) | One-ink editorial print image skill — warm paper, halftone photography, active negative space, and restrained typography. | unreviewed / starred |  |
+| [yanliudesign/offer-toolkit-skill](https://github.com/yanliudesign/offer-toolkit-skill) | Full job-hunt Claude skill bundle — Job Description decoder + Resume builder (11 templates) + Behavioral Interview / story bank. Three self-contained sub-skills with a top-level router. | unreviewed / starred |  |
+| [ynulihao/AgentSkillOS](https://github.com/ynulihao/AgentSkillOS) | Build your agent from 200,000+ skills via skill RETRIEVAL &amp; ORCHESTRATION | unreviewed / starred |  |

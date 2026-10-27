@@ -203,10 +203,15 @@ def render(root):
             lines.append(f"| [{cell(entry['name'])}]({url}) | {cell(entry['purpose'])} | {cell(', '.join(entry['projects']) or '待扩展')} | {entry['adoption']} | {cell(' '.join(entry['limitations']))} |")
         lines.append("")
     lines += ["## 来源目录", "", "以下仓库由关键词筛选进入；unreviewed 表示尚未审阅，不能解释为推荐。", "",
-              "| 来源 | 类型 | 收藏状态 | 备注 |", "| --- | --- | --- | --- |"]
+              "About 保留上游作者简介，随收藏同步更新；选用备注保留我们的判断。上游没有简介时显示“上游未提供”。", "",
+              "| 来源 | About（上游简介） | 类型 / 状态 | 选用备注 |", "| --- | --- | --- | --- |"]
     for source in sources["sources"].values():
         repo = source["repository"]
-        lines.append(f"| [{repo}](https://github.com/{repo}) | {source['kind']} | {source['star_state']} | {cell(source['notes'])} |")
+        about = source["upstream"].get("description", "").strip() or "上游未提供"
+        status = [source["kind"], source["star_state"]]
+        if source["upstream"].get("archived"):
+            status.append("已归档")
+        lines.append(f"| [{repo}](https://github.com/{repo}) | {cell(about)} | {' / '.join(status)} | {cell(source['notes'])} |")
     return "\n".join(lines) + "\n"
 
 
