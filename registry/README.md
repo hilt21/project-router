@@ -1,5 +1,7 @@
 # Skills 引入原则
 
+收藏来源与候选技能在 [Skills Map](../catalog/skills/README.md) 中维护，目录不属于活动注册表。其采集、检索和采用流程见 [维护说明](../docs/SKILLS_MAP.md)。
+
 当前有十一个自定义指令型 skills，许可证为 MIT，来源为本仓库，未安装到宿主技能目录。skills.lock.json 对全部包文件进行摘要校验。科研工作流的设计参考和固定来源见 [academic-references.yaml](academic-references.yaml)。
 
 外部技能须审阅：来源与完整 commit SHA、逐文件许可证、脚本与网络依赖、可用工具、作用域及真实 Work 试验。未验证候选不进入活动注册表。高 stars 不能替代这些检查。

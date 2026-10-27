@@ -1,0 +1,1513 @@
+schema_version: 1
+scan:
+  username: hilt21
+  fetched_at: '2026-10-27T04:36:03.276587+00:00'
+  complete: true
+  pages: 4
+  count: 306
+  snapshot_sha256: 039dcb8b1bd69fc25410184d170b2dc6e5ee72e8196b162be362c2b33fcec7e9
+  filter: keyword-skill-v1
+  consistency: paginated-non-atomic
+sources:
+  gh-1136590548:
+    github_id: 1136590548
+    kind: unreviewed
+    notes: ''
+    discovery: keyword-skill-v1
+    repository: affaan-m/ECC
+    star_state: starred
+    upstream:
+      id: 1136590548
+      full_name: affaan-m/ECC
+      description: The agent harness performance optimization system. Skills, instincts,
+        memory, security, and research-first development for Claude Code, Codex, Opencode,
+        Cursor and beyond.
+      topics:
+      - ai-agents
+      - anthropic
+      - claude
+      - claude-code
+      - developer-tools
+      - llm
+      - mcp
+      - productivity
+      default_branch: main
+      archived: false
+      pushed_at: '2026-10-26T04:56:56Z'
+      starred_at: '2026-02-13T14:51:20Z'
+      declared_license: MIT
+  gh-1061953414:
+    github_id: 1061953414
+    kind: skill-collection
+    notes: 按技能逐文件检查许可证；文档技能和界面技能的许可证不可互相推定。
+    discovery: keyword-skill-v1
+    repository: anthropics/skills
+    star_state: starred
+    upstream:
+      id: 1061953414
+      full_name: anthropics/skills
+      description: Public repository for Agent Skills
+      topics:
+      - agent-skills
+      default_branch: main
+      archived: false
+      pushed_at: '2026-10-09T18:45:52Z'
+      starred_at: '2026-01-09T17:05:15Z'
+      declared_license: unknown
+  gh-1143707508:
+    github_id: 1143707508
+    kind: unreviewed
+    notes: ''
+    discovery: keyword-skill-v1
+    repository: BagelHole/DevOps-Security-Agent-Skills
+    star_state: starred
+    upstream:
+      id: 1143707508
+      full_name: BagelHole/DevOps-Security-Agent-Skills
+      description: Agent-ready DevOps, security, infrastructure, and compliance knowledge
+        base with 80+ skills across Kubernetes, Terraform, AWS/Azure/GCP, AI platform
+        operations, container hardening, SOC2/ISO27001, and incident response—plus
+        ready-to-run scripts, templates, and playbooks for SRE, platform, and security
+        teams.
+      topics:
+      - agent-skills
+      - agentic-ai
+      - ai-agents
+      - aws
+      - cheatsheets
+      - compliance
+      - devops
+      - docker
+      - infrastructure-as-code
+      - kubernetes
+      - security
+      - sre
+      - terraform
+      default_branch: main
+      archived: false
+      pushed_at: '2026-05-22T13:07:20Z'
+      starred_at: '2026-09-04T14:35:01Z'
+      declared_license: MIT
+  gh-1078332194:
+    github_id: 1078332194
+    kind: unreviewed
+    notes: ''
+    discovery: keyword-skill-v1
+    repository: BehiSecc/awesome-claude-skills
+    star_state: starred
+    upstream:
+      id: 1078332194
+      full_name: BehiSecc/awesome-claude-skills
+      description: A curated list of Claude Skills.
+      topics: []
+      default_branch: main
+      archived: false
+      pushed_at: '2026-09-21T07:16:41Z'
+      starred_at: '2026-01-09T17:19:36Z'
+      declared_license: unknown
+  gh-1136666433:
+    github_id: 1136666433
+    kind: single-skill
+    notes: 内容编辑储备，保留事实、证据和用户原有表达。
+    discovery: keyword-skill-v1
+    repository: blader/humanizer
+    star_state: starred
+    upstream:
+      id: 1136666433
+      full_name: blader/humanizer
+      description: Agent skill that removes signs of AI-generated writing from text
+      topics:
+      - agent-skills
+      - ai-humanizer
+      - ai-writing
+      - chatgpt
+      - claude
+      - claude-code
+      - codex
+      - cursor
+      - humanize-ai-text
+      - humanizer
+      - llm
+      - prompt-engineering
+      - writing-tools
+      default_branch: main
+      archived: false
+      pushed_at: '2026-10-16T19:12:03Z'
+      starred_at: '2026-08-27T13:13:06Z'
+      declared_license: MIT
+  gh-1212718768:
+    github_id: 1212718768
+    kind: unreviewed
+    notes: ''
+    discovery: keyword-skill-v1
+    repository: ciembor/agent-rules-books
+    star_state: starred
+    upstream:
+      id: 1212718768
+      full_name: ciembor/agent-rules-books
+      description: 'AGENTS.md rules / skills for AI coding agents: Codex, Cursor &
+        Claude Code. Inspired by Clean Code, Refactoring, DDD, Clean Architecture
+        and DDIA programming books.'
+      topics:
+      - agent-rules
+      - agent-skills
+      - agent-skills-manager
+      - agents-md
+      - agents-rules
+      - agents-skills
+      - agentsmd
+      - ai-agent
+      - ai-skills
+      - claude-code
+      - claude-code-skills
+      - code-quality
+      - codex
+      - codex-skills
+      - cursor-rules
+      - cursor-skills
+      - domain-driven-design
+      - programming-books
+      - refactoring
+      default_branch: main
+      archived: false
+      pushed_at: '2026-09-10T11:21:47Z'
+      starred_at: '2026-10-06T22:31:51Z'
+      declared_license: MIT
+  gh-1145199131:
+    github_id: 1145199131
+    kind: unreviewed
+    notes: ''
+    discovery: keyword-skill-v1
+    repository: claude-office-skills/skills
+    star_state: starred
+    upstream:
+      id: 1145199131
+      full_name: claude-office-skills/skills
+      description: A curated collection of practical Claude Skills for real-world
+        office tasks
+      topics: []
+      default_branch: main
+      archived: false
+      pushed_at: '2026-01-31T14:03:56Z'
+      starred_at: '2026-06-17T23:55:41Z'
+      declared_license: MIT
+  gh-1078079172:
+    github_id: 1078079172
+    kind: unreviewed
+    notes: ''
+    discovery: keyword-skill-v1
+    repository: ComposioHQ/awesome-claude-skills
+    star_state: starred
+    upstream:
+      id: 1078079172
+      full_name: ComposioHQ/awesome-claude-skills
+      description: A curated list of awesome Claude Skills, resources, and tools for
+        customizing Claude AI workflows
+      topics:
+      - agent-skills
+      - ai-agents
+      - antigravity
+      - automation
+      - claude
+      - claude-code
+      - codex
+      - composio
+      - cursor
+      - developer-tools
+      - gemini-cli
+      - mcp
+      - openai-codex
+      - rube
+      - saas
+      - skill
+      - workflow-automation
+      default_branch: master
+      archived: false
+      pushed_at: '2026-09-18T07:16:11Z'
+      starred_at: '2026-01-09T17:16:33Z'
+      declared_license: unknown
+  gh-1135212071:
+    github_id: 1135212071
+    kind: unreviewed
+    notes: ''
+    discovery: keyword-skill-v1
+    repository: coreyhaines31/marketingskills
+    star_state: starred
+    upstream:
+      id: 1135212071
+      full_name: coreyhaines31/marketingskills
+      description: Marketing skills for Claude Code and AI agents. CRO, copywriting,
+        SEO, analytics, and growth engineering.
+      topics:
+      - agent-skills
+      - ai-agents
+      - ai-seo
+      - claude
+      - claude-code
+      - claude-code-plugin
+      - claude-skills
+      - codex
+      - content-marketing
+      - conversion-rate-optimization
+      - copywriting
+      - cursor
+      - email-marketing
+      - generative-engine-optimization
+      - growth-marketing
+      - marketing
+      - marketing-automation
+      - saas-marketing
+      - seo
+      - skill-md
+      default_branch: main
+      archived: false
+      pushed_at: '2026-10-26T19:16:55Z'
+      starred_at: '2026-09-08T12:03:08Z'
+      declared_license: MIT
+  gh-1150205470:
+    github_id: 1150205470
+    kind: unreviewed
+    notes: ''
+    discovery: keyword-skill-v1
+    repository: deanpeters/Product-Manager-Skills
+    star_state: starred
+    upstream:
+      id: 1150205470
+      full_name: deanpeters/Product-Manager-Skills
+      description: Product Management skills framework built on battle-tested methods
+        for Claude Code, Cowork, Codex, and AI agents.
+      topics:
+      - ai-agents
+      - ai-product-management
+      - claude-skills
+      - pm-frameworks
+      - product-management
+      default_branch: main
+      archived: false
+      pushed_at: '2026-10-16T01:51:12Z'
+      starred_at: '2026-09-06T03:56:57Z'
+      declared_license: NOASSERTION
+  gh-1267202750:
+    github_id: 1267202750
+    kind: unreviewed
+    notes: ''
+    discovery: keyword-skill-v1
+    repository: devcxl/mattpocock-skills-zh
+    star_state: starred
+    upstream:
+      id: 1267202750
+      full_name: devcxl/mattpocock-skills-zh
+      description: Matt Pocock 技能集的中文翻译版 — 地道中文，原汁原味的技术术语。基于 mattpocock/skills 复刻。每日中午12点钟同步
+      topics:
+      - ai-agent
+      - chinese
+      - prompt-engineering
+      - skills
+      - translation
+      default_branch: main
+      archived: false
+      pushed_at: '2026-10-23T00:38:05Z'
+      starred_at: '2026-10-01T22:48:28Z'
+      declared_license: MIT
+  gh-1183325896:
+    github_id: 1183325896
+    kind: unreviewed
+    notes: ''
+    discovery: keyword-skill-v1
+    repository: emilkowalski/skills
+    star_state: starred
+    upstream:
+      id: 1183325896
+      full_name: emilkowalski/skills
+      description: Skills for Designers and Engineers.
+      topics: []
+      default_branch: main
+      archived: false
+      pushed_at: '2026-10-11T13:58:36Z'
+      starred_at: '2026-07-10T11:07:00Z'
+      declared_license: MIT
+  gh-1211089620:
+    github_id: 1211089620
+    kind: unreviewed
+    notes: ''
+    discovery: keyword-skill-v1
+    repository: feichanggege/ecommerce-visual-copywriting-skill
+    star_state: starred
+    upstream:
+      id: 1211089620
+      full_name: feichanggege/ecommerce-visual-copywriting-skill
+      description: 电商视觉文案设计SOP Skill - 让电商设计小白也能一键做出5年资深设计经验的商品图片.兼容 Claude / Codex
+        / Cursor / Workbuddy 等 SKILL.md Agent. AI-powered e-commerce visual strategy
+        skill for main images, PDP/A+, copywriting, localization, evidence-aware compliance
+        and image prompts.
+      topics:
+      - agent-skills
+      - ai-image-generation-api
+      - amazon
+      - copywriting
+      - ecommerce
+      - prompt-engineering
+      - shopify
+      - tiktok-shop-affiliate
+      default_branch: main
+      archived: false
+      pushed_at: '2026-09-17T02:40:28Z'
+      starred_at: '2026-08-04T11:44:40Z'
+      declared_license: MIT
+  gh-1000362065:
+    github_id: 1000362065
+    kind: unreviewed
+    notes: ''
+    discovery: keyword-skill-v1
+    repository: github/awesome-copilot
+    star_state: starred
+    upstream:
+      id: 1000362065
+      full_name: github/awesome-copilot
+      description: Community-contributed instructions, agents, skills, and configurations
+        to help you make the most of GitHub Copilot.
+      topics:
+      - agent-skills
+      - agents
+      - ai
+      - awesome
+      - custom-agents
+      - github-copilot
+      - hacktoberfest
+      - prompt-engineering
+      default_branch: main
+      archived: false
+      pushed_at: '2026-10-27T04:28:44Z'
+      starred_at: '2026-10-07T04:35:36Z'
+      declared_license: MIT
+  gh-1204004374:
+    github_id: 1204004374
+    kind: unreviewed
+    notes: ''
+    discovery: keyword-skill-v1
+    repository: handsomestWei/patent-disclosure-skill
+    star_state: starred
+    upstream:
+      id: 1204004374
+      full_name: handsomestWei/patent-disclosure-skill
+      description: 中国专利.skill：专利点挖掘与交底书（发明/实用/外观）编写，通俗解读专利，嗅探政策动向，辅助审查答复。
+      topics:
+      - chinese
+      - disclosure
+      - obsidian
+      - patent
+      - skill
+      default_branch: main
+      archived: false
+      pushed_at: '2026-10-27T04:00:14Z'
+      starred_at: '2026-08-06T14:52:06Z'
+      declared_license: MIT
+  gh-1184901356:
+    github_id: 1184901356
+    kind: unreviewed
+    notes: ''
+    discovery: keyword-skill-v1
+    repository: humanlayer/skills
+    star_state: starred
+    upstream:
+      id: 1184901356
+      full_name: humanlayer/skills
+      description: ''
+      topics: []
+      default_branch: main
+      archived: false
+      pushed_at: '2026-10-08T21:54:25Z'
+      starred_at: '2026-10-06T01:13:27Z'
+      declared_license: MIT
+  gh-1167300963:
+    github_id: 1167300963
+    kind: unreviewed
+    notes: ''
+    discovery: keyword-skill-v1
+    repository: Imbad0202/academic-research-skills
+    star_state: starred
+    upstream:
+      id: 1167300963
+      full_name: Imbad0202/academic-research-skills
+      description: 'Academic Research Skills for Claude Code: research → write → review
+        → revise → finalize'
+      topics:
+      - academic-pipeline
+      - academic-writing
+      - ai-research
+      - claude
+      - claude-code
+      - literature-review
+      - peer-review
+      - prompt-engineering
+      default_branch: main
+      archived: false
+      pushed_at: '2026-10-27T04:04:43Z'
+      starred_at: '2026-08-27T13:09:55Z'
+      declared_license: NOASSERTION
+  gh-1220899692:
+    github_id: 1220899692
+    kind: reference
+    notes: 已有设计参考，固定来源继续以 registry/academic-references.yaml 为准。
+    discovery: keyword-skill-v1
+    repository: Imbad0202/academic-research-skills-codex
+    star_state: starred
+    upstream:
+      id: 1220899692
+      full_name: Imbad0202/academic-research-skills-codex
+      description: Codex-native Academic Research Skills suite for human-in-the-loop
+        academic research workflows
+      topics:
+      - academic-pipeline
+      - academic-research
+      - academic-writing
+      - ai-research
+      - codex
+      - literature-review
+      - openai-codex
+      - peer-review
+      - prompt-engineering
+      - research-assistant
+      default_branch: main
+      archived: false
+      pushed_at: '2026-10-26T03:42:46Z'
+      starred_at: '2026-10-25T02:34:25Z'
+      declared_license: NOASSERTION
+  gh-159152904:
+    github_id: 159152904
+    kind: unreviewed
+    notes: ''
+    discovery: keyword-skill-v1
+    repository: jeecgboot/JeecgBoot
+    star_state: starred
+    upstream:
+      id: 159152904
+      full_name: jeecgboot/JeecgBoot
+      description: 【低代码v2.0，一句话即可生成整个系统】企业级AI低代码平台，一键生成前后端代码甚至整个系统。 AI Skills 一句话画流程、设计表单、生成报表、大屏。内置
+        AI应用平台涵盖：AI聊天、知识库、流程编排、MCP插件等，兼容主流大模型。引领AI低代码「Skills 生成 → 在线配置 → 代码生成 → 手工合并->AI修改」开发模式，解决
+        Java 项目 90% 重复工作，提高效率又不失灵活。
+      topics:
+      - activiti
+      - agent
+      - ai
+      - antd
+      - claude-code
+      - cli
+      - codegenerator
+      - codex
+      - flowable
+      - langchain4j
+      - llm
+      - low-code
+      - mcp
+      - mybatis-plus
+      - rag
+      - skills
+      - spring-ai
+      - springboot
+      - springcloud
+      - vue3
+      default_branch: main
+      archived: false
+      pushed_at: '2026-10-24T09:42:32Z'
+      starred_at: '2024-08-12T23:21:50Z'
+      declared_license: Apache-2.0
+  gh-1079456184:
+    github_id: 1079456184
+    kind: unreviewed
+    notes: ''
+    discovery: keyword-skill-v1
+    repository: K-Dense-AI/scientific-agent-skills
+    star_state: starred
+    upstream:
+      id: 1079456184
+      full_name: K-Dense-AI/scientific-agent-skills
+      description: 'Turn any AI agent into an AI Scientist. The #1 Agent Skills library
+        for science, used by 250,000+ scientists worldwide. 177 ready-to-use validated
+        skills plus 100+ scientific databases covering biology, chemistry, medicine,
+        and drug discovery. Compatible with Cursor, Claude Code, Codex, Pi, Antigravity,
+        and the open Agent Skills standard.'
+      topics:
+      - agent-skills
+      - ai-scientist
+      - bioinformatics
+      - chemoinformatics
+      - claude
+      - claude-skills
+      - claudecode
+      - clinical-research
+      - computational-biology
+      - data-analysis
+      - drug-discovery
+      - genomics
+      - materials-science
+      - metabolomics
+      - proteomics
+      - scientific-computing
+      - scientific-visualization
+      default_branch: main
+      archived: false
+      pushed_at: '2026-10-26T09:36:15Z'
+      starred_at: '2026-08-27T13:11:51Z'
+      declared_license: MIT
+  gh-1126947080:
+    github_id: 1126947080
+    kind: unreviewed
+    notes: ''
+    discovery: keyword-skill-v1
+    repository: kepano/obsidian-skills
+    star_state: starred
+    upstream:
+      id: 1126947080
+      full_name: kepano/obsidian-skills
+      description: Agent skills for Obsidian. Teach your agent to use Obsidian CLI
+        and open formats including Markdown, Bases, JSON Canvas.
+      topics:
+      - agents
+      - agentskills
+      - bases
+      - claude
+      - clawdbot
+      - cli
+      - codex
+      - defuddle
+      - hermes
+      - jsoncanvas
+      - knap
+      - markdown
+      - md
+      - obsidian
+      - openclaw
+      - opencode
+      - skills
+      default_branch: main
+      archived: false
+      pushed_at: '2026-09-15T14:43:57Z'
+      starred_at: '2026-01-09T17:18:54Z'
+      declared_license: MIT
+  gh-1358733444:
+    github_id: 1358733444
+    kind: unreviewed
+    notes: ''
+    discovery: keyword-skill-v1
+    repository: kunchenguid/kun
+    star_state: starred
+    upstream:
+      id: 1358733444
+      full_name: kunchenguid/kun
+      description: Think and build like a principal engineer. Leverage Kun's experience,
+        knowledge, tools, workflows, and skills to help you get shit done.
+      topics: []
+      default_branch: main
+      archived: false
+      pushed_at: '2026-10-26T10:12:38Z'
+      starred_at: '2026-09-06T22:55:32Z'
+      declared_license: unknown
+  gh-626805178:
+    github_id: 626805178
+    kind: unreviewed
+    notes: ''
+    discovery: keyword-skill-v1
+    repository: langgenius/dify
+    star_state: starred
+    upstream:
+      id: 626805178
+      full_name: langgenius/dify
+      description: Build Agentic workflows, RAG pipelines, with rich AI model and
+        tool support on one collaborative workspace. Deploy on cloud, VPC, or self-hosted,
+        so teams move from prototype to production without rebuilding the stack.
+      topics:
+      - agent
+      - agentic-ai
+      - agentic-framework
+      - agentic-workflow
+      - ai
+      - automation
+      - claude
+      - deepseek
+      - genai
+      - gpt
+      - llm
+      - low-code
+      - mcp
+      - nextjs
+      - no-code
+      - openai
+      - python
+      - skills
+      - workflow
+      default_branch: main
+      archived: false
+      pushed_at: '2026-10-27T04:33:18Z'
+      starred_at: '2024-09-05T08:19:27Z'
+      declared_license: NOASSERTION
+  gh-1302690078:
+    github_id: 1302690078
+    kind: unreviewed
+    notes: ''
+    discovery: keyword-skill-v1
+    repository: larashero3-dotcom/lieflat-charts
+    star_state: starred
+    upstream:
+      id: 1302690078
+      full_name: larashero3-dotcom/lieflat-charts
+      description: Data visualization Skill for AI Agents, turning data into polished,
+        interactive HTML charts. 面向 AI Agents 的数据可视化 Skill，将数据快速生成精致、可交互的 HTML 图表。
+      topics:
+      - agent-skills
+      - charts
+      - claude-code
+      - codex
+      - data-visualization
+      - html
+      - moxt
+      - svg
+      default_branch: main
+      archived: false
+      pushed_at: '2026-10-15T10:59:32Z'
+      starred_at: '2026-09-02T11:42:17Z'
+      declared_license: NOASSERTION
+  gh-1271560627:
+    github_id: 1271560627
+    kind: unreviewed
+    notes: ''
+    discovery: keyword-skill-v1
+    repository: latent-spaces/brag
+    star_state: starred
+    upstream:
+      id: 1271560627
+      full_name: latent-spaces/brag
+      description: You built it. Now brag. Turn the project you just created into
+        a short, shareable launch video with one command.
+      topics:
+      - agent-skills
+      - claude-code
+      - claude-skills
+      - hyperframes
+      - launch-video
+      - video-generation
+      default_branch: main
+      archived: false
+      pushed_at: '2026-10-23T21:18:13Z'
+      starred_at: '2026-09-21T14:55:49Z'
+      declared_license: MIT
+  gh-1106401972:
+    github_id: 1106401972
+    kind: unreviewed
+    notes: ''
+    discovery: keyword-skill-v1
+    repository: legeling/PromptHub
+    star_state: starred
+    upstream:
+      id: 1106401972
+      full_name: legeling/PromptHub
+      description: 一款包含了 Prompt管理，Skill管理，Agent管理的一站式AI工具箱，助你高效管理提示词，一键分发skills ，一站式管理Agent资产，并实现云同步，备份，版本管理
+        | An all-in-one AI toolbox for prompt, agent, and skills management. Reuse
+        prompts, distribute skills with one click, manage agent assets, and support
+        cloud sync, backup, and version control
+      topics:
+      - agent
+      - ai
+      - cli-tool
+      - llm
+      - prompt
+      - prompt-toolkit
+      - skills
+      default_branch: main
+      archived: false
+      pushed_at: '2026-10-23T10:25:13Z'
+      starred_at: '2026-07-09T03:58:46Z'
+      declared_license: AGPL-3.0
+  gh-1334714311:
+    github_id: 1334714311
+    kind: unreviewed
+    notes: ''
+    discovery: keyword-skill-v1
+    repository: lencx/Minke
+    star_state: starred
+    upstream:
+      id: 1334714311
+      full_name: lencx/Minke
+      description: 🐳 DeepSeek Harness Desktop
+      topics:
+      - agent
+      - ai-agents
+      - codex
+      - cordis
+      - deekseek
+      - desktop
+      - dsh
+      - dsh-plugin
+      - harness
+      - linux
+      - macos
+      - skills
+      - windows
+      default_branch: main
+      archived: false
+      pushed_at: '2026-10-18T13:48:05Z'
+      starred_at: '2026-08-18T02:33:07Z'
+      declared_license: Apache-2.0
+  gh-1208997064:
+    github_id: 1208997064
+    kind: unreviewed
+    notes: ''
+    discovery: keyword-skill-v1
+    repository: lencx/skills
+    star_state: starred
+    upstream:
+      id: 1208997064
+      full_name: lencx/skills
+      description: 💡 Turn experience into repeatable execution.
+      topics:
+      - agent
+      - ai
+      - architecture
+      - claude
+      - claude-code
+      - codex
+      - coding
+      - docs
+      - dsh
+      - gpt
+      - grok
+      - keel
+      - openai
+      - skills
+      default_branch: main
+      archived: false
+      pushed_at: '2026-08-21T16:41:22Z'
+      starred_at: '2026-05-26T22:16:04Z'
+      declared_license: MIT
+  gh-1162099055:
+    github_id: 1162099055
+    kind: unreviewed
+    notes: ''
+    discovery: keyword-skill-v1
+    repository: Leonxlnx/taste-skill
+    star_state: starred
+    upstream:
+      id: 1162099055
+      full_name: Leonxlnx/taste-skill
+      description: 'Agent skills that give coding agents taste: art direction, reference
+        images and a browser check instead of generic AI pages'
+      topics:
+      - agent-skills
+      - ai-agents
+      - anti-slop
+      - claude-code
+      - codex
+      - cursor
+      - design-system
+      - frontend
+      - landing-page
+      - ui-design
+      - web-design
+      default_branch: main
+      archived: false
+      pushed_at: '2026-10-26T12:28:18Z'
+      starred_at: '2026-09-06T07:39:53Z'
+      declared_license: MIT
+  gh-1127499996:
+    github_id: 1127499996
+    kind: unreviewed
+    notes: ''
+    discovery: keyword-skill-v1
+    repository: lishix520/academic-paper-skills
+    star_state: starred
+    upstream:
+      id: 1127499996
+      full_name: lishix520/academic-paper-skills
+      description: Systematic framework for planning and writing academic papers using
+        Claude Code. Includes strategist (planning) and composer (writing) skills
+        with quality checkpoints.
+      topics:
+      - academic-writing
+      - claude-code
+      - philosophy
+      - preprint
+      - research-tools
+      default_branch: main
+      archived: false
+      pushed_at: '2026-01-04T02:42:38Z'
+      starred_at: '2026-08-27T13:06:00Z'
+      declared_license: MIT
+  gh-1148788086:
+    github_id: 1148788086
+    kind: skill-collection
+    notes: 工程需求、TDD 与复盘的储备；本次上游版本与已有 PRD 使用的 curated 包分别记录。
+    discovery: keyword-skill-v1
+    repository: mattpocock/skills
+    star_state: starred
+    upstream:
+      id: 1148788086
+      full_name: mattpocock/skills
+      description: Skills for Real Engineers. Straight from my .agents directory.
+      topics: []
+      default_branch: main
+      archived: false
+      pushed_at: '2026-10-22T09:35:28Z'
+      starred_at: '2026-06-28T02:33:25Z'
+      declared_license: MIT
+  gh-1148744000:
+    github_id: 1148744000
+    kind: unreviewed
+    notes: ''
+    discovery: keyword-skill-v1
+    repository: MengTo/Skills
+    star_state: starred
+    upstream:
+      id: 1148744000
+      full_name: MengTo/Skills
+      description: Agent skills for designers and builders using Codex, Claude, Cursor,
+        and other AI coding agents
+      topics: []
+      default_branch: main
+      archived: false
+      pushed_at: '2026-10-25T17:54:56Z'
+      starred_at: '2026-07-25T14:35:10Z'
+      declared_license: MIT
+  gh-1232669890:
+    github_id: 1232669890
+    kind: unreviewed
+    notes: ''
+    discovery: keyword-skill-v1
+    repository: microsoft/SkillOpt
+    star_state: starred
+    upstream:
+      id: 1232669890
+      full_name: microsoft/SkillOpt
+      description: SkillOpt is a text-space optimizer that trains reusable natural-language
+        skills for frozen LLM agents through trajectory-driven edits, validation-gated
+        updates, and deployable best_skill.md artifacts.
+      topics:
+      - agent-skills
+      - self-evolving-agents
+      default_branch: main
+      archived: false
+      pushed_at: '2026-10-25T21:19:21Z'
+      starred_at: '2026-06-14T10:33:37Z'
+      declared_license: MIT
+  gh-1301683816:
+    github_id: 1301683816
+    kind: unreviewed
+    notes: ''
+    discovery: keyword-skill-v1
+    repository: mintdotgg/mint-playground
+    star_state: starred
+    upstream:
+      id: 1301683816
+      full_name: mintdotgg/mint-playground
+      description: Open-source Three.js experiences built with Mint MCP and Mint Three.js
+        Skills
+      topics: []
+      default_branch: main
+      archived: false
+      pushed_at: '2026-09-26T09:56:07Z'
+      starred_at: '2026-08-04T15:12:58Z'
+      declared_license: MIT
+  gh-1362509712:
+    github_id: 1362509712
+    kind: unreviewed
+    notes: ''
+    discovery: keyword-skill-v1
+    repository: mizzlelover/gongwen-gbt9704-skill
+    star_state: starred
+    upstream:
+      id: 1362509712
+      full_name: mizzlelover/gongwen-gbt9704-skill
+      description: 信息安全提醒：请勿上传企业禁止对外公开的文件；可在本地或企业内网部署大模型后使用。中文公文排版 Skill：按 GB/T 9704-2012
+        生成可编辑 DOCX。配套 CEB：https://github.com/mizzlelover/CEB
+      topics:
+      - ai-skill
+      - ceb
+      - chinese-official-document
+      - claude-code
+      - cross-platform
+      - document-formatting
+      - docx
+      - gbt-9704-2012
+      - kimi
+      - opencode
+      - trae-code
+      - traework
+      - word
+      - workbuddy
+      - wps
+      - zcode
+      default_branch: main
+      archived: false
+      pushed_at: '2026-09-13T00:12:46Z'
+      starred_at: '2026-09-11T08:52:33Z'
+      declared_license: MIT
+  gh-1142983825:
+    github_id: 1142983825
+    kind: unreviewed
+    notes: ''
+    discovery: keyword-skill-v1
+    repository: multica-ai/andrej-karpathy-skills
+    star_state: starred
+    upstream:
+      id: 1142983825
+      full_name: multica-ai/andrej-karpathy-skills
+      description: A single CLAUDE.md file to improve Claude Code behavior, derived
+        from Andrej Karpathy's observations on LLM coding pitfalls.
+      topics: []
+      default_branch: main
+      archived: false
+      pushed_at: '2026-04-20T10:05:04Z'
+      starred_at: '2026-05-05T05:41:30Z'
+      declared_license: unknown
+  gh-1140843380:
+    github_id: 1140843380
+    kind: unreviewed
+    notes: ''
+    discovery: keyword-skill-v1
+    repository: mvanhorn/last30days-skill
+    star_state: starred
+    upstream:
+      id: 1140843380
+      full_name: mvanhorn/last30days-skill
+      description: AI agent skill that researches any topic across Reddit, X, YouTube,
+        HN, Polymarket, and the web - then synthesizes a grounded summary
+      topics:
+      - ai-prompts
+      - ai-skill
+      - bluesky
+      - claude
+      - claude-code
+      - clawhub
+      - deep-research
+      - hackernews
+      - instagram
+      - openclaw
+      - polymarket
+      - recency
+      - reddit
+      - research
+      - social-media
+      - tiktok
+      - trends
+      - twitter
+      - web-search
+      - youtube
+      default_branch: main
+      archived: false
+      pushed_at: '2026-10-27T02:44:12Z'
+      starred_at: '2026-09-06T07:38:43Z'
+      declared_license: MIT
+  gh-1106996539:
+    github_id: 1106996539
+    kind: unreviewed
+    notes: ''
+    discovery: keyword-skill-v1
+    repository: nextlevelbuilder/ui-ux-pro-max-skill
+    star_state: starred
+    upstream:
+      id: 1106996539
+      full_name: nextlevelbuilder/ui-ux-pro-max-skill
+      description: An AI skill that provides design intelligence for building professional
+        UI/UX across multiple platforms.
+      topics:
+      - ai-skills
+      - antigravity
+      - claude
+      - claude-code
+      - codex
+      - command-line
+      - copilot
+      - cursor-ai
+      - html5
+      - kiro
+      - landing-page
+      - mobile-ui
+      - qoder
+      - react
+      - tailwindcss
+      - trae
+      - ui-design
+      - uikit
+      - windsurf-ai
+      default_branch: main
+      archived: false
+      pushed_at: '2026-10-26T10:07:28Z'
+      starred_at: '2026-09-06T07:27:11Z'
+      declared_license: MIT
+  gh-1223170290:
+    github_id: 1223170290
+    kind: unreviewed
+    notes: ''
+    discovery: keyword-skill-v1
+    repository: nexu-io/open-design
+    star_state: starred
+    upstream:
+      id: 1223170290
+      full_name: nexu-io/open-design
+      description: The 1st Collaborative AI Design Agent Workspace. Local-first and
+        open source. Create motion, prototypes, websites, apps, dashboards, presentations,
+        images, and videos with your team and AI agents. Share work, exchange feedback,
+        and iterate together in one workspace.
+      topics:
+      - agent-skills
+      - ai-design
+      - byok
+      - claude-code-for-design
+      - claude-design
+      - codex-design
+      - cursor-design
+      - deepseek
+      - deepseek-harness
+      - design-systems
+      - desktop-app
+      - desktop-apps
+      - dsh
+      - dsh-plugin
+      - figma-alternative
+      - hermes-agent
+      - local-first
+      - prototyping
+      - ui-generator
+      - vibe-coding
+      default_branch: main
+      archived: false
+      pushed_at: '2026-10-27T04:30:18Z'
+      starred_at: '2026-06-04T13:18:01Z'
+      declared_license: Apache-2.0
+  gh-1073224795:
+    github_id: 1073224795
+    kind: skill-collection
+    notes: 验证与调试方法储备；不整体采用其全局触发和编排规则。
+    discovery: keyword-skill-v1
+    repository: obra/superpowers
+    star_state: starred
+    upstream:
+      id: 1073224795
+      full_name: obra/superpowers
+      description: An agentic skills framework & software development methodology
+        that works.
+      topics:
+      - ai
+      - brainstorming
+      - coding
+      - obra
+      - sdlc
+      - skills
+      - subagent-driven-development
+      - superpowers
+      default_branch: main
+      archived: false
+      pushed_at: '2026-10-23T03:48:57Z'
+      starred_at: '2026-01-09T17:20:50Z'
+      declared_license: MIT
+  gh-1088558237:
+    github_id: 1088558237
+    kind: unreviewed
+    notes: ''
+    discovery: keyword-skill-v1
+    repository: Orchestra-Research/AI-Research-SKILLs
+    star_state: starred
+    upstream:
+      id: 1088558237
+      full_name: Orchestra-Research/AI-Research-SKILLs
+      description: Comprehensive open-source library of AI research and engineering
+        skills for any AI model. Package the skills and your claude code/codex/gemini
+        agent will be an AI research agent with full horsepower. Maintained by Orchestra
+        Research.
+      topics:
+      - ai
+      - ai-research
+      - claude
+      - claude-code
+      - claude-skills
+      - codex
+      - gemini
+      - gpt-5
+      - grpo
+      - huggingface
+      - machine-leanring
+      - megatron
+      - skills
+      - vllm
+      default_branch: main
+      archived: false
+      pushed_at: '2026-10-11T02:56:34Z'
+      starred_at: '2026-08-27T13:12:42Z'
+      declared_license: MIT
+  gh-1170266927:
+    github_id: 1170266927
+    kind: unreviewed
+    notes: ''
+    discovery: keyword-skill-v1
+    repository: phuryn/pm-skills
+    star_state: starred
+    upstream:
+      id: 1170266927
+      full_name: phuryn/pm-skills
+      description: 'PM Skills Marketplace: 100+ agentic skills, commands, and plugins
+        — from discovery to strategy, execution, launch, and growth.'
+      topics:
+      - agent-skill-repository
+      - agent-skills
+      - agentic-skills
+      - claude-code-marketplace
+      - claude-code-plugins
+      - claude-cowork-plugin
+      - product-management
+      default_branch: main
+      archived: false
+      pushed_at: '2026-10-16T12:28:37Z'
+      starred_at: '2026-09-06T03:55:49Z'
+      declared_license: MIT
+  gh-1289435641:
+    github_id: 1289435641
+    kind: unreviewed
+    notes: ''
+    discovery: keyword-skill-v1
+    repository: Pluviobyte/rnskill
+    star_state: starred
+    upstream:
+      id: 1289435641
+      full_name: Pluviobyte/rnskill
+      description: 雪踏乌云的 AI Agent Skills 集合
+      topics: []
+      default_branch: main
+      archived: false
+      pushed_at: '2026-09-21T05:44:30Z'
+      starred_at: '2026-07-28T23:52:12Z'
+      declared_license: NOASSERTION
+  gh-1130952330:
+    github_id: 1130952330
+    kind: unreviewed
+    notes: ''
+    discovery: keyword-skill-v1
+    repository: product-on-purpose/pm-skills
+    star_state: starred
+    upstream:
+      id: 1130952330
+      full_name: product-on-purpose/pm-skills
+      description: '68 plug-and-play, best-practice product management skills for
+        AI agents: 30 Triple Diamond phase + 11 foundation + 12 utility + 15 tool
+        (Foundation Sprint + Design Sprint). Plus 6 sub-agents, workflows, 200+ output
+        samples, guides, and CI-enforced contracts. Apache 2.0.'
+      topics:
+      - agent-skills
+      - agentskills
+      - ai-skills
+      - claude-code
+      - claude-desktop
+      - codex
+      - design-sprint
+      - foundation-sprint
+      - openskills
+      - product-management
+      - skill-families
+      - triple-diamond
+      default_branch: main
+      archived: false
+      pushed_at: '2026-10-27T01:25:22Z'
+      starred_at: '2026-09-06T04:12:42Z'
+      declared_license: Apache-2.0
+  gh-995029641:
+    github_id: 995029641
+    kind: unreviewed
+    notes: ''
+    discovery: keyword-skill-v1
+    repository: ruvnet/ruflo
+    star_state: starred
+    upstream:
+      id: 995029641
+      full_name: ruvnet/ruflo
+      description: 🌊 The original agent harness. Deploy intelligent multi-player swarms,
+        coordinate autonomous workflows, and build conversational AI systems. Features
+        adaptive memory, self-learning intelligence, federation, vector RAG integration,
+        and native Claude Code / Codex / Hermes and many more Integrated
+      topics:
+      - agentic-ai
+      - agentic-framework
+      - agentic-workflow
+      - agents
+      - ai-agents
+      - ai-assistant
+      - ai-skills
+      - autonomous-agents
+      - claude
+      - codex
+      - dsh-plugin
+      - harness
+      - mcp-server
+      - multi-agent
+      - multi-agent-systems
+      - npm
+      - skills
+      - swarm
+      - swarm-intelligence
+      - typescript
+      default_branch: main
+      archived: false
+      pushed_at: '2026-10-27T00:39:20Z'
+      starred_at: '2026-07-18T14:11:10Z'
+      declared_license: MIT
+  gh-1211139949:
+    github_id: 1211139949
+    kind: unreviewed
+    notes: ''
+    discovery: keyword-skill-v1
+    repository: tt-a1i/archify
+    star_state: starred
+    upstream:
+      id: 1211139949
+      full_name: tt-a1i/archify
+      description: Turn any idea, plan, or codebase into a beautiful interactive diagram.
+        An agent skill for Claude Code, Codex, and more.
+      topics:
+      - agent-skills
+      - ai-agents
+      - architecture-diagram
+      - claude-code
+      - claude-skills
+      - codex
+      - coding-agents
+      - deepseek-harness
+      - developer-tools
+      - diagrams
+      - diagrams-as-code
+      - dsh-plugin
+      - flowchart
+      - llm
+      - mermaid
+      - opencode
+      - sequence-diagram
+      - software-architecture
+      - system-design
+      - visualization
+      default_branch: main
+      archived: false
+      pushed_at: '2026-10-27T01:15:41Z'
+      starred_at: '2026-09-06T23:45:45Z'
+      declared_license: Apache-2.0
+  gh-1216173720:
+    github_id: 1216173720
+    kind: unreviewed
+    notes: ''
+    discovery: keyword-skill-v1
+    repository: tw93/Kami
+    star_state: starred
+    upstream:
+      id: 1216173720
+      full_name: tw93/Kami
+      description: 👩‍🚒 Good content deserves good paper. Layout rules and templates
+        that let AI agents export PDF, PNG and editable PowerPoint.
+      topics:
+      - agent-skills
+      - ai-agents
+      - claude-code
+      - codex
+      - document-design
+      - pdf
+      - pptx
+      - typesetting
+      default_branch: main
+      archived: false
+      pushed_at: '2026-10-26T14:30:13Z'
+      starred_at: '2026-09-10T11:27:46Z'
+      declared_license: MIT
+  gh-1179363570:
+    github_id: 1179363570
+    kind: unreviewed
+    notes: ''
+    discovery: keyword-skill-v1
+    repository: tw93/Waza
+    star_state: starred
+    upstream:
+      id: 1179363570
+      full_name: tw93/Waza
+      description: 🥷 Engineering habits you already know, turned into skills AI assistants
+        like Claude Code, Codex and Cursor can run.
+      topics:
+      - agent-skills
+      - ai-agents
+      - claude
+      - claude-code
+      - codex
+      - cursor
+      - design
+      - engineer
+      - skills
+      - superpowers
+      default_branch: main
+      archived: false
+      pushed_at: '2026-10-27T03:39:37Z'
+      starred_at: '2026-05-27T04:42:30Z'
+      declared_license: MIT
+  gh-1084853233:
+    github_id: 1084853233
+    kind: unreviewed
+    notes: ''
+    discovery: keyword-skill-v1
+    repository: VoltAgent/awesome-agent-skills
+    star_state: starred
+    upstream:
+      id: 1084853233
+      full_name: VoltAgent/awesome-agent-skills
+      description: A curated collection of 1000+ agent skills from official dev teams
+        and the community, compatible with Claude Code, Codex, Gemini CLI, Cursor,
+        and more.
+      topics:
+      - agent-skills
+      - ai-agents
+      - awesome
+      - awesome-list
+      - claude-code
+      - claude-code-skills
+      - claude-skills
+      - codex
+      - codex-skills
+      - cursor
+      - cursor-skills
+      - gemini-skills
+      - opencode-skills
+      - skills
+      default_branch: main
+      archived: false
+      pushed_at: '2026-10-25T13:18:51Z'
+      starred_at: '2026-01-09T17:19:53Z'
+      declared_license: MIT
+  gh-1141704318:
+    github_id: 1141704318
+    kind: unreviewed
+    notes: ''
+    discovery: keyword-skill-v1
+    repository: VoltAgent/awesome-openclaw-skills
+    star_state: starred
+    upstream:
+      id: 1141704318
+      full_name: VoltAgent/awesome-openclaw-skills
+      description: The awesome collection of OpenClaw skills. 5,400+ skills filtered
+        and categorized from the official OpenClaw Skills Registry.🦞
+      topics:
+      - agent-skills
+      - awesome
+      - awesome-list
+      - awesome-lists
+      - clawd
+      - clawdbot
+      - clawdbot-skill
+      - clawdhub
+      - moltbot
+      - moltbot-skills
+      - openclaw
+      - openclaw-skills
+      default_branch: main
+      archived: false
+      pushed_at: '2026-10-19T05:54:13Z'
+      starred_at: '2026-03-17T00:05:01Z'
+      declared_license: MIT
+  gh-1410124849:
+    github_id: 1410124849
+    kind: single-skill
+    notes: 机械系统可视化储备；图形几何检查不能证明工程模型正确。
+    discovery: keyword-skill-v1
+    repository: wheresryan22/anatomy
+    star_state: starred
+    upstream:
+      id: 1410124849
+      full_name: wheresryan22/anatomy
+      description: An agent skill for creating detailed, interactive isometric illustrations
+        of real-world machines and complex systems. Generates polished SVGs with optional
+        WebGL shaders and 3D effects.
+      topics:
+      - agent-skill
+      - open-source
+      - svg
+      - vizualization
+      default_branch: main
+      archived: false
+      pushed_at: '2026-10-18T20:20:24Z'
+      starred_at: '2026-10-14T00:31:09Z'
+      declared_license: MIT
+  gh-1339161831:
+    github_id: 1339161831
+    kind: unreviewed
+    notes: ''
+    discovery: keyword-skill-v1
+    repository: yanliudesign/mono-color-skill
+    star_state: starred
+    upstream:
+      id: 1339161831
+      full_name: yanliudesign/mono-color-skill
+      description: One-ink editorial print image skill — warm paper, halftone photography,
+        active negative space, and restrained typography.
+      topics:
+      - agent-skill
+      - ai-agent
+      - claude-skill
+      - editorial-design
+      - generative-art
+      - halftone
+      - image-generation
+      - monochrome
+      - poster-design
+      - prompt-engineering
+      - risograph
+      - zine
+      default_branch: main
+      archived: false
+      pushed_at: '2026-09-02T18:49:42Z'
+      starred_at: '2026-09-01T10:41:03Z'
+      declared_license: MIT
+  gh-1285692037:
+    github_id: 1285692037
+    kind: unreviewed
+    notes: ''
+    discovery: keyword-skill-v1
+    repository: yanliudesign/offer-toolkit-skill
+    star_state: starred
+    upstream:
+      id: 1285692037
+      full_name: yanliudesign/offer-toolkit-skill
+      description: Full job-hunt Claude skill bundle — Job Description decoder + Resume
+        builder (11 templates) + Behavioral Interview / story bank. Three self-contained
+        sub-skills with a top-level router.
+      topics:
+      - agent-skill
+      - ai-agent
+      - aijob
+      - behavioral-interview
+      - bilingual
+      - career
+      - career-tools
+      - claude
+      - claude-code
+      - claude-skill
+      - codex-skill
+      - interview-prep
+      - job-description
+      - jobhunting
+      - llm-tools
+      - offer-strategy
+      - resume
+      - resume-builder
+      - resume-template
+      - story-bank
+      default_branch: main
+      archived: false
+      pushed_at: '2026-10-26T05:14:06Z'
+      starred_at: '2026-07-03T04:26:26Z'
+      declared_license: MIT
+  gh-1141918448:
+    github_id: 1141918448
+    kind: unreviewed
+    notes: ''
+    discovery: keyword-skill-v1
+    repository: ynulihao/AgentSkillOS
+    star_state: starred
+    upstream:
+      id: 1141918448
+      full_name: ynulihao/AgentSkillOS
+      description: Build your agent from 200,000+ skills via skill RETRIEVAL & ORCHESTRATION
+      topics: []
+      default_branch: main
+      archived: false
+      pushed_at: '2026-03-07T16:51:24Z'
+      starred_at: '2026-10-10T00:26:46Z'
+      declared_license: unknown
