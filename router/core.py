@@ -221,6 +221,8 @@ def instruction_graph(root: Path, project: str, mode=None) -> dict:
     required, optional = set(), set()
 
     def visit(path):
+        if PurePosixPath(path).parts[:1] == ("catalog",):
+            raise RouterError(f"Catalog data cannot enter the instruction graph: {path}")
         if path in active:
             raise RouterError("Instruction cycle: " + " -> ".join([*active, path]))
         if path in result:

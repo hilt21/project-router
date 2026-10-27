@@ -1,0 +1,132 @@
+{
+  "schema_version": 1,
+  "recorded_at": "2026-10-27T04:37:22.343588+00:00",
+  "base_sha": "b16b04742937d3a5ee5e2643da9d11e0413086aa",
+  "layer": "local-cli-and-static",
+  "checks": [
+    {
+      "command": "python -m router.catalog check",
+      "exit_code": 0,
+      "status": "passed",
+      "output_sha256": "a730a30e59b80e15dee2effe07170d176c5015d6dcc08e4a7645d090f9a0a466"
+    },
+    {
+      "command": "python -m router.catalog render --check",
+      "exit_code": 0,
+      "status": "passed",
+      "output_sha256": "a730a30e59b80e15dee2effe07170d176c5015d6dcc08e4a7645d090f9a0a466"
+    },
+    {
+      "command": "python -m router validate",
+      "exit_code": 0,
+      "status": "passed",
+      "output_sha256": "7654a3990ca930c28a1dac2dc79b832c4ce4a2298b3801248d6a4918969a56ca"
+    },
+    {
+      "command": "python -m router lock --check",
+      "exit_code": 0,
+      "status": "passed",
+      "output_sha256": "1d44d1a8432e4449bfb5aa6ab99c3ed32eb08eee436c7f0965cdb3a072a8e4d0"
+    },
+    {
+      "command": "python -m router eval",
+      "exit_code": 0,
+      "status": "passed",
+      "output_sha256": "39d66f289551cef655a293fbdc6aa2a233b0c2cafa85a3fe93f3cadd933ac7e6"
+    },
+    {
+      "command": "python evals/probes/check_artifacts.py",
+      "exit_code": 0,
+      "status": "passed",
+      "output_sha256": "2248dffbfc5cd3dbbc7f6813d1c749df20541082b740936db835efa6c4c7da25"
+    },
+    {
+      "command": "python evals/check_content_replay.py",
+      "exit_code": 0,
+      "status": "passed",
+      "output_sha256": "4042dc21f333440a9400dc8952dbcd86db9d35fd40bb6e9ed7cfb780f9dd9ff0"
+    },
+    {
+      "command": "python evals/run_academic_lifecycle.py",
+      "exit_code": 0,
+      "status": "passed",
+      "output_sha256": "59bb01eac90db2528ff14df986844a6254bd27a1d3dd5a1c3d5885ea9b47246b"
+    },
+    {
+      "command": "python scripts/check_release_history.py --base b16b04742937d3a5ee5e2643da9d11e0413086aa",
+      "exit_code": 0,
+      "status": "passed",
+      "output_sha256": "15e1490b5821af30db90baf5958d9c8b34a856cb6936fe2a8baf811e7fb5bc33"
+    },
+    {
+      "command": "python -m unittest discover -s tests -v",
+      "exit_code": 0,
+      "status": "passed",
+      "output_sha256": "1241f954269cbb7c195ea203c12f0764d5587ce0d1819e76f0429ba08891a3d8",
+      "test_count": 97
+    }
+  ],
+  "collection": {
+    "status": "complete",
+    "pages": 4,
+    "count": 306,
+    "snapshot_sha256": "039dcb8b1bd69fc25410184d170b2dc6e5ee72e8196b162be362c2b33fcec7e9"
+  },
+  "external_skill_host_tests": "not-run",
+  "human_acceptance": "not-run",
+  "github_ci": "see-pull-request-checks",
+  "channels_updated": false,
+  "implementation_sha256": {
+    "router/catalog.py": "257ae798cb6a82373831a33a92dd2ef468140c6810761db94e8ca0db4244a756",
+    "router/core.py": "8cbcc3a18f941a571ff0eabaa95df3fba91affe47c3c8e19f255564019e68d5c",
+    "scripts/collect_skill_stars.py": "f1ee5e9b2fe25d8214458e48cffece4ba7db57c76ea6e3641763bf8ae902db8f",
+    "tests/test_catalog.py": "d19587f69470957569159766cfa0b14bc23016e6e0de8a46b82966408e708dba",
+    "catalog/skills/sources.yaml": "5aafc28c24e65544feca5b84c616f0ba2a395245a2327ed60024f7072a84558c",
+    "catalog/skills/entries.yaml": "a3d26f995542f766ab7bc988a7729a6dd02fd30f376443e4b75a39551d3c61a5",
+    "catalog/skills/README.md": "c86163dc337f2a428dbf3906340040a03571a1c9714f82df8515ca5502ef081d",
+    "catalog/skills/reviews/source-readings.json": "a0d8c3df2194f831d3263ff11288bee8a82ef51253a63ba4bae22f6ecb067925"
+  },
+  "discovery_scenarios": [
+    {
+      "arguments": [
+        "--stage",
+        "define",
+        "--query",
+        "PRD"
+      ],
+      "matched_ids": [
+        "matt-to-spec",
+        "anthropic-doc-coauthoring"
+      ],
+      "activation": "none",
+      "host_verification": "not-run"
+    },
+    {
+      "arguments": [
+        "--project",
+        "academic-research",
+        "--query",
+        "数学证明"
+      ],
+      "matched_ids": [
+        "ars-research-reference"
+      ],
+      "activation": "none",
+      "host_verification": "not-run"
+    },
+    {
+      "arguments": [
+        "--stage",
+        "verify",
+        "--query",
+        "上线"
+      ],
+      "matched_ids": [
+        "superpowers-verify",
+        "anthropic-webapp-testing"
+      ],
+      "activation": "none",
+      "host_verification": "not-run"
+    }
+  ]
+}

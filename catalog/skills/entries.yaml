@@ -1,0 +1,389 @@
+schema_version: 1
+entries:
+  matt-to-spec:
+    name: to-spec
+    source: gh-1148788086
+    path: skills/engineering/to-spec/SKILL.md
+    commit_sha: 5beb35b040e3de97e54fa9e386d7e42d15c295c2
+    blob_sha: 3f52599ae2a4347aee5a07432c2707518e691a7f
+    content_sha256: 43ad9cf318e5e7d3d1fa360253a37021796dc87a0c2e595ad262661a10f85088
+    purpose: 将已有访谈和代码事实综合成 PRD 或规格说明。
+    avoid: 需求尚无上下文时先补齐关键事实。
+    stages:
+    - define
+    projects:
+    - new-project
+    keywords:
+    - 访谈
+    - PRD
+    - 需求
+    - 规格
+    - spec
+    tools:
+    - repository-read
+    - issue-tracker-write (optional adaptation)
+    limitations:
+    - 上游包含发布 Issue 和标签动作，使用前需适配授权边界。
+    - 未运行宿主试验。
+    local_skills: []
+    relationship: complements
+    adoption: candidate
+    review_status: source-read
+    review_scope: 完整入口文件已取回；审阅 frontmatter 与正文重点；未审阅全部引用、脚本或传递依赖。
+    license: MIT
+    license_status: file-read
+    host_tests: []
+    review: catalog/skills/reviews/initial-source-review.md
+  matt-tdd:
+    name: tdd
+    source: gh-1148788086
+    path: skills/engineering/tdd/SKILL.md
+    commit_sha: 5beb35b040e3de97e54fa9e386d7e42d15c295c2
+    blob_sha: 01eadaa34e7c9a63a67d6dc3cce1cc81b0e49985
+    content_sha256: 5505d25bbaa8fc14a79e4d20163936958992a2995b7f1dd1d6197edc9ed722e0
+    purpose: 通过公开接口验证功能和修复，按小步测试推进。
+    avoid: 不适用于只整理资料且无需行为测试的任务。
+    stages:
+    - implement
+    - verify
+    projects: []
+    keywords:
+    - 测试
+    - TDD
+    - test
+    - integration
+    tools:
+    - code-execution
+    - test-runner
+    limitations:
+    - 依赖 tests.md、mocking.md 及其他技能，未审阅传递依赖。
+    - 上游要求先确认测试接口，需结合已有任务授权适配。
+    local_skills: []
+    relationship: complements
+    adoption: candidate
+    review_status: source-read
+    review_scope: 完整入口文件已取回；审阅 frontmatter 与正文重点；未审阅全部引用、脚本或传递依赖。
+    license: MIT
+    license_status: file-read
+    host_tests: []
+    review: catalog/skills/reviews/initial-source-review.md
+  matt-retro:
+    name: retro
+    source: gh-1148788086
+    path: skills/engineering/retro/SKILL.md
+    commit_sha: 5beb35b040e3de97e54fa9e386d7e42d15c295c2
+    blob_sha: 12149acf2dd23b4514dec57b04a6293eaa1352fa
+    content_sha256: 33fbc28568e3146f20fd908b12998bc0ab30aa4f4c87288199a40793efa94696
+    purpose: 从实际开发过程识别导航、检查和环境改进机会。
+    avoid: 无过程证据时不直接生成长期规则。
+    stages:
+    - maintain
+    projects: []
+    keywords:
+    - 复盘
+    - 反馈
+    - retro
+    - 维护
+    tools:
+    - repository-read
+    - session-evidence-read
+    limitations:
+    - 依赖 writing-for-agents；不复制完整会话到公开仓库。
+    - 只形成候选，不能直接修改正式工作流。
+    local_skills:
+    - capture-router-feedback
+    relationship: overlaps
+    adoption: candidate
+    review_status: source-read
+    review_scope: 完整入口文件已取回；审阅 frontmatter 与正文重点；未审阅全部引用、脚本或传递依赖。
+    license: MIT
+    license_status: file-read
+    host_tests: []
+    review: catalog/skills/reviews/initial-source-review.md
+  superpowers-verify:
+    name: verification-before-completion
+    source: gh-1073224795
+    path: skills/verification-before-completion/SKILL.md
+    commit_sha: 2ce8aa15d05bd57213e6f746f953aafb7ded7a8b
+    blob_sha: 7d45333cc4a49c57a80df6c1fe2fa777a207afbc
+    content_sha256: 2befe7fc55bcadaa3d97dd9e8efeb633d2561c0ebe74c5a8b17c4d9e7e4520b3
+    purpose: 在宣称完成前检查最新命令结果及需求证据。
+    avoid: 没有实际执行能力时保留 not-run。
+    stages:
+    - verify
+    projects:
+    - new-project
+    - content-studio
+    - academic-research
+    keywords:
+    - 验收
+    - 上线
+    - 生产
+    - 检查
+    - verification
+    - evidence
+    tools:
+    - code-execution (when checking code)
+    limitations:
+    - 此技能不提供完整生产安全检查清单。
+    - 需要针对产物定义实际验收项。
+    local_skills:
+    - verify-delivery
+    relationship: overlaps
+    adoption: candidate
+    review_status: source-read
+    review_scope: 完整入口文件已取回；审阅 frontmatter 与正文重点；未审阅全部引用、脚本或传递依赖。
+    license: MIT
+    license_status: file-read
+    host_tests: []
+    review: catalog/skills/reviews/initial-source-review.md
+  superpowers-debug:
+    name: systematic-debugging
+    source: gh-1073224795
+    path: skills/systematic-debugging/SKILL.md
+    commit_sha: 2ce8aa15d05bd57213e6f746f953aafb7ded7a8b
+    blob_sha: 62fc752aaef59a8bbed5d305f4cadc60f8ae07ed
+    content_sha256: 51c6435d98c83c42c96ba7c35725a0b2c376cd487fb1a4e6bd0ddbe7e33ef202
+    purpose: 通过复现、边界观测和单一假设定位故障。
+    avoid: 缺少复现材料时先收集证据。
+    stages:
+    - implement
+    - verify
+    projects: []
+    keywords:
+    - 调试
+    - 故障
+    - debug
+    - 排查
+    tools:
+    - repository-read
+    - code-execution
+    limitations:
+    - 引用根因追踪和 TDD 等依赖，尚未逐项审阅。
+    - 真实环境诊断和修复未运行。
+    local_skills: []
+    relationship: complements
+    adoption: candidate
+    review_status: source-read
+    review_scope: 完整入口文件已取回；审阅 frontmatter 与正文重点；未审阅全部引用、脚本或传递依赖。
+    license: MIT
+    license_status: file-read
+    host_tests: []
+    review: catalog/skills/reviews/initial-source-review.md
+  anthropic-frontend:
+    name: frontend-design
+    source: gh-1061953414
+    path: skills/frontend-design/SKILL.md
+    commit_sha: dbd4588f9e1033efb41dad4bef2f7947c8993d44
+    blob_sha: a5333457c414d20d625f307df945842c0952ecc3
+    content_sha256: d91970639e9f5c37682ac7ab60094d35f1c7c1f38d731bd56396563aee10c1d3
+    purpose: 根据主题和受众制定界面视觉方向并检查成品。
+    avoid: 不替代事实核对和可访问性验收。
+    stages:
+    - design
+    projects: []
+    keywords:
+    - UI
+    - 界面
+    - frontend
+    - 设计
+    tools:
+    - frontend-code-edit
+    - browser-check
+    limitations:
+    - 本次仅审阅正文重点；未构建界面。
+    - 视觉原则需要服从具体项目约束。
+    local_skills: []
+    relationship: complements
+    adoption: candidate
+    review_status: source-read
+    review_scope: 完整入口文件已取回；审阅 frontmatter 与正文重点；未审阅全部引用、脚本或传递依赖。
+    license: Apache-2.0
+    license_status: file-read
+    host_tests: []
+    review: catalog/skills/reviews/initial-source-review.md
+  anthropic-webapp-testing:
+    name: webapp-testing
+    source: gh-1061953414
+    path: skills/webapp-testing/SKILL.md
+    commit_sha: dbd4588f9e1033efb41dad4bef2f7947c8993d44
+    blob_sha: 4726215301db64a0cc4d41fc3219c61f37a30f4a
+    content_sha256: 51b7349e77ec63b7744a6f63647e7566a0b4d2e301121cc10e8c2113af6556a2
+    purpose: 使用 Playwright 检查本地网页功能、截图和日志。
+    avoid: 不能以静态输出替代浏览器验证。
+    stages:
+    - verify
+    projects: []
+    keywords:
+    - 浏览器
+    - QA
+    - 上线
+    - 生产
+    - 检查
+    - Playwright
+    - webapp
+    tools:
+    - python
+    - playwright
+    - chromium
+    - local-server
+    limitations:
+    - with_server.py 和 examples 尚未审阅或执行。
+    - networkidle 约定需针对长连接页面调整。
+    local_skills: []
+    relationship: complements
+    adoption: candidate
+    review_status: source-read
+    review_scope: 完整入口文件已取回；审阅 frontmatter 与正文重点；未审阅全部引用、脚本或传递依赖。
+    license: Apache-2.0
+    license_status: file-read
+    host_tests: []
+    review: catalog/skills/reviews/initial-source-review.md
+  anthropic-doc-coauthoring:
+    name: doc-coauthoring
+    source: gh-1061953414
+    path: skills/doc-coauthoring/SKILL.md
+    commit_sha: dbd4588f9e1033efb41dad4bef2f7947c8993d44
+    blob_sha: a5a69839ef4a161131d80b6daef10037a9686f4a
+    content_sha256: 2e47d78846faeea4a56e9809c52700087a15a2155a3f293a3efbaded81398ef4
+    purpose: 按上下文、结构与读者检查改进技术文档。
+    avoid: 简单文档维护可裁剪流程，避免重复访谈。
+    stages:
+    - define
+    - publish
+    projects:
+    - new-project
+    - content-studio
+    keywords:
+    - 文档
+    - PRD
+    - documentation
+    - 写作
+    tools:
+    - document-edit
+    - fresh-reader-test (optional)
+    limitations:
+    - 本次只审阅正文重点；许可证尚未核实。
+    - 独立读者测试未运行。
+    local_skills: []
+    relationship: complements
+    adoption: candidate
+    review_status: source-read
+    review_scope: 完整入口文件已取回；审阅 frontmatter 与正文重点；未审阅全部引用、脚本或传递依赖。
+    license: unknown
+    license_status: unverified
+    host_tests: []
+    review: catalog/skills/reviews/initial-source-review.md
+  humanizer:
+    name: humanizer
+    source: gh-1136666433
+    path: SKILL.md
+    commit_sha: 8c307f367c91bd974002f10f2be2965d642c13df
+    blob_sha: 19fc634208e8cc6ae55d4ff287152583216fd244
+    content_sha256: 0612f1dfb1672b0ea9b97e139bf1f06cabe98d8b27424fe8ff01e1fb4cc99cad
+    purpose: 清理机械化表达，同时保持原文主张和事实。
+    avoid: 不能补造经历或删除必要技术术语。
+    stages:
+    - publish
+    projects:
+    - content-studio
+    keywords:
+    - 写作
+    - LinkedIn
+    - 微信
+    - 去AI味
+    - editing
+    tools:
+    - text-edit
+    limitations:
+    - 英文方法对中文效果待验证。
+    - 本次只审阅正文重点，未做改写对比试验。
+    local_skills:
+    - craft-channel-content
+    relationship: overlaps
+    adoption: candidate
+    review_status: source-read
+    review_scope: 完整入口文件已取回；审阅 frontmatter 与正文重点；未审阅全部引用、脚本或传递依赖。
+    license: MIT
+    license_status: file-read
+    host_tests: []
+    review: catalog/skills/reviews/initial-source-review.md
+  anatomy:
+    name: anatomy
+    source: gh-1410124849
+    path: SKILL.md
+    commit_sha: 1482e8469b0a9e0d8cc18ea2740a01423d29ae80
+    blob_sha: 36f22e400814d84e41fa6c0568928d9d5620c47a
+    content_sha256: 3423ada45a05033bb6e320dfc3b3ac832569969a5afb059bbfc9096c5cf0c71b
+    purpose: 将机器和系统机制表达为可交互的等轴测 SVG。
+    avoid: 不能把插图审计结果当成物理模型验证。
+    stages:
+    - design
+    - publish
+    projects:
+    - content-studio
+    keywords:
+    - 机械
+    - 制动
+    - SVG
+    - 可视化
+    - 图解
+    - engineering
+    tools:
+    - node>=20.10
+    - chromium
+    - optional-webgl
+    limitations:
+    - 只审阅入口及工具说明；kit、脚本和几何模型未审阅。
+    - 性能与机械准确性均未验证。
+    local_skills: []
+    relationship: complements
+    adoption: candidate
+    review_status: source-read
+    review_scope: 完整入口文件已取回；审阅 frontmatter 与正文重点；未审阅全部引用、脚本或传递依赖。
+    license: MIT
+    license_status: file-read
+    host_tests: []
+    review: catalog/skills/reviews/initial-source-review.md
+  ars-research-reference:
+    name: academic-research-suite
+    source: gh-1220899692
+    path: skills/academic-research-suite/SKILL.md
+    commit_sha: 8d6a1f856ee3da9d3a5e2b7f292b3dfe72b592c5
+    blob_sha: 1e2f8abc142f9ded85f20016916b2cca03822dc0
+    content_sha256: 5922ab7d20f251f4568694b4ebefbe89e04eecf42e332a0a22fd371b719ba38a
+    purpose: 查找科研阶段方法；数学证明优先使用本仓库已有 math 模式。
+    avoid: 不可用外部套件绕过研究 ID、材料证据和阶段边界。
+    stages:
+    - research
+    - verify
+    - publish
+    projects:
+    - academic-research
+    keywords:
+    - 数学证明
+    - 科研
+    - 文献
+    - 数学
+    - proof
+    - math
+    tools:
+    - repository-read
+    - web-search
+    - optional-python
+    limitations:
+    - 已有记录为设计参考；未整体引入或安装。
+    - CC-BY-NC-4.0 来源的复制与改编须单独审阅。
+    local_skills:
+    - audit-mathematical-rigor
+    - build-literature-evidence
+    - review-academic-manuscript
+    relationship: design-reference
+    adoption: reference
+    review_status: source-read
+    review_scope: 完整入口文件已取回；审阅 frontmatter 与正文重点；未审阅全部引用、脚本或传递依赖。
+    license: CC-BY-NC-4.0
+    license_status: existing-provenance
+    host_tests: []
+    review: catalog/skills/reviews/initial-source-review.md
+    provenance: registry/academic-references.yaml

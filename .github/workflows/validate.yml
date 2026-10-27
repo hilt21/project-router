@@ -28,6 +28,7 @@ jobs:
           ROUTER_BASE_SHA: ${{ github.event.pull_request.base.sha || github.event.before }}
       - run: python -m router lock --check
       - run: python -m router validate
+      - run: python -m router.catalog check
       - run: python -m router eval
       - run: python evals/probes/check_artifacts.py
       - run: python evals/check_content_replay.py
