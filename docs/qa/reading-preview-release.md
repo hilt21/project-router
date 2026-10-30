@@ -22,7 +22,7 @@ reading-preview 仅分发 interactive-reading。先为已存在且 CI 通过的�
 | 入口故障与反例测试 | passed | 新增 12 项；覆盖缺频道、缺 release、错项目/路由、错误 SHA、正文漂移、元数据缺失等 |
 | 旧版与修复版对照 | passed | 删除 reading-preview 后，旧版 validate 返回 passed；修复版以缺失频道阻断 |
 | 全量本地回归 | passed | 119 项单测、60 项路由用例、skill 锁、地图与既有产物/内容/科研回归通过 |
-| 新源 GitHub CI | not-run | 需远程 CI 成功后再发布新源 |
+| 新源 GitHub CI | passed | 源 38fc1213b3551f4abfe60c24754504e6e05549ba，运行 41036067583 |
 | 频道、发布记录与固定 SHA 依赖回读 | not-run | 发布后另行核验 |
 | 新建真实 Work 对话 | not-run | 当前维护任务与连接器回读不能替代 |
 | 跨对话与压缩恢复 | not-run | 不能从普通加载推断 |
@@ -39,3 +39,9 @@ reading-preview 仅分发 interactive-reading。先为已存在且 CI 通过的�
 推荐下一步限定 Work 验收：使用短入口新开伴读任务，回执核对 reading-preview 的实际 version、源 SHA 和已读依赖；进入探索分支后返回主线；暂停并恢复；再明确要求整理草稿，检查只切 curate 且不写网站。保留失败和未测范围，最后再决定是否将相应内容纳入 stable。
 
 全量回归中，原发布生命周期测试先移除频道再创建 release，与新安装依赖约束不一致；现保留有效依赖，使用隔离测试版本验证创建和回滚，没有弱化生产检查。早期编写中缺少本验证文档导致一次链接检查失败，补齐文档后反例测试通过。
+
+## 最终发布目标
+
+reading-preview 指向 v0.3.0-rc.2，源 SHA 为 38fc1213b3551f4abfe60c24754504e6e05549ba，仅包含 interactive-reading 路由。v0.3.0-rc.1 保留为不可变初始记录。上述发布目标需在主分支合并后以远程回读确认，不能以本地 promote 的成功响应替代。
+
+stable 预期保持 v0.1.3 / f712260baf8701d703c4af81c9fec53cc89072a7，文件 blob 为 5a2abe2bf44326127fb520c5643475dc22a629d6；学术 preview 也保持原记录。本页的 not-run 项保留原范围，不能由此次发布自动升级。
