@@ -67,7 +67,7 @@ CLI 针对当前工作树编译候选执行包。要复现发布版，先按稳�
 - [科研工作流与本地证据检查](docs/ACADEMIC.md)
 - [加载协议与回执](docs/PROTOCOL.md)
 - [发布及回滚](docs/RELEASING.md)
-- [反馈闭环](feedback/README.md)
+- [反馈闭环](feedback/README.md)：每轮语义检查明确纠错，按需加载反馈 skill；草拟、查重、授权写入及后续验证分开进行
 - [评测说明](evals/README.md)
 - [参考来源及引入原则](registry/README.md)
 
