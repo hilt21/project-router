@@ -8,6 +8,7 @@ routes:
   new-project: routes/new-project.md
   content-studio: routes/content-studio.md
   academic-research: routes/academic-research.md
+  interactive-reading: routes/interactive-reading.md
 capabilities:
   - github-read
   - web-search
@@ -15,3 +16,7 @@ capabilities:
   - github-write
   - artifact-read
   - code-execution
+  - site-read
+  - site-write
+  - site-deploy
+  - browser-inspect

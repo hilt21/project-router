@@ -1,6 +1,6 @@
 ---
 id: shared
-project_ids: [new-project, content-studio, academic-research]
+project_ids: [new-project, content-studio, academic-research, interactive-reading]
 includes: []
 ---
 

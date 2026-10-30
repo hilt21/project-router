@@ -37,7 +37,7 @@ class RouterTests(unittest.TestCase):
     def test_legacy_and_academic_route_cases(self):
         result = core.evaluate(self.root)
         self.assertEqual(len(core.load_yaml(self.root, "evals/routing.yaml")["cases"]), 20)
-        self.assertEqual(len(result["cases"]), 48)
+        self.assertEqual(len(result["cases"]), 60)
         self.assertEqual(result["status"], "passed", result)
         self.assertEqual(result["behavioral_verification"], "not-run")
 
