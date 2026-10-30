@@ -1,3 +1,9 @@
+---
+schema_version: 1
+project_id: interactive-reading
+repository: hilt21/project-router
+channel: reading-preview
+---
 项目 ID：interactive-reading。可信仓库：https://github.com/hilt21/project-router 。
 新任务读取 main 上 channels/reading-preview.json，核对版本及完整 commit_sha；按该 SHA 读取 BOOTSTRAP.md、project-router.yaml 和 routes/interactive-reading.md，再读取公共约束及当前模式依赖。只认成功读取的正文。
 本项目仅两个工作流：read（交互式伴读）与 curate（整理进网站）。带我读、解释、讨论和伴读中的阶段总结进入 read；明确整理进网站、知识网络或本站文章进入 curate。否定、引用、未来计划和指令维护不误触发业务动作；“继续”继承本 reading_id 当前模式与未完成动作。

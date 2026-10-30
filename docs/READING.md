@@ -5,9 +5,11 @@
 ## 两种使用方式
 
 - [完整独立项目指令](READING_PROJECT_INSTRUCTIONS.md)：可直接复制到项目设置，不依赖频道发布。更新该指令后需要重新复制。
-- [远程短入口](../bootstrap/interactive-reading.md)：发布后读取专用 `reading-preview` 频道；维护工作流只需更新仓库。候选 PR 阶段尚未创建该频道，不能将短入口视为已启用。
+- [远程短入口](../bootstrap/interactive-reading.md)：读取专用 `reading-preview` 频道；复制 YAML 元数据之后的正文。能否启用须回读 main 的频道记录、不可变源 SHA 和对应路由，不能只凭入口文件存在判断。
 
-本仓库不自动编辑 ChatGPT 项目设置。当前候选实现不修改 stable 或现有学术 preview 频道。后续发布按 [发布协议](RELEASING.md) 创建 immutable source release，再单独 promote 到 `reading-preview`；不得把旧频道切到含新项目的版本并声称本项目已生效。
+本仓库不自动编辑 ChatGPT 项目设置。伴读使用独立 reading-preview，不修改 stable 或现有学术 preview 频道。发布按 [发布协议](RELEASING.md) 创建 immutable source release，再单独 promote 到 reading-preview；真实 Work 新对话与压缩恢复须另行验收。
+
+入口通过结构化元数据声明项目、仓库和频道，校验同时核对可复制正文；入口引用的频道必须存在、与 release record 一致，并发布该项目的正确路由。缺失不能自动退回 stable。检查只验证本地文件契约，不证明网络访问、远程源码存在或项目设置已保存。
 
 ## 路由与动作范围
 
@@ -63,3 +65,5 @@ site-read、site-write、site-deploy、browser-inspect 为宿主能力声明：�
 后续用真实的一小节伴读验证主线、分支和恢复，再完成一次明确授权的知识整理。不要把当前配置校验通过写成学习效果或网站验收通过。
 
 本次实际检查结果与未测范围见 [验证记录](qa/reading-workflows.md)。
+
+404 反馈修复与 stable 资格评估见 [独立预览发布检查](qa/reading-preview-release.md)。

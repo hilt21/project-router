@@ -7,11 +7,11 @@
 ## 开始使用
 
 1. 在目标 ChatGPT 项目中确保 GitHub 连接可以读取 `hilt21/project-router`。
-2. 将下列入口文件的**正文**复制到对应项目的指令设置中：
+2. 将下列入口文件中 YAML 元数据之后的**正文**复制到对应项目的指令设置中：
    - [新项目脑暴入口](bootstrap/new-project.md)
    - [内容创作入口](bootstrap/content-studio.md)
    - [学术研究入口](bootstrap/academic-research.md)，使用 preview 频道
-   - [交互式伴读独立指令](docs/READING_PROJECT_INSTRUCTIONS.md)，可直接复制；[远程短入口](bootstrap/interactive-reading.md) 等待 reading-preview 专用频道发布
+   - [交互式伴读入口](bootstrap/interactive-reading.md)，使用独立 reading-preview 频道；也可直接复制[完整独立指令](docs/READING_PROJECT_INSTRUCTIONS.md)中的“项目指令正文”
 3. 新建该项目内的 Work 对话，发送一个真实任务。首个回执应包含实际源 SHA、已读 skills 和未验证项。
 
 维护工作流时只修改本仓库并发布版本。入口协议本身升级时才需要更新项目设置。修改仓库不会自动更新已安装插件，也不会改变运行中任务的快照。
