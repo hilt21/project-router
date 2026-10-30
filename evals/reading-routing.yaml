@@ -1,0 +1,72 @@
+schema_version: 1
+cases:
+  - id: reading-default-is-read
+    project_id: interactive-reading
+    task: 带我读这份报告
+    capabilities: [github-read]
+    expected: {mode: read, status: ready, mutations_authorized: false}
+  - id: reading-explicit-read
+    project_id: interactive-reading
+    task: 我选择B，请分析并继续
+    mode: read
+    capabilities: [github-read]
+    expected: {mode: read, status: ready, intended_actions: []}
+  - id: reading-quoted-site-term-no-heuristic
+    project_id: interactive-reading
+    task: 文中说发布到网站，现在只解释本段
+    capabilities: [github-read]
+    expected: {mode: read, status: ready}
+  - id: reading-negated-site-term
+    project_id: interactive-reading
+    task: 不要整理进网站，继续伴读
+    mode: read
+    capabilities: [github-read]
+    expected: {mode: read, status: ready}
+  - id: reading-future-curation-stays-read
+    project_id: interactive-reading
+    task: 先伴读，读完后再整理进网站
+    mode: read
+    capabilities: [github-read]
+    expected: {mode: read, status: ready, intended_actions: []}
+  - id: reading-stage-summary
+    project_id: interactive-reading
+    task: 总结本章并保存进度
+    mode: read
+    capabilities: [github-read]
+    expected: {mode: read, status: ready}
+  - id: reading-curate-draft-without-write
+    project_id: interactive-reading
+    task: 整理本站文章草稿，先不写网站
+    mode: curate
+    capabilities: [github-read]
+    expected: {mode: curate, status: ready, mutations_authorized: false, intended_actions: []}
+  - id: reading-curate-knowledge-only
+    project_id: interactive-reading
+    task: 更新知识网络，不生成文章
+    mode: curate
+    capabilities: [github-read, site-read, site-write]
+    expected: {mode: curate, status: ready}
+  - id: reading-curate-tools-not-authorization
+    project_id: interactive-reading
+    task: 把已整理内容更新到网站
+    mode: curate
+    capabilities: [github-read, site-read, site-write, site-deploy, browser-inspect, web-search, artifact-read, code-execution, github-write]
+    expected: {mode: curate, status: ready, mutations_authorized: false, intended_actions: [], missing_optional_capabilities: []}
+  - id: reading-continue-curation
+    project_id: interactive-reading
+    task: 继续
+    mode: curate
+    capabilities: [github-read]
+    expected: {mode: curate, status: ready}
+  - id: reading-loader-absent
+    project_id: interactive-reading
+    task: 继续伴读
+    mode: read
+    capabilities: [artifact-read]
+    expected: {mode: read, status: blocked, missing_capabilities: [github-read]}
+  - id: reading-invalid-third-workflow
+    project_id: interactive-reading
+    task: 发布
+    mode: publish
+    capabilities: [github-read]
+    expected_error: Unsupported mode

@@ -2,7 +2,7 @@
 
 在一个 Git 仓库维护 ChatGPT Work 各项目的路由、工作流、规则和 skills。每个项目只保留短入口，任务开始时读取已发布快照。
 
-提供“新项目脑暴”“内容创作”和“学术研究”三条路由，以及十一个指令型 skills。源代码和配置采用 MIT 许可证。
+提供“新项目脑暴”“内容创作”“学术研究”和“交互式伴读写作”四条路由，以及十一个指令型 skills。源代码和配置采用 MIT 许可证。
 
 ## 开始使用
 
@@ -11,6 +11,7 @@
    - [新项目脑暴入口](bootstrap/new-project.md)
    - [内容创作入口](bootstrap/content-studio.md)
    - [学术研究入口](bootstrap/academic-research.md)，使用 preview 频道
+   - [交互式伴读独立指令](docs/READING_PROJECT_INSTRUCTIONS.md)，可直接复制；[远程短入口](bootstrap/interactive-reading.md) 等待 reading-preview 专用频道发布
 3. 新建该项目内的 Work 对话，发送一个真实任务。首个回执应包含实际源 SHA、已读 skills 和未验证项。
 
 维护工作流时只修改本仓库并发布版本。入口协议本身升级时才需要更新项目设置。修改仓库不会自动更新已安装插件，也不会改变运行中任务的快照。
@@ -65,6 +66,7 @@ CLI 针对当前工作树编译候选执行包。要复现发布版，先按稳�
 - [个人 AI 工作流管理器 PRD](docs/PERSONAL_WORKFLOW_PRD.md)：个人产品方向、需求、验收标准与待决事项
 - [架构与边界](docs/ARCHITECTURE.md)
 - [科研工作流与本地证据检查](docs/ACADEMIC.md)
+- [交互式伴读与整理进网站](docs/READING.md)：两工作流路由、状态与发布边界
 - [加载协议与回执](docs/PROTOCOL.md)
 - [发布及回滚](docs/RELEASING.md)
 - [反馈闭环](feedback/README.md)：每轮语义检查明确纠错，按需加载反馈 skill；草拟、查重、授权写入及后续验证分开进行
