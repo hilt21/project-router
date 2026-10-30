@@ -365,7 +365,44 @@ def validate(root: Path) -> dict:
     for channel in sorted((root / "channels").glob("*.json")):
         entry = read_channel(root, channel.stem)
         channels.append({"channel": channel.stem, "version": entry["version"], "sha": entry["commit_sha"]})
-    return {"status": "passed", "layer": "static", "projects": projects, "skills": len(registry(root)), "channels": channels, "behavioral_verification": "not-run"}
+    bootstraps = validate_bootstraps(root)
+    return {"status": "passed", "layer": "static", "projects": projects, "skills": len(registry(root)), "channels": channels, "bootstraps": bootstraps, "behavioral_verification": "not-run"}
+
+
+def validate_bootstraps(root: Path) -> list[dict]:
+    """Check installation entries against published local channel manifests.
+
+    This is offline metadata validation. It does not fetch a remote source
+    commit, execute a host, or attest that project settings were installed.
+    """
+    cfg = config(root)
+    results, projects = [], set()
+    for file in sorted((root / "bootstrap").glob("*.md")):
+        path = file.relative_to(root).as_posix()
+        meta, body = document(root, path)
+        if set(meta) != {"schema_version", "project_id", "repository", "channel"} or meta["schema_version"] != 1:
+            raise RouterError(f"Invalid bootstrap metadata: {path}")
+        project, channel = meta["project_id"], meta["channel"]
+        if not isinstance(project, str) or project not in cfg["routes"]:
+            raise RouterError(f"Unknown bootstrap project: {path}")
+        if project in projects:
+            raise RouterError(f"Duplicate bootstrap project: {project}")
+        projects.add(project)
+        if meta["repository"] != cfg["repository"]:
+            raise RouterError(f"Bootstrap repository mismatch: {path}")
+        if not isinstance(channel, str) or not ID.fullmatch(channel):
+            raise RouterError(f"Invalid bootstrap channel: {path}")
+        references = set(re.findall(r"channels/([a-z0-9]+(?:-[a-z0-9]+)*)\.json", body))
+        if references != {channel}:
+            raise RouterError(f"Bootstrap body channel mismatch: {path}")
+        if f"项目 ID：{project}。" not in body or f"https://github.com/{cfg['repository']}" not in body:
+            raise RouterError(f"Bootstrap body identity mismatch: {path}")
+        entry = read_channel(root, channel)
+        if entry["routes"].get(project) != cfg["routes"][project]:
+            raise RouterError(f"Bootstrap channel does not publish project route: {path}")
+        results.append({"path": path, "project_id": project, "channel": channel,
+                        "version": entry["version"], "sha": entry["commit_sha"]})
+    return results
 
 
 def read_channel(root: Path, name: str) -> dict:

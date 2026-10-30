@@ -163,29 +163,29 @@ class RouterTests(unittest.TestCase):
 
     def test_release_and_rollback(self):
         # Offline git integration: real source commits, immutable records, pointer rollback.
-        shutil.rmtree(self.root / "channels", ignore_errors=True)
-        shutil.rmtree(self.root / "releases", ignore_errors=True)
+        # Preserve valid installation dependencies. Use isolated test versions
+        # instead of deleting the channels required by the copied bootstraps.
         self.git("init", "-b", "main")
         self.git("config", "user.name", "Test")
         self.git("config", "user.email", "test@example.invalid")
         self.git("add", ".")
         self.git("commit", "-m", "source A")
         source_a = self.git("rev-parse", "HEAD")
-        core.create_release(self.root, "v0.1.0", source_a)
-        core.promote(self.root, "v0.1.0", "stable")
+        core.create_release(self.root, "v99.0.1", source_a)
+        core.promote(self.root, "v99.0.1", "stable")
         self.edit("rules/research.md", "调研约束", "调研约束 A")
         with self.assertRaisesRegex(core.RouterError, "differ"):
-            core.create_release(self.root, "v0.2.0", source_a)
+            core.create_release(self.root, "v99.0.2", source_a)
         self.git("add", ".")
         self.git("commit", "-m", "source B")
         source_b = self.git("rev-parse", "HEAD")
-        core.create_release(self.root, "v0.2.0", source_b)
-        core.promote(self.root, "v0.2.0", "stable")
+        core.create_release(self.root, "v99.0.2", source_b)
+        core.promote(self.root, "v99.0.2", "stable")
         self.assertEqual(core.read_channel(self.root, "stable")["commit_sha"], source_b)
-        core.promote(self.root, "v0.1.0", "stable")
+        core.promote(self.root, "v99.0.1", "stable")
         self.assertEqual(core.read_channel(self.root, "stable")["commit_sha"], source_a)
         with self.assertRaisesRegex(core.RouterError, "immutable"):
-            core.create_release(self.root, "v0.1.0", source_b)
+            core.create_release(self.root, "v99.0.1", source_b)
 
     def test_modified_channel_record_blocks(self):
         record = {"schema_version": 1, "repository": "hilt21/project-router", "version": "v0.1.0", "commit_sha": "1" * 40, "routes": core.config(self.root)["routes"]}

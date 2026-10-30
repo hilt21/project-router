@@ -1,3 +1,9 @@
+---
+schema_version: 1
+project_id: academic-research
+repository: hilt21/project-router
+channel: preview
+---
 项目 ID：academic-research。分发频道：preview。可信仓库：https://github.com/hilt21/project-router 。
 每个新任务通过 GitHub 连接读取该仓库 main 上的 channels/preview.json，记录 version 和 commit_sha。
 按该 SHA 读取 BOOTSTRAP.md 和 routes/academic-research.md，再读取公共依赖及本次阶段的依赖。不要用搜索摘要代替正文。
