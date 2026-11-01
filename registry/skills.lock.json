@@ -37,7 +37,7 @@
       "path": "skills/craft-channel-content/SKILL.md",
       "activation": "document",
       "files": {
-        "skills/craft-channel-content/SKILL.md": "da38537c9bebc4a1d98bc6573f466d9c989a5edbf9412e188c2b7805234106ad",
+        "skills/craft-channel-content/SKILL.md": "9aeb3814cc9932d151b47caef89bfdd6af4dfb84cdebf42614a2f78da671586b",
         "skills/craft-channel-content/agents/openai.yaml": "2ade3cd9927d4c4679e226d6c3028050af3b6448ab55cfdefef0f2b0c4016900"
       }
     },
@@ -77,7 +77,7 @@
       "path": "skills/verify-delivery/SKILL.md",
       "activation": "document",
       "files": {
-        "skills/verify-delivery/SKILL.md": "a3bffe103b5ca191731ee78fe463c86fd12a603c68423ebf5ff1603c358efcd1",
+        "skills/verify-delivery/SKILL.md": "47a112b9dde2d3f1989bc1bd6857fad4a7e5858e28d3920a9eaa3df63d342a15",
         "skills/verify-delivery/agents/openai.yaml": "15cc858ba29ef6bc94f7c5fb44f071bf1c75d28a4568fab21c832f338e677597"
       }
     },
