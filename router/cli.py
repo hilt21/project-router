@@ -25,9 +25,14 @@ def main(argv=None):
         cmd.add_argument("--task", required=True)
         cmd.add_argument("--mode")
         cmd.add_argument("--generate-images", action="store_true", help="Declare an intended image action; does not grant permission")
+        cmd.add_argument("--design-entry", action="append", default=[], metavar="STAGE=ID",
+                         help="Select an approved design ID or alias for a configured stage")
+        cmd.add_argument("--design-resource", action="append", default=[], metavar="ID=PATH",
+                         help="Load a declared optional resource of a selected design entry")
         cmd.add_argument("--capability", action="append", default=[])
     cmd = commands.add_parser("receipt-check")
     cmd.add_argument("path", type=Path)
+    cmd.add_argument("--artifact-root", type=Path)
     cmd = commands.add_parser("academic-check", help="Check local research records; does not certify scientific truth")
     cmd.add_argument("passport", type=Path)
     cmd.add_argument("--research-root", type=Path, required=True)
@@ -35,6 +40,7 @@ def main(argv=None):
     cmd.add_argument("--snapshot-sha", required=True)
     cmd.add_argument("--submission", action="store_true", help="Check recorded submission prerequisites for human review")
     cmd = commands.add_parser("feedback-draft")
+    cmd.add_argument("--artifact-root", type=Path)
     cmd.add_argument("--receipt", type=Path, required=True)
     cmd.add_argument("--category", required=True)
     cmd.add_argument("--observation", required=True)
@@ -63,7 +69,8 @@ def main(argv=None):
             core.check_lock(root)
             result = {"status": "passed", "layer": "skill-integrity"}
         elif args.command in {"plan", "packet"}:
-            result = core.plan(root, args.project, args.task, args.capability, args.mode, args.generate_images)
+            result = core.plan(root, args.project, args.task, args.capability, args.mode,
+                               args.generate_images, args.design_entry, args.design_resource)
             if args.command == "packet":
                 print(core.packet(root, result))
                 return 0 if result["status"] == "ready" else 2
@@ -75,9 +82,10 @@ def main(argv=None):
             path = args.path if args.command == "receipt-check" else args.receipt
             data = json.loads(path.read_text(encoding="utf-8"))
             if args.command == "feedback-draft":
-                print(core.feedback_body(data, args.category, args.observation, args.expected, args.scope))
+                print(core.feedback_body(data, args.category, args.observation, args.expected,
+                                         args.scope, root, args.artifact_root))
                 return 0
-            result = core.validate_receipt(data)
+            result = core.validate_receipt(data, root, args.artifact_root)
         elif args.command == "channel":
             result = core.read_channel(root, args.name)
         elif args.command == "release-create":

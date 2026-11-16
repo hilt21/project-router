@@ -11,6 +11,8 @@ from urllib.parse import unquote, urlparse
 
 import yaml
 
+from . import design
+
 SHA = re.compile(r"[0-9a-f]{40}\Z")
 DIGEST = re.compile(r"[0-9a-f]{64}\Z")
 ID = re.compile(r"[a-z0-9]+(?:-[a-z0-9]+)*\Z")
@@ -292,7 +294,8 @@ def git_identity(root: Path) -> dict:
         return {"kind": "working-tree", "sha": None, "base_sha": None}
 
 
-def plan(root: Path, project: str, task: str, capabilities: list[str], mode=None, generate_images=False) -> dict:
+def plan(root: Path, project: str, task: str, capabilities: list[str], mode=None,
+         generate_images=False, design_entries=None, design_resources=None) -> dict:
     cfg = config(root)
     check_lock(root)
     if set(capabilities) - set(cfg["capabilities"]):
@@ -304,13 +307,25 @@ def plan(root: Path, project: str, task: str, capabilities: list[str], mode=None
     graph = instruction_graph(root, project, chosen)
     paths, selected = graph["paths"], graph["skills"]
     required, optional = graph["required_capabilities"], graph["optional_capabilities"]
+    design_selection = None
+    if design_resources and not design_entries:
+        raise RouterError("Optional design resources need an explicit entry")
+    if design_entries:
+        if design.ADAPTER not in registry(root, cfg):
+            raise RouterError("Design Library is not registered in this snapshot")
+        design_selection, design_paths, design_required = design.select(
+            root, project, design_entries, cfg, generate_images, design_resources)
+        paths.extend(design_paths)
+        selected.append(design.ADAPTER)
+        required.update(design_required)
+        optional.difference_update(required)
     # A mention of images may be a negation or a request for a brief. The host
     # resolves the requested stage and passes the intended action explicitly.
     if generate_images:
         required.add("image-generation")
     missing = sorted(required - set(capabilities))
     input_modes = route.get("needs_input_modes", ["select-channel"])
-    return {
+    result = {
         "schema_version": 1, "project_id": project, "mode": chosen,
         "status": "blocked" if missing else "needs-input" if chosen in input_modes else "ready",
         "source": git_identity(root), "required_capabilities": sorted(required), "missing_capabilities": missing,
@@ -322,10 +337,14 @@ def plan(root: Path, project: str, task: str, capabilities: list[str], mode=None
         "authorization_note": "A packet never grants permission; use actual user authorization and host policy.",
         "behavioral_verification": "not-run",
     }
+    if design_selection is not None:
+        result["design_library"] = design_selection
+    packet(root, result)
+    return result
 
 
 def packet(root: Path, result: dict) -> str:
-    text = "# Execution packet\n\n" + json.dumps(result, ensure_ascii=False, indent=2) + "\n"
+    text = "# Execution packet\n\n" + json.dumps(result, ensure_ascii=False, separators=(",", ":")) + "\n"
     for item in result["documents"]:
         text += f"\n## Source: {item['path']}\n\nSHA-256: {item['sha256']}\n\n" + read_text(root, item["path"])
     if len(text.encode("utf-8")) > config(root)["max_packet_bytes"]:
@@ -336,6 +355,13 @@ def packet(root: Path, result: dict) -> str:
 def validate(root: Path) -> dict:
     cfg = config(root)
     check_lock(root)
+    skills = registry(root, cfg)
+    if design.ADAPTER in skills:
+        for project, requests, generate in design.validation_requests(root, cfg):
+            route = route_config(root, project)
+            for mode in set(route["modes"]) - set(route.get("needs_input_modes", [])):
+                plan(root, project, "", cfg["capabilities"], mode,
+                     generate_images=generate, design_entries=requests)
     projects = []
     for project, path in cfg["routes"].items():
         meta = route_config(root, project)
@@ -366,7 +392,7 @@ def validate(root: Path) -> dict:
         entry = read_channel(root, channel.stem)
         channels.append({"channel": channel.stem, "version": entry["version"], "sha": entry["commit_sha"]})
     bootstraps = validate_bootstraps(root)
-    return {"status": "passed", "layer": "static", "projects": projects, "skills": len(registry(root)), "channels": channels, "bootstraps": bootstraps, "behavioral_verification": "not-run"}
+    return {"status": "passed", "layer": "static", "projects": projects, "skills": len(skills), "channels": channels, "bootstraps": bootstraps, "behavioral_verification": "not-run"}
 
 
 def validate_bootstraps(root: Path) -> list[dict]:
@@ -470,7 +496,7 @@ def promote(root: Path, version: str, channel: str) -> dict:
     return read_channel(root, channel)
 
 
-def validate_receipt(data: dict) -> dict:
+def validate_receipt(data: dict, root=None, artifact_root=None) -> dict:
     if data.get("schema_version") != 1:
         raise RouterError("Invalid receipt schema")
     for key in ("run_id", "project_id", "mode", "status", "created_at"):
@@ -513,11 +539,13 @@ def validate_receipt(data: dict) -> dict:
         raise RouterError("Complete receipt needs source readback and passing checks")
     if SECRET.search(json.dumps(data)):
         raise RouterError("Potential credential in receipt; redact before sharing")
+    design.validate_receipt(data, root, artifact_root)
     return {"status": "passed", "layer": "receipt-structure", "authenticity": "not-verified"}
 
 
-def feedback_body(receipt: dict, category: str, observation: str, expected: str, scope: str) -> str:
-    validate_receipt(receipt)
+def feedback_body(receipt: dict, category: str, observation: str, expected: str, scope: str,
+                  root=None, artifact_root=None) -> str:
+    validate_receipt(receipt, root, artifact_root)
     if category not in {"routing", "quality", "environment", "conflict", "preference", "unknown"}:
         raise RouterError("Invalid feedback category")
     if scope not in {"project", "shared-candidate"}:

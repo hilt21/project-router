@@ -52,3 +52,5 @@ Python 输出 `mutations_authorized: false` 表示它从不授予写权限；当
 出现实质反馈时，用户可见回执区分 `drafted`、`linked-existing`、`filed`、`blocked`，以工具回读确认外部写入；这些状态不改变任务本身的 complete/partial 语义。Memory 提示不作为仓库写入证据。
 
 发布记录中的 Work 新建对话、压缩恢复和私有仓库能力保持 not-run，直到取得对应平台证据.agent 独立探针与 CLI 单测不替代这些测试。
+
+设计任务的回执还需对应的干净 router 提交与产物目录。design_library 必须匹配活动来源及选中文档，complete 状态检查所有文档回读和实际产物摘要，partial 可保留未读取文件。细节见 [设计方法包](DESIGN_LIBRARY.md)。

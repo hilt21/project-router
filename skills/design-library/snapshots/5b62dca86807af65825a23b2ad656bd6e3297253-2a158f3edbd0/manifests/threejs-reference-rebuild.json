@@ -1,0 +1,59 @@
+{
+  "adaptation": {
+    "changed": [
+      "为宿主无关的设计规格重新编写",
+      "外部动作遵循调用方阶段与权限"
+    ],
+    "omitted": [
+      "上游安装器和运行时",
+      "未经实际验收的能力主张"
+    ],
+    "relationship": "reference",
+    "retained": [
+      "上游方法的任务分解与检查维度"
+    ]
+  },
+  "aliases": [
+    "参考图建模",
+    "Three.js重建"
+  ],
+  "cases": [
+    "caliper-pivot-contract"
+  ],
+  "content_sha256": "8c6f2f6ee59bb4f329e3a01f9bd138f58ace6cb0dd556c9093f478bcbde5dbdb",
+  "description": "参考图到有明确几何与运动约束的建模规格",
+  "domains": [
+    "threejs-design"
+  ],
+  "entry": "SKILL.md",
+  "files": {
+    "SKILL.md": "63b677a2dab17cbf7d319483fc981913a4958af104c8b43a67e7387a1af4e8af"
+  },
+  "id": "threejs-reference-rebuild",
+  "inputs": [
+    "参考图",
+    "已知尺寸和运动拓扑",
+    "目标交付阶段"
+  ],
+  "outputs": [
+    "零件与枢轴规格",
+    "视图和运动验收清单",
+    "未知量"
+  ],
+  "required": [],
+  "required_capabilities": [],
+  "resources": {},
+  "source": {
+    "commit": "0c0c49bc168e648dbaf9c8c080474de0b3a941b6",
+    "license": "Apache-2.0",
+    "path": "SKILL.md",
+    "repository": "img2threejs/img2threejs",
+    "watch_paths": [
+      "SKILL.md"
+    ]
+  },
+  "stages": [
+    "3d-design"
+  ],
+  "type": "skill"
+}

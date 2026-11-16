@@ -1,0 +1,59 @@
+{
+  "adaptation": {
+    "changed": [
+      "为宿主无关的设计规格重新编写",
+      "外部动作遵循调用方阶段与权限"
+    ],
+    "omitted": [
+      "上游安装器和运行时",
+      "未经实际验收的能力主张"
+    ],
+    "relationship": "reference",
+    "retained": [
+      "上游方法的任务分解与检查维度"
+    ]
+  },
+  "aliases": [
+    "技术演示稿",
+    "PPT设计"
+  ],
+  "cases": [
+    "embc-five-slides"
+  ],
+  "content_sha256": "bf7ed690d50e4bacdbc98b3e0f39e855f41dcc85ccd8f43df1dcc1c3349a7368",
+  "description": "技术演示稿逐页设计与可编辑对象规格",
+  "domains": [
+    "presentation-design"
+  ],
+  "entry": "SKILL.md",
+  "files": {
+    "SKILL.md": "9b4f071fd619fe66d07cefff054568208afb95e3ab3665ca7f13262ae088f59e"
+  },
+  "id": "technical-deck-design",
+  "inputs": [
+    "听众和演讲时长",
+    "事实材料",
+    "模板或视觉要求"
+  ],
+  "outputs": [
+    "逐页规格",
+    "编辑对象清单",
+    "页面验收标准"
+  ],
+  "required": [],
+  "required_capabilities": [],
+  "resources": {},
+  "source": {
+    "commit": "3af3e8ef774c4d67ee57e1306d9256d08c9ee1bf",
+    "license": "MIT",
+    "path": "README.md",
+    "repository": "hugohe3/ppt-master",
+    "watch_paths": [
+      "README.md"
+    ]
+  },
+  "stages": [
+    "slide-design"
+  ],
+  "type": "skill"
+}

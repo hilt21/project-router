@@ -23,4 +23,19 @@ python -m router packet --project content-studio --mode dual --task '共用证�
 
 图像工具声明与授权仍由宿主判断，只有本次确实要生图时才传入 `--generate-images`。Python 只编译规则，不生成内容、不执行发布。
 
+## 设计库候选接入
+
+[Design Library](https://github.com/hilt21/design-library) 独立维护条目。同步时按本仓库的项目绑定，从已发布提交构建不可变方法快照，使用活动索引和技能锁校验。Work 仍按自身固定的 router SHA 读取，保留设计库来源 SHA。索引按阶段和条目 ID 查找，允许以明确别名选择。视觉方案未指定风格时用原流程。
+
+```sh
+python -m router packet --project content-studio --mode wechat --capability web-search \
+  --task '为 EMB 写一篇微信贴图短文并审校，做单色封面方案，先别生图' \
+  --design-entry draft-review=channel-draft-review \
+  --design-entry visual-plan=单色海报
+```
+
+该候选包只在调用方显式传入阶段和条目时读取对应方法。Work 文档入口按工作流解析当前需求，选中后读取同样的文件。验收记录见 [设计库候选验收](qa/design-library.md)。
+
 DHH 历史选题的旧版与候选版云端产物、LinkedIn 仅正文任务和验收边界见 [验收报告](qa/content-pipeline.md)。
+
+跨领域配置、按需资源、恢复与回执命令见 [设计方法包](DESIGN_LIBRARY.md)。

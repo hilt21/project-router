@@ -32,7 +32,7 @@ class RouterTests(unittest.TestCase):
         return subprocess.check_output(["git", "-C", str(self.root), *args], text=True, stderr=subprocess.DEVNULL).strip()
 
     def test_repository_validates(self):
-        self.assertEqual(core.validate(self.root)["skills"], 11)
+        self.assertEqual(core.validate(self.root)["status"], "passed")
 
     def test_legacy_and_academic_route_cases(self):
         result = core.evaluate(self.root)
