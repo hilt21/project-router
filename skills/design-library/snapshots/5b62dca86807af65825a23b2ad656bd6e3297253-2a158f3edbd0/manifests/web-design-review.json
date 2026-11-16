@@ -1,0 +1,57 @@
+{
+  "adaptation": {
+    "changed": [
+      "为宿主无关的设计规格重新编写",
+      "外部动作遵循调用方阶段与权限"
+    ],
+    "omitted": [
+      "上游安装器和运行时",
+      "未经实际验收的能力主张"
+    ],
+    "relationship": "reference",
+    "retained": [
+      "上游方法的任务分解与检查维度"
+    ]
+  },
+  "aliases": [
+    "网页设计评审"
+  ],
+  "cases": [
+    "responsive-first-screen"
+  ],
+  "content_sha256": "8cb5c1739f5f62725e91236f6eba7e26cbe0ef7afea7d33f16d8b3ccbfd608d6",
+  "description": "基于页面状态和截图证据的网页设计评审",
+  "domains": [
+    "web-design"
+  ],
+  "entry": "INSTRUCTIONS.md",
+  "files": {
+    "INSTRUCTIONS.md": "619be64e25c93e633ad3b69671b4eb46438e050e8b107e34670aa99779b98ac9"
+  },
+  "id": "web-design-review",
+  "inputs": [
+    "页面与主任务",
+    "可访问的页面或截图",
+    "视口与状态"
+  ],
+  "outputs": [
+    "可定位的问题清单",
+    "复验步骤"
+  ],
+  "required": [],
+  "required_capabilities": [],
+  "resources": {},
+  "source": {
+    "commit": "d41d9860b0094dcb68030657da63461212835aaa",
+    "license": "Apache-2.0",
+    "path": "README.md",
+    "repository": "pbakaus/impeccable",
+    "watch_paths": [
+      "README.md"
+    ]
+  },
+  "stages": [
+    "web-review"
+  ],
+  "type": "instruction"
+}

@@ -1,0 +1,60 @@
+{
+  "adaptation": {
+    "changed": [
+      "为宿主无关的设计规格重新编写",
+      "外部动作遵循调用方阶段与权限"
+    ],
+    "omitted": [
+      "上游安装器和运行时",
+      "未经实际验收的能力主张"
+    ],
+    "relationship": "reference",
+    "retained": [
+      "上游方法的任务分解与检查维度"
+    ]
+  },
+  "aliases": [
+    "成稿审校",
+    "降低AI味"
+  ],
+  "cases": [
+    "wechat-emb-draft",
+    "linkedin-technical-draft"
+  ],
+  "content_sha256": "568a3b5ac26a42249b58a42d98e786cbb82bf0a2a07362d26c271cc117eb1c9b",
+  "description": "保留事实与作者语气的最小成稿审校",
+  "domains": [
+    "content-writing"
+  ],
+  "entry": "INSTRUCTIONS.md",
+  "files": {
+    "INSTRUCTIONS.md": "83328479443c2c868cc19aac2d48af3a69f699e417f7a4ab4a9c9410d46b3c4c"
+  },
+  "id": "channel-draft-review",
+  "inputs": [
+    "草稿",
+    "渠道规则",
+    "事实底稿"
+  ],
+  "outputs": [
+    "修订稿",
+    "改动说明",
+    "待核实项"
+  ],
+  "required": [],
+  "required_capabilities": [],
+  "resources": {},
+  "source": {
+    "commit": "000650b156983f5159695b441477f4e63b25dc85",
+    "license": "MIT",
+    "path": "skills/no-ai-slop/SKILL.md",
+    "repository": "petergyang/no-ai-slop",
+    "watch_paths": [
+      "skills/no-ai-slop/SKILL.md"
+    ]
+  },
+  "stages": [
+    "draft-review"
+  ],
+  "type": "instruction"
+}

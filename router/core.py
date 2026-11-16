@@ -295,7 +295,7 @@ def git_identity(root: Path) -> dict:
 
 
 def plan(root: Path, project: str, task: str, capabilities: list[str], mode=None,
-         generate_images=False, design_entries=None) -> dict:
+         generate_images=False, design_entries=None, design_resources=None) -> dict:
     cfg = config(root)
     check_lock(root)
     if set(capabilities) - set(cfg["capabilities"]):
@@ -308,11 +308,13 @@ def plan(root: Path, project: str, task: str, capabilities: list[str], mode=None
     paths, selected = graph["paths"], graph["skills"]
     required, optional = graph["required_capabilities"], graph["optional_capabilities"]
     design_selection = None
+    if design_resources and not design_entries:
+        raise RouterError("Optional design resources need an explicit entry")
     if design_entries:
         if design.ADAPTER not in registry(root, cfg):
             raise RouterError("Design Library is not registered in this snapshot")
         design_selection, design_paths, design_required = design.select(
-            root, project, design_entries, cfg["capabilities"], generate_images)
+            root, project, design_entries, cfg, generate_images, design_resources)
         paths.extend(design_paths)
         selected.append(design.ADAPTER)
         required.update(design_required)
@@ -337,11 +339,12 @@ def plan(root: Path, project: str, task: str, capabilities: list[str], mode=None
     }
     if design_selection is not None:
         result["design_library"] = design_selection
+    packet(root, result)
     return result
 
 
 def packet(root: Path, result: dict) -> str:
-    text = "# Execution packet\n\n" + json.dumps(result, ensure_ascii=False, indent=2) + "\n"
+    text = "# Execution packet\n\n" + json.dumps(result, ensure_ascii=False, separators=(",", ":")) + "\n"
     for item in result["documents"]:
         text += f"\n## Source: {item['path']}\n\nSHA-256: {item['sha256']}\n\n" + read_text(root, item["path"])
     if len(text.encode("utf-8")) > config(root)["max_packet_bytes"]:
@@ -354,15 +357,11 @@ def validate(root: Path) -> dict:
     check_lock(root)
     skills = registry(root, cfg)
     if design.ADAPTER in skills:
-        index, _ = design.read_index(root, cfg["capabilities"])
-        route = route_config(root, design.PROJECT)
-        for mode in set(route["modes"]) - set(route.get("needs_input_modes", [])):
-            for entry_id, entry in index["entries"].items():
-                for stage in entry["stages"]:
-                    result = plan(root, design.PROJECT, "", cfg["capabilities"], mode,
-                                  generate_images=stage == "image-generation",
-                                  design_entries=[f"{stage}={entry_id}"])
-                    packet(root, result)
+        for project, requests, generate in design.validation_requests(root, cfg):
+            route = route_config(root, project)
+            for mode in set(route["modes"]) - set(route.get("needs_input_modes", [])):
+                plan(root, project, "", cfg["capabilities"], mode,
+                     generate_images=generate, design_entries=requests)
     projects = []
     for project, path in cfg["routes"].items():
         meta = route_config(root, project)
@@ -497,7 +496,7 @@ def promote(root: Path, version: str, channel: str) -> dict:
     return read_channel(root, channel)
 
 
-def validate_receipt(data: dict) -> dict:
+def validate_receipt(data: dict, root=None, artifact_root=None) -> dict:
     if data.get("schema_version") != 1:
         raise RouterError("Invalid receipt schema")
     for key in ("run_id", "project_id", "mode", "status", "created_at"):
@@ -540,11 +539,13 @@ def validate_receipt(data: dict) -> dict:
         raise RouterError("Complete receipt needs source readback and passing checks")
     if SECRET.search(json.dumps(data)):
         raise RouterError("Potential credential in receipt; redact before sharing")
+    design.validate_receipt(data, root, artifact_root)
     return {"status": "passed", "layer": "receipt-structure", "authenticity": "not-verified"}
 
 
-def feedback_body(receipt: dict, category: str, observation: str, expected: str, scope: str) -> str:
-    validate_receipt(receipt)
+def feedback_body(receipt: dict, category: str, observation: str, expected: str, scope: str,
+                  root=None, artifact_root=None) -> str:
+    validate_receipt(receipt, root, artifact_root)
     if category not in {"routing", "quality", "environment", "conflict", "preference", "unknown"}:
         raise RouterError("Invalid feedback category")
     if scope not in {"project", "shared-candidate"}:

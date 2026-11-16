@@ -1,66 +1,33 @@
 {
-  "commit_sha": "39ceecd14049e3b48fdf63d39c9e4ef61f4d6ccf",
-  "entries": {
-    "channel-draft-review": {
-      "aliases": [
-        "成稿审校",
-        "降低AI味"
-      ],
-      "dependencies": [],
-      "entry": "entries/channel-draft-review/INSTRUCTIONS.md",
-      "files": {
-        "entries/channel-draft-review/INSTRUCTIONS.md": "4bcc05fff19d90c6b1f347699e5097b39384fc91eeab135eb803e32463f0b7c1"
-      },
-      "id": "channel-draft-review",
-      "projects": [
-        "content-studio"
-      ],
-      "required_capabilities": [],
-      "source": {
-        "commit": "000650b156983f5159695b441477f4e63b25dc85",
-        "license": "MIT",
-        "path": "skills/no-ai-slop/SKILL.md",
-        "repository": "petergyang/no-ai-slop"
-      },
-      "stages": [
-        "draft-review"
-      ],
-      "type": "instruction"
-    },
-    "mono-color-editorial": {
-      "aliases": [
-        "单色海报",
-        "单色编辑海报",
-        "mono-color"
-      ],
-      "dependencies": [
-        "entries/mono-color-editorial/PROMPT.md",
-        "entries/mono-color-editorial/CHECKLIST.md"
-      ],
-      "entry": "entries/mono-color-editorial/SKILL.md",
-      "files": {
-        "entries/mono-color-editorial/CHECKLIST.md": "8d21b7dc4eaae7690ea49da8394b648c60b7029dd0e56ba64089fb31b363f715",
-        "entries/mono-color-editorial/PROMPT.md": "22d10d9af4c813208c6829aada59492990b423194c7b0b2e41ef90e900728fdc",
-        "entries/mono-color-editorial/SKILL.md": "ccc37783e78e741a40de90161281bac2b5c3e307f9b3ba4426bd3feb58d01ebb"
-      },
-      "id": "mono-color-editorial",
-      "projects": [
-        "content-studio"
-      ],
-      "required_capabilities": [],
-      "source": {
-        "commit": "c8ff70597ddedcd65f21a0b528f6a70c35690b0a",
-        "license": "MIT",
-        "path": "SKILL.md",
-        "repository": "yanliudesign/mono-color-skill"
-      },
-      "stages": [
-        "visual-plan",
-        "image-generation"
-      ],
-      "type": "skill"
-    }
+  "commit_sha": "5b62dca86807af65825a23b2ad656bd6e3297253",
+  "entries": [
+    "channel-draft-review",
+    "mono-color-editorial",
+    "technical-deck-design",
+    "threejs-reference-rebuild",
+    "web-design-review"
+  ],
+  "files": {
+    "entries/channel-draft-review/INSTRUCTIONS.md": "83328479443c2c868cc19aac2d48af3a69f699e417f7a4ab4a9c9410d46b3c4c",
+    "entries/mono-color-editorial/CHECKLIST.md": "8d21b7dc4eaae7690ea49da8394b648c60b7029dd0e56ba64089fb31b363f715",
+    "entries/mono-color-editorial/PROMPT.md": "22d10d9af4c813208c6829aada59492990b423194c7b0b2e41ef90e900728fdc",
+    "entries/mono-color-editorial/SKILL.md": "336392ec095f4b8831152585e97ff105a4782ef8786d038281d31dd39b68e06e",
+    "entries/mono-color-editorial/design-system/colors.json": "e299d6b4a2ec36e2e59b7095b85bae5f13609f505d21c9a83561088f7c446b48",
+    "entries/mono-color-editorial/design-system/compositions.json": "e0c032e96eb14f53699614c8b4ecd35af1e145f5ffb8fe53b9214d1eb6032f30",
+    "entries/mono-color-editorial/design-system/recipes.json": "b84a37894a7e102afdb5b5be2ab7801ca792692c28906be9b5772fdac942a282",
+    "entries/mono-color-editorial/design-system/typography.json": "b20f558444aab2c93b6339b76aa3178ae9e04e25eed1059cd2db8044733db26f",
+    "entries/mono-color-editorial/references/UPSTREAM-LICENSE.txt": "2025880f6441e121c76c01bc5996e84a7498d9d5aa7222a10400d303bdd043cb",
+    "entries/mono-color-editorial/references/examples.md": "c504e99aae5cd182863c5d81a7532cb78d87e473608553e892a41a18d5dc3dd8",
+    "entries/technical-deck-design/SKILL.md": "9b4f071fd619fe66d07cefff054568208afb95e3ab3665ca7f13262ae088f59e",
+    "entries/threejs-reference-rebuild/SKILL.md": "63b677a2dab17cbf7d319483fc981913a4958af104c8b43a67e7387a1af4e8af",
+    "entries/web-design-review/INSTRUCTIONS.md": "619be64e25c93e633ad3b69671b4eb46438e050e8b107e34670aa99779b98ac9",
+    "manifests/channel-draft-review.json": "a591a6287b772d14d727f84dc5c8db1791e0521b14c30fe40e832debfff1ee8a",
+    "manifests/mono-color-editorial.json": "a5a0938c4a42cd2595f802b8c0703dcbc4ac100d0e631778ea7424205c9c692d",
+    "manifests/technical-deck-design.json": "5f793932033e0ca7da4afeda277a203df92d63a242ee545a51715590c2ed317e",
+    "manifests/threejs-reference-rebuild.json": "451bf410941acd3b2d5d48561315f30b213804c202f7eca5b974b01dd0a2eca0",
+    "manifests/web-design-review.json": "4d0fd6a8d2b1a671aa57139e4cd67198f41bee6aa3074c0e88a1cff2dc21e6f6"
   },
   "repository": "hilt21/design-library",
-  "schema_version": 1
+  "schema_version": 2,
+  "snapshot": "snapshots/5b62dca86807af65825a23b2ad656bd6e3297253-2a158f3edbd0"
 }

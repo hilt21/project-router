@@ -1,14 +1,14 @@
 ---
 name: design-library
-description: Resolve an explicitly selected or route-default design entry for the current content-studio stage.
+description: Load selected design methods and resources for a configured project stage.
 ---
 
 # Design Library
 
-从本任务固定的 `project-router` 源 SHA 读取 `skills/design-library/index.json`。索引的 `commit_sha` 是同步时的设计库来源版本。索引内的路径相对于 `skills/design-library/`，后续文件使用同一 router SHA。
+固定本任务的 router SHA。读取 `registry/design-library.json`，按项目确认允许的阶段、ID、别名、显式默认值和组合。每阶段限一个条目，未配置默认值时不猜风格。生图另需明确动作和宿主能力。
 
-每个阶段最多使用一个主条目。先筛选包含本阶段、且绑定 `content-studio` 的条目，再按用户选择匹配 ID 或别名。也可使用内容工作流明确指定的该阶段默认条目。缺少明确风格的视觉任务沿用既有流程。
+本包 `index.json` 固定设计库来源 SHA、活动快照目录及文件摘要。读取快照下 `manifests/<id>.json`，再完整读取 `entries/<id>/` 下的入口和 `required` 文件。按任务需要读取 `resources`，CLI 使用 `--design-resource ID=PATH`。执行包只包含选中条目及资源。全部文件沿用原 router SHA。
 
-完整读取命中条目的入口与声明依赖。对照 `registry/skills.lock.json` 与索引中的对应文件摘要。工具无法计算摘要时，将完整性检查标为未验证。请求的条目、文件或所需能力不可用时，报告具体缺口并暂停依赖它的动作。继续独立工作。
+对照活动索引、条目摘要和 `registry/skills.lock.json`。无法计算摘要时标为未验证。阶段组合也需满足完整执行包预算。条目、文件或能力缺失时报告缺口，暂停依赖动作并继续独立工作。
 
-条目只提供方法。渠道规范、用户指定范围、工作流的独立画布规则和宿主权限继续有效。回执记录 router SHA、设计库来源 SHA、命中 ID、阶段和实际读取的文件。
+渠道规范、用户范围、逐图规则和宿主权限继续有效。回执沿用编译结果的 `design_library` 字段并登记已读文件。完成任务还需产物路径及 SHA-256。使用对应的干净 router 提交和产物目录核对回执。静态检查、代理试跑、实际工具运行和人工评审分开记录。

@@ -1,0 +1,22 @@
+{
+  "schema_version": 1,
+  "repository": "hilt21/design-library",
+  "projects": {
+    "content-studio": {
+      "stages": {
+        "draft-review": {"entries": ["channel-draft-review"], "default": "channel-draft-review"},
+        "visual-plan": {"entries": ["mono-color-editorial"]},
+        "image-generation": {"entries": ["mono-color-editorial"], "action": "generate-images"}
+      },
+      "combinations": [["draft-review", "visual-plan"], ["visual-plan", "image-generation"], ["draft-review", "visual-plan", "image-generation"]]
+    },
+    "new-project": {
+      "stages": {
+        "slide-design": {"entries": ["technical-deck-design"]},
+        "3d-design": {"entries": ["threejs-reference-rebuild"]},
+        "web-review": {"entries": ["web-design-review"]}
+      },
+      "combinations": []
+    }
+  }
+}
