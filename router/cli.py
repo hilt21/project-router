@@ -25,6 +25,8 @@ def main(argv=None):
         cmd.add_argument("--task", required=True)
         cmd.add_argument("--mode")
         cmd.add_argument("--generate-images", action="store_true", help="Declare an intended image action; does not grant permission")
+        cmd.add_argument("--design-entry", action="append", default=[], metavar="STAGE=ID",
+                         help="Select a Design Library ID or alias for an explicit content-studio stage")
         cmd.add_argument("--capability", action="append", default=[])
     cmd = commands.add_parser("receipt-check")
     cmd.add_argument("path", type=Path)
@@ -63,7 +65,8 @@ def main(argv=None):
             core.check_lock(root)
             result = {"status": "passed", "layer": "skill-integrity"}
         elif args.command in {"plan", "packet"}:
-            result = core.plan(root, args.project, args.task, args.capability, args.mode, args.generate_images)
+            result = core.plan(root, args.project, args.task, args.capability, args.mode,
+                               args.generate_images, args.design_entry)
             if args.command == "packet":
                 print(core.packet(root, result))
                 return 0 if result["status"] == "ready" else 2

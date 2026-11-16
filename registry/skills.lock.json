@@ -41,6 +41,18 @@
         "skills/craft-channel-content/agents/openai.yaml": "2ade3cd9927d4c4679e226d6c3028050af3b6448ab55cfdefef0f2b0c4016900"
       }
     },
+    "design-library": {
+      "path": "skills/design-library/SKILL.md",
+      "activation": "document",
+      "files": {
+        "skills/design-library/SKILL.md": "53611293f7e382faf61377be948aed18c8b4c463aaa12255b4b0863afd20f909",
+        "skills/design-library/entries/channel-draft-review/INSTRUCTIONS.md": "4bcc05fff19d90c6b1f347699e5097b39384fc91eeab135eb803e32463f0b7c1",
+        "skills/design-library/entries/mono-color-editorial/CHECKLIST.md": "8d21b7dc4eaae7690ea49da8394b648c60b7029dd0e56ba64089fb31b363f715",
+        "skills/design-library/entries/mono-color-editorial/PROMPT.md": "22d10d9af4c813208c6829aada59492990b423194c7b0b2e41ef90e900728fdc",
+        "skills/design-library/entries/mono-color-editorial/SKILL.md": "ccc37783e78e741a40de90161281bac2b5c3e307f9b3ba4426bd3feb58d01ebb",
+        "skills/design-library/index.json": "7e0d4ac4b1630c969476960fc9bba01bf2dc5c051ce379633622786c1e85f723"
+      }
+    },
     "research-open-source": {
       "path": "skills/research-open-source/SKILL.md",
       "activation": "document",
